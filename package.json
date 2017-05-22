@@ -1,0 +1,17 @@
+{
+  "name": "pages",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Edmond",
+  "private": true,
+  "dependencies": {
+    "nuxt": "latest",
+    "pm2": "latest"
+  },
+  "scripts": {
+    "dev": "PORT=3333 nuxt",
+    "build": "nuxt build",
+    "startnow": "nuxt start",
+    "generate": "nuxt generate"
+  }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="42px" viewBox="0 0 44 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-50.000000, -204.000000)" fill="#231F20">
+            <path d="M94,222.1 L94,244 C94,245.1 93.1,246 92,246 L52,246 C50.9,246 50,245.1 50,244 L50,222.1 C50,221.5 50.1,220.9 50.6,220.5 L70.5,204.6 C70.9,204.2 71.4,204 72,204 C72.6,204 73.1,204.2 73.5,204.6 L93.4,220.5 C93.9,220.9 94,221.5 94,222.1 Z M54,242 L90,242 L90,222.9 L72,208.6 L54,222.9 L54,242 Z" id="Shape-Copy"></path>
+        </g>
+    </g>
+</svg>

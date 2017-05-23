@@ -1,7 +1,6 @@
 process.traceDeprecation = true
 process.noDeprecation = true
 
-
 module.exports = {
   /*
   ** Headers of the page

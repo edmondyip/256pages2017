@@ -49,3 +49,5 @@ jspm_packages
 LICENSE
 *.yml
 .gitattributes
+static
+assets

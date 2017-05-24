@@ -76,7 +76,8 @@
   @media (min-width: 767px) {
     #container {
       width: 90vw;
-      margin-left: 5vw;
+      height: 95vh;
+      margin: 2.5vh auto;
     }
     .nav-btn {
       display: none;

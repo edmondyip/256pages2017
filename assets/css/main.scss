@@ -1,0 +1,62 @@
+/*  Setup  */
+$font-color: #999;
+$title-color: #333;
+$theme-color: rgb(239,246,245);
+
+:root {
+  --header-width: 8rem;
+  --header-paddding: 1rem;
+  --total-header-width: (var(--header-width) + var(--header-padding));
+}
+/*  Mixinz  */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Basic */
+html {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.05rem;
+  font-family: 'Dosis', sans-serif;
+  color: $font-color;
+  height: 100%;
+  margin: 0;
+  background: $theme-color;
+}
+
+body {
+  @extend html;
+}
+
+h1 {
+  font-size: 130%;
+  line-height: 130%;
+  color: $title-color;
+}
+h1::first-letter {
+   text-transform:uppercase;
+}
+
+a, a:hover, a:focus, a:visited {
+  color: $font-color;
+  text-decoration: none;
+}
+
+#__nuxt {
+  height: 100%;
+  overflow: hidden;
+}
+
+/*  loading  */
+.page-enter-active, .page-leave-active {
+  transition: all .5s;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0;
+  transform: translateY(1rem);
+}

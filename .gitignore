@@ -50,4 +50,5 @@ LICENSE
 *.yml
 .gitattributes
 static
-assets
+assets/img
+assets/svg

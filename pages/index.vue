@@ -1,23 +1,36 @@
 <!-- Template -->
 <template>
   <section>
-    <p>I am Edmond. I am a UX/UI Designer in Hong Kong. I also work in web front-end. This website is using full Javascript to development. Available freelance jobs. Contact me if you need someone working at front-end.</p>
+    <div class="welcome-image">
+      <img src="~assets/img/chinese.svg" alt="256">
+    </div>
   </section>
 </template>
 
 <!-- Script -->
 <script>
-export default {
-  name: "Index",
-  head: {
-    title: "Pages",
-    meta: [
-      { name: 'CanonicalUrl', content: 'https://256pages.com' }
-    ]
+  export default {
+    name: "Index",
+    head: {
+      title: "Pages",
+      meta: [
+        { name: 'CanonicalUrl', content: 'https://256pages.com' }
+      ]
+    }
   }
-}
 </script>
 
 <!-- Style -->
 <style lang="scss" scoped>
+  .welcome-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    img {
+      width: 10rem;
+    }
+  }
 </style>

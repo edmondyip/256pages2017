@@ -7,11 +7,11 @@
 
 <!-- Script -->
 <script>
-export default {
-  head : {
-    title: "Pages"
+  export default {
+    head : {
+      title: "Pages"
+    }
   }
-}
 </script>
 
 <!-- Style -->

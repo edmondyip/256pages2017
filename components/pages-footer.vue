@@ -14,22 +14,32 @@
     </div>
   </footer>
 </template>
-<!-- Script -->
 
+<!-- Script -->
+<script>
+  export default {
+    name: "Nav",
+    methods: {
+      closeNav() {
+        tab: false
+      }
+    }
+  }
+</script>
 
 <!-- Style -->
 <style lang="scss" scoped>
-footer {
-  padding: 1rem;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  width: 100%;
-  font-size: 80%;
-  align-self: flex-start;
-  #footer-container ul.menu {
-    list-style: none;
-    display: flex;
-    flex-flow: nowrap;
+  footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    font-size: 80%;
+    align-self: flex-start;
+    #footer-container ul.menu {
+      list-style: none;
+      display: flex;
+      flex-flow: nowrap;
+    }
   }
-}
 </style>

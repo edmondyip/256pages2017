@@ -7,7 +7,7 @@
     <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
     <app-header/>
     <article id="content">
-      <h1 v-if="$route.name=='index'" class="title">Welcome to 256P</h1>
+      <div v-if="$route.name=='index'"></div>
       <h1 v-else class="title">{{ $route.name }}</h1>
       <nuxt/>
     </article>
@@ -17,76 +17,69 @@
 
 <!-- Script -->
 <script>
-import Header from '~components/pages-header.vue'
-import Footer from '~components/pages-footer.vue'
-export default {
-  name: "DefaultLayout",
-  components: {
-    "app-header" : Header,
-    "app-footer" : Footer
-  },
-  data: () => ({
-    tab: false
-  }),
-  methods: {
-    closeNav() {
-      tab: false
+  import Header from '~components/pages-header.vue'
+  import Footer from '~components/pages-footer.vue'
+  export default {
+    name: "DefaultLayout",
+    components: {
+      "app-header" : Header,
+      "app-footer" : Footer
     }
   }
-}
 </script>
 
 <!-- Style -->
 <style lang="scss" scoped>
-#container {
-  display: flex;
-  flex-wrap: nowrap;
-  width: calc(100% + var(--header-width));
-  height: 100%;
-  margin-left: -10rem;
-  opacity: 1;
-  transition: .5s;
-  #content {
-    padding: 1rem;
-    width: 100%;
-    position: relative;
-    align-content: flex-start;
-    transition: .5s;
-    z-index: 100;
-  }
-}
-#container.active {
-  margin-left: 0;
-}
-.overlay {
-  position: fixed;
-  width: 200%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  transition: .5s;
-  z-index: 200;
-}
-.nav-btn {
-  display: block;
-  position: fixed;
-  top: 0.1rem;
-  left: 0.1rem;
-  border: 0;
-  background: #52c6d6;
-  color: #fff;
-  padding: 0.1rem;
-  z-index: 1000;
-  :hover {
-    background:  darken(#52c6d6,20%);
-  }
-}
-@media (min-width: 767px) {
   #container {
-    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    width: calc(100% + var(--header-width));
+    height: 100%;
+    margin-left: -10rem;
+    opacity: 1;
+    transition: .5s;
+    box-shadow: 0 0 5rem rgba(0,0,0,.2);
+    #content {
+      padding: 1rem;
+      width: 100%;
+      position: relative;
+      align-content: flex-start;
+      transition: .5s;
+      z-index: 100;
+    }
+  }
+  #container.active {
     margin-left: 0;
   }
-  .nav-btn {
-    display: none;
+  .overlay {
+    position: fixed;
+    width: 200%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    transition: .5s;
+    z-index: 200;
   }
-}
+  .nav-btn {
+    display: block;
+    position: fixed;
+    top: .1rem;
+    left: .1rem;
+    border: 0;
+    background: #52c6d6;
+    color: #fff;
+    padding: .1rem;
+    z-index: 1000;
+    :hover {
+      background:  darken(#52c6d6,20%);
+    }
+  }
+  @media (min-width: 767px) {
+    #container {
+      width: 90vw;
+      margin-left: 5vw;
+    }
+    .nav-btn {
+      display: none;
+    }
+  }
 </style>

@@ -13,7 +13,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' },
       { hid: 'description', content: "Edmond Yip's Personal Website & Portfolio" },
       { name: 'msapplication-TileColor', content: '#52c6d6' },
-      { name: 'msapplication-TileImage', content: '~static/ms-icon-144x144.png' },
+      { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
       { name: 'msapplication-navbutton-color', content: '#52c6d6' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },

@@ -11,7 +11,7 @@
       <h1 v-else class="title">{{ $route.name }}</h1>
       <nuxt/>
     </article>
-  <!--  <app-footer/> -->
+    <app-footer/>
   </div>
 </template>
 
@@ -24,21 +24,24 @@
     components: {
       "app-header" : Header,
       "app-footer" : Footer
-    }
+    },
+    data: () => ({
+      tab: false
+    })
   }
 </script>
 
 <!-- Style -->
 <style lang="scss" scoped>
   #container {
-    display: flex;
     flex-wrap: nowrap;
-    width: calc(100% + var(--header-width));
+    width: var(--container-width);
     height: 100%;
     margin-left: -10rem;
     opacity: 1;
     transition: .5s;
     box-shadow: 0 0 5rem rgba(0,0,0,.2);
+    background: #fff;
     #content {
       padding: 1rem;
       width: 100%;

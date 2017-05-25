@@ -5,8 +5,10 @@ $theme-color: rgb(239,246,245);
 
 :root {
   --header-width: 8rem;
-  --header-paddding: 1rem;
-  --total-header-width: (var(--header-width) + var(--header-padding));
+  --header-padding: 1rem;
+  --mobile-header-width: (var(--header-width) + var(--header-padding));
+  --full-header-width: (100% - var(--header-padding));
+  --container-width: (100% + var(--total-header-width));
 }
 /*  Mixinz  */
 @mixin border-radius($radius) {

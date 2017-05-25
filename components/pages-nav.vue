@@ -2,8 +2,8 @@
 <template>
   <nav id="nav">
     <ul>
-      <li><nuxt-link v-on:click="closeNav()" to="/">Home</nuxt-link></li>
-      <li><nuxt-link v-on:click="closeNav()" to="/about">About</nuxt-link></li>
+      <li><nuxt-link to="/">Home</nuxt-link></li>
+      <li><nuxt-link to="/about">About</nuxt-link></li>
       <li><nuxt-link to="/portfolio/">Portfolio</nuxt></li>
       <li><nuxt-link to="/contact">Contact</nuxt-link></li>
       <li><a href="https://blog.256pages.com/" target="_blank">Blog</a></li>
@@ -19,12 +19,7 @@
 <!-- Script -->
 <script>
   export default {
-    name: "Nav",
-    methods: {
-      closeNav() {
-        tab: false
-      }
-    }
+    name: "Nav"
   }
 </script>
 
@@ -60,6 +55,23 @@
     ul.active
     {
       margin-left: -10rem;
+    }
+  }
+
+  @media (min-width:767px) {
+    nav
+    {
+      width: var(--full-header-width);
+      ul
+      {
+        display: flex;
+        line-height: 2rem;
+        li
+        {
+          margin: 0 1rem;
+          height: 2rem;
+        }
+      }
     }
   }
 </style>

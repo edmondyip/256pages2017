@@ -21,27 +21,36 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-  header {
-    transition: .5s;
-    height: calc(90vh - 2rem);
-    width: var(--header-width);
-    padding: 1rem;
-    background: #fff;
-    z-index: 800;
-    #logo {
-      margin:1rem auto;
-      font-size: 1.8rem;
-      font-weight: 400;
-      text-align: center;
-      color:#52c6d6;
-      border-radius: .2rem;
-    }
-    #logo::before {
-      content:"";
-      display: inline-block;
-      vertical-align: bottom;
-      height: 100%;
-      text-align: right;
-    }
+header {
+  transition: .5s;
+  height: 100%;
+  width: var(--header-width);
+  padding: var(--header-padding);
+  background: #fff;
+  z-index: 800;
+  #logo {
+    margin:1rem auto;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    color:#52c6d6;
+    border-radius: .2rem;
   }
+  #logo::before {
+    content:"";
+    display: inline-block;
+    vertical-align: bottom;
+    height: 100%;
+    text-align: right;
+  }
+}
+
+@media (min-width:767px) {
+  header {
+    height: 4rem;
+    width: var(--full-header-width);
+    display: block;
+  }
+}
+
 </style>

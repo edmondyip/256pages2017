@@ -30,36 +30,36 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-nav
-{
-  width: 100%;
-  transition: .5s;
-  ul
+  nav
   {
-    list-style: none;
-    padding: 1rem 2rem;
-    display: block;
-    line-height: 2rem;
+    width: 100%;
     transition: .5s;
-    li
+    ul
     {
-      margin: 1rem 0;
+      list-style: none;
+      padding: 1rem 2rem;
+      display: block;
+      line-height: 2rem;
       transition: .5s;
-      a
+      li
       {
-        line-height: 2rem;
-        height: 2rem;
+        margin: 1rem 0;
+        transition: .5s;
+        a
+        {
+          line-height: 2rem;
+          height: 2rem;
+        }
+      }
+      li:hover
+      {
+        color: #333;
+        text-decoration: underline;
       }
     }
-    li:hover
+    ul.active
     {
-      color: #333;
-      text-decoration: underline;
+      margin-left: -10rem;
     }
   }
-  ul.active
-  {
-    margin-left: -10rem;
-  }
-}
 </style>

@@ -12,9 +12,9 @@
   </section>
 </template>
 <script>
-export default {
-  props: ['error']
-}
+  export default {
+    props: ['error']
+  }
 </script>
 
 <style scoped>

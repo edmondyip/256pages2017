@@ -1,13 +1,9 @@
 <!-- Template -->
 <template>
   <section>
-<<<<<<< HEAD
-    <img src="~assest/img/chinese.svg" alt="256pages">
-=======
     <div class="welcome-image">
-      <img src="~assets/img/chinese.svg" alt="256">
+      <img src="~assets/img/chinese.svg" alt="256pages">
     </div>
->>>>>>> 6258ddf22b40deaa8abeaf398bb7bac7298c096f
   </section>
 </template>
 

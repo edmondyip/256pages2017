@@ -2,7 +2,7 @@
 <template>
   <header>
     <div id="logo">
-        <nuxt-link to="/">256P</nuxt>
+        <nuxt-link to="/"><img src="~assets/img/chinese.svg" alt="256pages"></nuxt>
       </div>
     <app-navbar />
   </header>

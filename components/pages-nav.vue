@@ -44,6 +44,7 @@
         {
           line-height: 2rem;
           height: 2rem;
+          cursor: pointer;
         }
       }
       li:hover
@@ -61,15 +62,16 @@
   @media (min-width:767px) {
     nav
     {
-      width: var(--full-header-width);
+      width: var(--container-width);
       ul
       {
         display: flex;
-        line-height: 2rem;
+        line-height: 1rem;
+        justify-content: center;
         li
         {
           margin: 0 1rem;
-          height: 2rem;
+          height: 1rem;
         }
       }
     }

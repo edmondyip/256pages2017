@@ -47,7 +47,7 @@ header {
 
 @media (min-width:767px) {
   header {
-    height: 4rem;
+    height: 5rem;
     width: var(--full-header-width);
     display: block;
   }

@@ -27,10 +27,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 100vh;
     width: 100%;
+    height: 95vh;
     img {
-      width: 10rem;
+      width: 15rem;
     }
   }
 </style>

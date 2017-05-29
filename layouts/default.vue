@@ -11,8 +11,8 @@
       <h1 v-else class="title">{{ $route.name }}</h1>
       <nuxt/>
     </article>
-    <app-footer/>
   </div>
+  <app-footer/>
 </template>
 
 <!-- Script -->

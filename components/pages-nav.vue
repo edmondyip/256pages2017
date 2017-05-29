@@ -8,12 +8,7 @@
       <li><nuxt-link to="/contact">Contact</nuxt-link></li>
       <li><a href="https://blog.256pages.com/" target="_blank">Blog</a></li>
     </ul>
-    <!--
-    <div class="tab" v-on:click="tab = !tab" v-bind:class="{ active: tab }">
-      <i class="material-icons">arrow_back</i>
-    </div>
-  -->
-</nav>
+  </nav>
 </template>
 
 <!-- Script -->
@@ -62,11 +57,18 @@
   @media (min-width:767px) {
     nav
     {
+<<<<<<< HEAD
       width: var(--container-width);
       ul
       {
         display: flex;
         line-height: 1rem;
+=======
+      ul
+      {
+        display: flex;
+        line-height: 2rem;
+>>>>>>> f03e3e1598d70a9c50562f4d780f46c0e85e1d82
         justify-content: center;
         li
         {

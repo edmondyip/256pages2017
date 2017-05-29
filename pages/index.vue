@@ -2,7 +2,7 @@
 <template>
   <section>
     <div class="welcome-image">
-      <img src="~assets/img/chinese.svg" alt="256">
+      <img src="~assets/img/chinese.svg" alt="256pages">
     </div>
   </section>
 </template>

@@ -17,7 +17,8 @@ module.exports = {
       { name: 'msapplication-navbutton-color', content: '#52c6d6' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
-      { name: 'theme-color', content: '#52c6d6' }
+      { name: 'theme-color', content: '#52c6d6' },
+      { name: 'google-site-verification', content: 'vA7tpUkqKhXTdkqg4_vIFYET5zO8oMhd9EDlnG6GkNM'}
     ],
     link: [
     /*  { rel: 'icon', type: 'image/x-icon', href: 'https://www.kisstudio.co/static/favicon.ico' },*/

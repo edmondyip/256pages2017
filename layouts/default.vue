@@ -33,7 +33,7 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-@import "~assets/css/main.scss";
+@import "~assets/css/setting.scss";
 
   #container {
     flex-wrap: nowrap;
@@ -78,8 +78,6 @@
     }
   }
   @include for-tablet {
-    #container {
-    }
     .nav-btn {
       display: none;
     }

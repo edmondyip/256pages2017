@@ -7,19 +7,19 @@ module.exports = {
   */
   head: {
     titleTemplate: '%s - 256P',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'sitecode', content: 'hk'},
-      { name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' },
-      { hid: 'description', content: "Edmond Yip's Personal Website & Portfolio" },
-      { name: 'msapplication-TileColor', content: '#52c6d6' },
-      { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
-      { name: 'msapplication-navbutton-color', content: '#52c6d6' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
-      { name: 'theme-color', content: '#52c6d6' },
-      { name: 'google-site-verification', content: 'vA7tpUkqKhXTdkqg4_vIFYET5zO8oMhd9EDlnG6GkNM'}
-    ],
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'sitecode', content: 'hk'},
+        { name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' },
+        { hid: 'description', content: "Edmond Yip's Personal Website & Portfolio" },
+        { name: 'msapplication-TileColor', content: '#52c6d6' },
+        { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
+        { name: 'msapplication-navbutton-color', content: '#52c6d6' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+        { name: 'theme-color', content: '#52c6d6' },
+        { name: 'google-site-verification', content: 'vA7tpUkqKhXTdkqg4_vIFYET5zO8oMhd9EDlnG6GkNM'}
+      ],
     link: [
     /*  { rel: 'icon', type: 'image/x-icon', href: 'https://www.kisstudio.co/static/favicon.ico' },*/
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dosis:200,400' },

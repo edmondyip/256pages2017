@@ -33,7 +33,7 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-@import "~assets/css/setting.scss";
+@import "~assets/css/main.scss";
 
   #container {
     flex-wrap: nowrap;

@@ -67,7 +67,7 @@
       {
         display: flex;
         line-height: 1rem;
-        width: var(--container-width);
+        justify-content: center;
         li
         {
           margin: 0 1rem;

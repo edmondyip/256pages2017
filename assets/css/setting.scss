@@ -1,0 +1,33 @@
+/* ============= setting =============*/
+/*  Color  */
+$font-color: #999;
+$title-color: #333;
+$theme-color: rgb(239,246,245);
+$background-color: #fff;
+
+:root {
+  --header-width: 8rem;
+  --header-padding: 1rem;
+  --mobile-header-width: (var(--header-width) + var(--header-padding));
+  --full-header-width: (100vw - var(--header-padding));
+  --container-width: (100vw + var(--total-header-width));
+}
+
+/*  Mixinz  */
+@mixin for-tablet {
+  @media (min-width: 767px) { @content; }
+}
+@mixin for-desktop {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin box-shadow($shadows) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}

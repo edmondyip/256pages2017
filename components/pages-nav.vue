@@ -2,8 +2,8 @@
 <template>
   <nav id="nav">
     <ul>
-      <li><nuxt-link v-on:click="closeNav()" to="/">Home</nuxt-link></li>
-      <li><nuxt-link v-on:click="closeNav()" to="/about">About</nuxt-link></li>
+      <li><nuxt-link to="/">Home</nuxt-link></li>
+      <li><nuxt-link to="/about">About</nuxt-link></li>
       <li><nuxt-link to="/portfolio/">Portfolio</nuxt></li>
       <li><nuxt-link to="/contact">Contact</nuxt-link></li>
       <li><a href="https://blog.256pages.com/" target="_blank">Blog</a></li>
@@ -19,47 +19,76 @@
 <!-- Script -->
 <script>
   export default {
-    name: "Nav",
-    methods: {
-      closeNav() {
-        tab: false
-      }
-    }
+    name: "Nav"
   }
 </script>
 
 <!-- Style -->
 <style lang="scss" scoped>
-nav
-{
-  width: 100%;
-  transition: .5s;
-  ul
+  nav
   {
-    list-style: none;
-    padding: 1rem 2rem;
-    display: block;
-    line-height: 2rem;
+    width: 100%;
     transition: .5s;
-    li
+    ul
     {
-      margin: 1rem 0;
+      list-style: none;
+      padding: 1rem 2rem;
+      display: block;
+      line-height: 2rem;
       transition: .5s;
-      a
+      li
       {
-        line-height: 2rem;
-        height: 2rem;
+        margin: 1rem 0;
+        transition: .5s;
+        a
+        {
+          line-height: 2rem;
+          height: 2rem;
+          cursor: pointer;
+        }
+      }
+      li:hover
+      {
+        color: #333;
+        text-decoration: underline;
       }
     }
-    li:hover
+    ul.active
     {
-      color: #333;
-      text-decoration: underline;
+      margin-left: -10rem;
     }
   }
-  ul.active
-  {
-    margin-left: -10rem;
+
+  @media (min-width:767px) {
+    nav
+    {
+<<<<<<< HEAD
+      width: var(--container-width);
+      ul
+      {
+        display: flex;
+        line-height: 1rem;
+=======
+<<<<<<< HEAD
+      width: var(--container-width);
+      ul
+      {
+        display: flex;
+        line-height: 1rem;
+=======
+      ul
+      {
+        display: flex;
+        line-height: 2rem;
+>>>>>>> f03e3e1598d70a9c50562f4d780f46c0e85e1d82
+>>>>>>> 6c8d44eaba542365f3cd08ef761d071d966c0042
+        justify-content: center;
+        li
+        {
+          margin: 0 1rem;
+          height: 1rem;
+        }
+      }
+    }
   }
-}
 </style>

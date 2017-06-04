@@ -14,7 +14,6 @@
       title: "Contact"
     }
   }
-
 </script>
 
 <!-- Style -->

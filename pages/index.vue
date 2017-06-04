@@ -1,37 +1,35 @@
-<!-- Template -->
 <template>
-  <section>
-    <div class="welcome-image">
-      <img src="~assets/img/chinese.svg" alt="256pages">
-    </div>
-  </section>
+  <div class="container">
+    <h1>User Agent</h1>
+    <p>{{ userAgent }}</p>
+    <p><nuxt-link to="/posts">Blog</nuxt-link></p>
+  </div>
 </template>
 
-<!-- Script -->
 <script>
-  export default {
-    name: "Index",
-    head: {
-      title: "Pages",
-      meta: [
-        { name: 'CanonicalUrl', content: 'https://256pages.com' }
-      ]
-    }
+export default {
+  asyncData ({ req }, callback) {
+    setTimeout(function () {
+      // callback(err, data)
+      callback(null, {
+        userAgent: (req ? req.headers['user-agent'] : navigator.userAgent)
+      })
+    }, 100)
   }
+}
 </script>
 
-<!-- Style -->
-<style lang="scss" scoped>
-  .welcome-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 95vh;
-    background: rgb(8,251,144);
-    img {
-      width: 15rem;
-    }
-  }
+<style scoped>
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+p {
+  font-size: 20px;
+}
+a {
+  color: #41B883;
+}
 </style>

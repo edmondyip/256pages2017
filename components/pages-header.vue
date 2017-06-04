@@ -2,7 +2,15 @@
 <template>
   <header>
     <div id="logo">
+<<<<<<< HEAD
         <nuxt-link to="/"><img src="~assets/img/chinese.svg" alt="256pages"></nuxt>
+=======
+<<<<<<< HEAD
+        <nuxt-link to="/"><img src="~assets/img/chinese.svg" alt="256pages"></nuxt>
+=======
+        <nuxt-link to="/"><img src="~assets/img/chinese.svg" alt="256pages Logo"></nuxt>
+>>>>>>> f03e3e1598d70a9c50562f4d780f46c0e85e1d82
+>>>>>>> 6c8d44eaba542365f3cd08ef761d071d966c0042
       </div>
     <app-navbar />
   </header>
@@ -47,11 +55,27 @@
     }
   }
 
+<<<<<<< HEAD
 @include for-tablet {
+=======
+<<<<<<< HEAD
+@media (min-width:767px) {
+>>>>>>> 6c8d44eaba542365f3cd08ef761d071d966c0042
   header {
     height: 5rem;
     width: var(--full-header-width);
     display: block;
+<<<<<<< HEAD
+=======
+=======
+  @media (min-width:767px) {
+    header {
+      height: 5rem;
+      width: var(--full-header-width);
+      display: block;
+    }
+>>>>>>> f03e3e1598d70a9c50562f4d780f46c0e85e1d82
+>>>>>>> 6c8d44eaba542365f3cd08ef761d071d966c0042
   }
 }
 </style>

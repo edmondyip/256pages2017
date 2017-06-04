@@ -62,11 +62,26 @@
   @media (min-width:767px) {
     nav
     {
+<<<<<<< HEAD
       width: var(--container-width);
       ul
       {
         display: flex;
         line-height: 1rem;
+=======
+<<<<<<< HEAD
+      width: var(--container-width);
+      ul
+      {
+        display: flex;
+        line-height: 1rem;
+=======
+      ul
+      {
+        display: flex;
+        line-height: 2rem;
+>>>>>>> f03e3e1598d70a9c50562f4d780f46c0e85e1d82
+>>>>>>> 6c8d44eaba542365f3cd08ef761d071d966c0042
         justify-content: center;
         li
         {

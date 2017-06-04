@@ -9,7 +9,7 @@
 <script>
   export default {
     head : {
-      title: "Portfolio",
+      title: "Portfolio"
     }
   }
 </script>

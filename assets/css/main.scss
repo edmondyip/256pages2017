@@ -1,22 +1,4 @@
-/*  Setup  */
-$font-color: #999;
-$title-color: #333;
-$theme-color: rgb(239,246,245);
-
-:root {
-  --header-width: 8rem;
-  --header-padding: 1rem;
-  --mobile-header-width: (var(--header-width) + var(--header-padding));
-  --full-header-width: (100% - var(--header-padding));
-  --container-width: (100% + var(--total-header-width));
-}
-/*  Mixinz  */
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
+@import "~assets/css/setting.scss";
 
 /* Basic */
 html {

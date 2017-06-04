@@ -8,7 +8,12 @@
       <li><nuxt-link to="/contact">Contact</nuxt-link></li>
       <li><a href="https://blog.256pages.com/" target="_blank">Blog</a></li>
     </ul>
-  </nav>
+    <!--
+    <div class="tab" v-on:click="tab = !tab" v-bind:class="{ active: tab }">
+      <i class="material-icons">arrow_back</i>
+    </div>
+  -->
+</nav>
 </template>
 
 <!-- Script -->
@@ -39,6 +44,7 @@
         {
           line-height: 2rem;
           height: 2rem;
+          cursor: pointer;
         }
       }
       li:hover
@@ -56,15 +62,16 @@
   @media (min-width:767px) {
     nav
     {
+      width: var(--container-width);
       ul
       {
         display: flex;
-        line-height: 2rem;
+        line-height: 1rem;
         justify-content: center;
         li
         {
           margin: 0 1rem;
-          height: 2rem;
+          height: 1rem;
         }
       }
     }

@@ -33,6 +33,8 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
+@import "~assets/css/main.scss";
+
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
@@ -40,7 +42,6 @@
     margin-left: -10rem;
     opacity: 1;
     transition: .5s;
-    box-shadow: 0 0 5rem rgba(0,0,0,.2);
     background: #fff;
     #content {
       padding: 1rem;
@@ -73,17 +74,22 @@
     padding: .1rem;
     z-index: 1000;
     :hover {
-      background:  darken(#52c6d6,20%);
+      background: darken(#52c6d6,20%);
     }
   }
-  @media (min-width: 767px) {
+  @include for-tablet {
     #container {
-      width: 90vw;
-      height: 95vh;
-      margin: 2.5vh auto;
     }
     .nav-btn {
       display: none;
+    }
+  }
+  @include for-desktop {
+    #container {
+      width: 1200px;
+      height: 95vh;
+      margin: 2.5vh auto;
+      box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }
   }
 </style>

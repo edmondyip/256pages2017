@@ -6,7 +6,6 @@
         <nuxt-link :to="{ name: 'posts-id', params: { id: post.id } }">{{ post.title }}</nuxt-link>
       </li>
     </ul>
-    <p><nuxt-link to="/">Back to home page</nuxt-link></p>
   </div>
 </template>
 

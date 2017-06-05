@@ -3,7 +3,7 @@ process.noDeprecation = true
 
 module.exports = {
   /*
-  ** Headers of the page
+  ** Headers of the page*/
 
   head: {
     titleTemplate: '%s - 256P',
@@ -21,7 +21,7 @@ module.exports = {
         { name: 'google-site-verification', content: 'vA7tpUkqKhXTdkqg4_vIFYET5zO8oMhd9EDlnG6GkNM'}
       ],
     link: [
-    /*  { rel: 'icon', type: 'image/x-icon', href: 'https://www.kisstudio.co/static/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'https://www.kisstudio.co/static/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dosis:200,400' },
       { rel: 'icon', type: 'image/x-icon', sizes: "16x16", href: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/x-icon', sizes: "32x32", href: '/favicon-32x32.png' },
@@ -41,14 +41,14 @@ module.exports = {
   },
   /*
   ** Global CSS
-
+*/
   css: [
     '~assets/css/normalize.css',
     { src: '~assets/css/main.scss', lang: 'scss' }
   ],
   /*
   ** Customize the progress-bar color
-
+*/
   loading: { color: '#52c6d6' },
 
 /* Load Customize Main.js */

@@ -1,4 +1,3 @@
-<!-- Template -->
 <template>
   <section class="container">
     <h1 class="title">
@@ -12,15 +11,12 @@
     </nuxt-link>
   </section>
 </template>
-
-<!-- Script -->
 <script>
   export default {
     props: ['error']
   }
 </script>
 
-<!-- Style -->
 <style scoped>
 
 </style>

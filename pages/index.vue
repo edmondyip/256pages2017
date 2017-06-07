@@ -29,6 +29,7 @@
     position: relative;
     width: 100%;
     height: 95vh;
+    background: rgb(8,251,144);
     img {
       width: 15rem;
     }

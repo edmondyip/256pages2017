@@ -2,11 +2,7 @@
 <template>
   <header>
     <div id="logo">
-<<<<<<< HEAD
         <nuxt-link to="/"><img src="~assets/img/chinese.svg" alt="256pages"></nuxt>
-=======
-        <nuxt-link to="/"><img src="~assets/img/chinese.svg" alt="256pages Logo"></nuxt>
->>>>>>> f03e3e1598d70a9c50562f4d780f46c0e85e1d82
       </div>
     <app-navbar />
   </header>
@@ -25,6 +21,8 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
+@import "~assets/css/setting.scss";
+
   header {
     transition: .5s;
     height: 100%;
@@ -49,19 +47,11 @@
     }
   }
 
-<<<<<<< HEAD
-@media (min-width:767px) {
+@include for-tablet {
   header {
     height: 5rem;
     width: var(--full-header-width);
     display: block;
-=======
-  @media (min-width:767px) {
-    header {
-      height: 5rem;
-      width: var(--full-header-width);
-      display: block;
-    }
->>>>>>> f03e3e1598d70a9c50562f4d780f46c0e85e1d82
   }
+}
 </style>

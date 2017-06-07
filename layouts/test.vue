@@ -5,26 +5,17 @@
       <div class="burger">Menu</div>
     </div>
     <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
-    <app-header/>
     <article id="content">
       <div v-if="$route.name=='index'"></div>
       <h1 v-else class="title">{{ $route.name }}</h1>
       <nuxt/>
     </article>
   </div>
-  <app-footer/>
 </template>
 
 <!-- Script -->
 <script>
-  import Header from '~components/pages-header.vue'
-  import Footer from '~components/pages-footer.vue'
   export default {
-    name: "DefaultLayout",
-    components: {
-      "app-header" : Header,
-      "app-footer" : Footer
-    },
     data: () => ({
       tab: false
     })
@@ -33,16 +24,14 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-@import "~assets/css/main.scss";
-
+@import ""
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
     height: 100%;
-    margin-left: -10rem;
     opacity: 1;
     transition: .5s;
-    background: #fff;
+    background: $container-color;
     #content {
       padding: 1rem;
       width: 100%;
@@ -77,14 +66,14 @@
       background: darken(#52c6d6,20%);
     }
   }
-  @include for-tablet {
+  @media (min-width: 767px) {
     #container {
     }
     .nav-btn {
       display: none;
     }
   }
-  @include for-desktop {
+  @media (min-width: 1280px) {
     #container {
       width: 1200px;
       height: 95vh;

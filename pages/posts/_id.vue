@@ -2,8 +2,6 @@
   <div class="container">
     <h1>{{ post.title }}</h1>
     <pre>{{ post.body }}</pre>
-    <p><nuxt-link to="/posts">Back to the list</nuxt-link></p>
-  </div>
 </template>
 
 <script>

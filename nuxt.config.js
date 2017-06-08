@@ -58,7 +58,6 @@ module.exports = {
   plugins: [
     '~plugins/ga.js'
   ],
-
   build: {
     vendor: ['axios'],
     assetsPublicPath: '/',

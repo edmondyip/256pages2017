@@ -15,7 +15,7 @@ export default {
   },
   head () {
     return {
-      title: this.post.uid
+      title: this.post.title
     }
   }
 }

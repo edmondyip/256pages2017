@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h1>Blog</h1>
     <ul>
       <li v-for="post in posts">
         <nuxt-link :to="{ name: 'posts-id', params: { id: post.id } }">
@@ -8,13 +7,11 @@
         </nuxt-link>
       </li>
     </ul>
-    <p><nuxt-link to="/">Back to home page</nuxt-link></p>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
   asyncData ({ req, params }) {
     // We can return a Promise instead of calling the callback
@@ -24,6 +21,7 @@ export default {
     })
   }
 }
+
 </script>
 
 <style scoped>

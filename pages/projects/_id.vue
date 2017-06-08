@@ -12,7 +12,7 @@ import axios from 'axios'
 export default {
   async asyncData ({ params }) {
     // We can use async/await ES6 feature
-    let { data } = await axios.get(`http://0.0.0.0:3000/posts/${params.id}`)
+    let { data } = await axios.get(`http://localhost:3002/posts/${params.id}`)
     return { post: data }
   },
   head () {

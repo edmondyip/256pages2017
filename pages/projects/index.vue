@@ -16,7 +16,7 @@ import axios from 'axios'
 export default {
   asyncData ({ req, params }) {
     // We can return a Promise instead of calling the callback
-    return axios.get('http://0.0.0.0:3000/posts')
+    return axios.get('http://localhost:3002/posts')
     .then((res) => {
       return { posts: res.data.slice(0, 5) }
     })

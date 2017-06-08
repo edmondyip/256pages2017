@@ -1,33 +1,49 @@
 [
   {
     "project": {
-      "id": "20150201",
+      "id": 1,
       "name": "Eventor",
       "date": "2015",
-      "type": "UX Design",
-      "url": "project/eventor",
-      "cover": "~asset/project/eventor/cover.jpg"
+      "type": ["UX Design","UI Design"],
+      "tech": ["Sketch","Photoshop"],
+      "url": "eventor"
     },
     "author": {
       "name": "Edmond Yip",
       "email": "neta.edmond@gmail.com",
-      "home": "256 Pages",
+      "home": "256P",
       "home_url": "https://256pages.com"
     }
   },
   {
     "project": {
-      "id": "20150201",
+      "id": 2,
       "name": "Cloudnifier",
       "date": "2016",
-      "type": "Website Design",
-      "url": "project/cloudnifier",
-      "cover": "~asset/project/cloudnifier/cover.jpg"
+      "type": ["Website Design","Responsive Design"],
+      "tech": ["Wordpress","Javascript"],
+      "url": "cloudnifier"
     },
     "author": {
       "name": "Edmond Yip",
       "email": "neta.edmond@gmail.com",
-      "home": "256 Pages",
+      "home": "256P",
+      "home_url": "https://256pages.com"
+    }
+  },
+  {
+    "project": {
+      "id": 3,
+      "name": "InnoDesign",
+      "date": "2009",
+      "type": ["Website Design","Logo Design","HTML"],
+      "tech": ["Html","Javascript","Flash"],
+      "url": "innodesign"
+    },
+    "author": {
+      "name": "Edmond Yip",
+      "email": "neta.edmond@gmail.com",
+      "home": "256P",
       "home_url": "https://256pages.com"
     }
   }

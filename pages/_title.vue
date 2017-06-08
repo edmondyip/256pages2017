@@ -1,12 +1,12 @@
 <template>
   <div class="container">
+    <h1>Blog</h1>
     <ul>
       <li v-for="post in posts">
-        <nuxt-link :to="{ name: 'posts-id', params: { id: post.id } }">
-          {{ post.title }}
-        </nuxt-link>
+        <nuxt-link :to="{ name: 'posts-id', params: { id: post.id } }">{{ post.title }}</nuxt-link>
       </li>
     </ul>
+    <nuxt-child/>
   </div>
 </template>
 
@@ -14,12 +14,15 @@
 import axios from 'axios'
 
 export default {
-  asyncData ({ req, params }) {
-    // We can return a Promise instead of calling the callback
-    return axios.get('http://localhost:3002/posts')
-    .then((res) => {
-      return { posts: res.data.slice(0, 10) }
-    })
+  async asyncData ({ params }) {
+    // We can use async/await ES6 feature
+    let { data } = await axios.get(`http://localhost:3002/posts/${params.id}`)
+    return { post: data }
+  },
+  head () {
+    return {
+      title: this.post.title
+    }
   }
 }
 </script>

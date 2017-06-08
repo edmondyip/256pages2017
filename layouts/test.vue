@@ -5,26 +5,17 @@
       <div class="burger">Menu</div>
     </div>
     <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
-    <app-header/>
     <article id="content">
       <div v-if="$route.name=='index'"></div>
       <h1 v-else class="title">{{ $route.name }}</h1>
       <nuxt/>
     </article>
   </div>
-  <app-footer/>
 </template>
 
 <!-- Script -->
 <script>
-  import Header from '~components/pages-header.vue'
-  import Footer from '~components/pages-footer.vue'
   export default {
-    name: "DefaultLayout",
-    components: {
-      "app-header" : Header,
-      "app-footer" : Footer
-    },
     data: () => ({
       tab: false
     })
@@ -33,20 +24,14 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-<<<<<<< HEAD
-@import "~assets/css/main.scss";
-=======
-@import "~assets/css/setting.scss";
->>>>>>> 87d3a420ea4ff836851c5c944d652edd4ca72007
-
+@import ""
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
     height: 100%;
-    margin-left: -10rem;
     opacity: 1;
     transition: .5s;
-    background: #fff;
+    background: $container-color;
     #content {
       padding: 1rem;
       width: 100%;
@@ -79,32 +64,16 @@
     z-index: 1000;
     :hover {
       background: darken(#52c6d6,20%);
-<<<<<<< HEAD
     }
   }
-  @include for-tablet {
+  @media (min-width: 767px) {
     #container {
     }
     .nav-btn {
       display: none;
-=======
     }
   }
-  @include for-tablet {
-    .nav-btn {
-      display: none;
-    }
-  }
-  @include for-desktop {
-    #container {
-      width: 1200px;
-      height: 95vh;
-      margin: 2.5vh auto;
-      box-shadow: 0 0 5rem rgba(0,0,0,.2);
->>>>>>> 87d3a420ea4ff836851c5c944d652edd4ca72007
-    }
-  }
-  @include for-desktop {
+  @media (min-width: 1280px) {
     #container {
       width: 1200px;
       height: 95vh;

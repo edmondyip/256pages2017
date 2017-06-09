@@ -1,14 +1,10 @@
 <template>
   <div class="container">
-    <h1>Blog</h1>
-    <ul>
+   <ul class="posts">
       <li v-for="post in posts">
-        <nuxt-link :to="{ name: 'posts-id', params: { id: post.id } }">
-          {{ post.title }}
-        </nuxt-link>
+        <nuxt-link :to="'/posts/'+post.id">{{ post.title }}</nuxt-link>
       </li>
     </ul>
-    <p><nuxt-link to="/">Back to home page</nuxt-link></p>
   </div>
 </template>
 
@@ -16,11 +12,10 @@
 import axios from 'axios'
 
 export default {
-  asyncData ({ req, params }) {
-    // We can return a Promise instead of calling the callback
-    return axios.get('http://localhost:3002/posts')
+  asyncData () {
+    return axios.get('https://jsonplaceholder.typicode.com/posts')
     .then((res) => {
-      return { posts: res.data.slice(0, 10) }
+      return { posts: res.data }
     })
   }
 }
@@ -28,27 +23,23 @@ export default {
 
 <style scoped>
 .container {
-  width: 70%;
-  margin: auto;
   text-align: center;
-  padding-top: 100px;
+  margin-top: 100px;
+  font-family: sans-serif;
 }
-ul {
+.posts {
   list-style-type: none;
-  padding: 0;
 }
-ul li {
+.posts li a {
+  display: inline-block;
+  width: 800px;
   border: 1px #ddd solid;
-  padding: 20px;
+  padding: 10px;
   text-align: left;
+  color: #222;
+  text-decoration: none;
 }
-ul li a {
-  color: gray;
-}
-p {
-  font-size: 20px;
-}
-a {
-  color: #41B883;
+.posts li a:hover {
+  color: orange;
 }
 </style>

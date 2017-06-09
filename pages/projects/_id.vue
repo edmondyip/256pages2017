@@ -8,11 +8,9 @@
 
 <script>
 import axios from 'axios'
-
 export default {
   async asyncData ({ params }) {
     // We can use async/await ES6 feature
-    let { url } = "//localhost:3002"
     let { data } = await axios.get(`http://localhost:3002/projects/${params.id}`)
     return { project: data }
   },

@@ -10,7 +10,6 @@
 
 <script>
 import axios from 'axios'
-
 export default {
   asyncData ({ req, params }) {
     // We can return a Promise instead of calling the callback

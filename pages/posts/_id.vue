@@ -1,49 +1,32 @@
 <template>
-  <div class="container">
-    <h1>{{ post.title }}</h1>
-    <pre>{{ post.body }}</pre>
+  <div class="post">
+    <h3>{{ title }}</h3>
+    <h4>{{ body }}</h4>
+    <p><nuxt-link to="../posts">List</nuxt-link></p>
+  </div>
 </template>
 
 <script>
 import axios from 'axios'
 
 export default {
-  async asyncData ({ params }) {
-    // We can use async/await ES6 feature
-    let { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
-    return { post: data }
+  validate ({ params }) {
+    return !isNaN(+params.id)
   },
-  head () {
-    return {
-      title: this.post.title
-    }
+  asyncData ({ params, error }) {
+    return axios.get(`https://jsonplaceholder.typicode.com/posts/${+params.id}`)
+    .then((res) => res.data)
+    .catch(() => {
+      error({ message: 'User not found', statusCode: 404 })
+    })
   }
 }
 </script>
 
 <style scoped>
-.container {
-  width: 70%;
-  margin: auto;
+.user {
   text-align: center;
-  padding-top: 100px;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-ul li {
-  border: 1px #ddd solid;
-  padding: 20px;
-  text-align: left;
-}
-ul li a {
-  color: gray;
-}
-p {
-  font-size: 20px;
-}
-a {
-  color: #41B883;
+  margin-top: 100px;
+  font-family: sans-serif;
 }
 </style>

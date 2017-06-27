@@ -24,7 +24,6 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-@import ""
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);

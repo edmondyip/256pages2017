@@ -8,7 +8,7 @@
     <app-header/>
     <article id="content">
       <div v-if="$route.name=='index'"></div>
-      <h1 v-else class="title">{{ $route.name }}</h1>
+      <h1 v-else-if class="title">{{ $route.name }}</h1>
       <nuxt/>
     </article>
   </div>
@@ -75,25 +75,30 @@
       background: darken(#52c6d6,20%);
     }
   }
-  @include for-tablet {
-    .nav-btn {
-      display: none;
-    }
-  }
-  @include for-desktop {
-    #container {
-      width: 1200px;
-      height: 95vh;
-      margin: 2.5vh auto;
-      box-shadow: 0 0 5rem rgba(0,0,0,.2);
-    }
-  }
-  @include for-desktop {
-    #container {
-      width: 1200px;
-      height: 95vh;
-      margin: 2.5vh auto;
-      box-shadow: 0 0 5rem rgba(0,0,0,.2);
-    }
-  }
+
 </style>
+
+
+<!--
+@include for-tablet {
+  .nav-btn {
+    display: none;
+  }
+}
+@include for-desktop {
+  #container {
+    width: 1200px;
+    height: 95vh;
+    margin: 2.5vh auto;
+    box-shadow: 0 0 5rem rgba(0,0,0,.2);
+  }
+}
+@include for-desktop {
+  #container {
+    width: 1200px;
+    height: 95vh;
+    margin: 2.5vh auto;
+    box-shadow: 0 0 5rem rgba(0,0,0,.2);
+  }
+}
+-->

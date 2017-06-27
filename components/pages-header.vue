@@ -2,7 +2,7 @@
 <template>
   <header>
     <div id="logo">
-        <nuxt-link to="/"><img src="~assets/img/chinese.svg" alt="256pages"></nuxt>
+        <nuxt-link to="/"><img src="~assets/img/chinese.svg" alt="256pages"></nuxt-link>
       </div>
     <app-navbar />
   </header>
@@ -47,6 +47,11 @@
     }
   }
 
+
+</style>
+
+<!--
+
 @include for-tablet {
   header {
     height: 5rem;
@@ -54,4 +59,5 @@
     display: block;
   }
 }
-</style>
+
+-->

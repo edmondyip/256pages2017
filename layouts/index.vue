@@ -1,45 +1,26 @@
 <!-- Template -->
 <template>
-  <div id="container" v-bind:class="{ active: tab }">
-    <div class="nav-btn" v-on:click="tab = !tab">
-      <div class="burger">Menu</div>
-    </div>
-    <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
-    <article id="content">
-      <div v-if="$route.name=='index'"></div>
-      <h1 v-else class="title">{{ $route.name }}</h1>
-      <nuxt/>
-    </article>
+  <div id="container">
+    <nuxt/>
   </div>
 </template>
 
 <!-- Script -->
 <script>
-  export default {
-    data: () => ({
-      tab: false
-    })
-  }
+
 </script>
 
 <!-- Style -->
 <style lang="scss" scoped>
-@import ""
+@import "~assets/css/setting.scss";
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
     height: 100%;
+    margin-left: -10rem;
     opacity: 1;
     transition: .5s;
-    background: $container-color;
-    #content {
-      padding: 1rem;
-      width: 100%;
-      position: relative;
-      align-content: flex-start;
-      transition: .5s;
-      z-index: 100;
-    }
+    background: #fff;
   }
   #container.active {
     margin-left: 0;
@@ -66,14 +47,12 @@
       background: darken(#52c6d6,20%);
     }
   }
-  @media (min-width: 767px) {
-    #container {
-    }
+  @include for-tablet {
     .nav-btn {
       display: none;
     }
   }
-  @media (min-width: 1280px) {
+  @include for-desktop {
     #container {
       width: 1200px;
       height: 95vh;
@@ -82,3 +61,8 @@
     }
   }
 </style>
+
+
+<!--
+
+-->

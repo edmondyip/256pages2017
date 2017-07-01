@@ -8,11 +8,11 @@
     <app-header/>
     <article id="content">
       <div v-if="$route.name=='index'"></div>
-      <h1 v-else class="title">{{ $route.name }}</h1>
+      <h1 v-else-if class="title">{{ $route.name }}</h1>
       <nuxt/>
     </article>
+    <app-footer/>
   </div>
-  <app-footer/>
 </template>
 
 <!-- Script -->
@@ -33,12 +33,7 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-<<<<<<< HEAD
-@import "~assets/css/main.scss";
-=======
 @import "~assets/css/setting.scss";
->>>>>>> 87d3a420ea4ff836851c5c944d652edd4ca72007
-
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
@@ -79,29 +74,11 @@
     z-index: 1000;
     :hover {
       background: darken(#52c6d6,20%);
-<<<<<<< HEAD
-    }
-  }
-  @include for-tablet {
-    #container {
-    }
-    .nav-btn {
-      display: none;
-=======
     }
   }
   @include for-tablet {
     .nav-btn {
       display: none;
-    }
-  }
-  @include for-desktop {
-    #container {
-      width: 1200px;
-      height: 95vh;
-      margin: 2.5vh auto;
-      box-shadow: 0 0 5rem rgba(0,0,0,.2);
->>>>>>> 87d3a420ea4ff836851c5c944d652edd4ca72007
     }
   }
   @include for-desktop {

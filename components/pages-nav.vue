@@ -4,7 +4,7 @@
     <ul>
       <li><nuxt-link to="/">Home</nuxt-link></li>
       <li><nuxt-link to="/about">About</nuxt-link></li>
-      <li><nuxt-link to="/project/">Project</nuxt></li>
+      <li><nuxt-link to="/project/">Project</nuxt-link></li>
       <li><nuxt-link to="/contact">Contact</nuxt-link></li>
       <li><a href="https://blog.256pages.com/" target="_blank">Blog</a></li>
     </ul>

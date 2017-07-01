@@ -1,23 +1,22 @@
 <template>
   <div class="container">
-    <h1>{{ post.title }}</h1>
-    <pre>{{ post.body }}</pre>
-    <p><nuxt-link to="/posts">Back to the list</nuxt-link></p>
+    <h1>{{ project.title }}</h1>
+    <pre>{{ project.body }}</pre>
+    <p><nuxt-link to="/projects">Back to the list</nuxt-link></p>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
   async asyncData ({ params }) {
     // We can use async/await ES6 feature
-    let { data } = await axios.get(`//localhost:3002/posts/${params.id}`)
-    return { post: data }
+    let { data } = await axios.get(`http://localhost:3002/projects/${params.id}`)
+    return { project: data }
   },
   head () {
     return {
-      title: this.post.title
+      title: this.project.title
     }
   }
 }

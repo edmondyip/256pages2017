@@ -7,7 +7,7 @@ $container-color: #fff;
 $background-color: #fff;
 
 :root {
-  --header-width: 8rem;
+  --header-width: 100%;
   --header-padding: 1rem;
   --mobile-header-width: (var(--header-width) + var(--header-padding));
   --full-header-width: (100vw - var(--header-padding));

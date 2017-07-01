@@ -1,34 +1,13 @@
 <!-- Template -->
 <template>
-  <div id="container" v-bind:class="{ active: tab }">
-    <div class="nav-btn" v-on:click="tab = !tab">
-      <div class="burger">Menu</div>
-    </div>
-    <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
-    <app-header/>
-    <article id="content">
-      <div v-if="$route.name=='index'"></div>
-      <h1 v-else-if class="title">{{ $route.name }}</h1>
-      <nuxt/>
-    </article>
-    <app-footer/>
+  <div id="container">
+    <nuxt/>
   </div>
 </template>
 
 <!-- Script -->
 <script>
-  import Header from '~components/pages-header.vue'
-  import Footer from '~components/pages-footer.vue'
-  export default {
-    name: "DefaultLayout",
-    components: {
-      "app-header" : Header,
-      "app-footer" : Footer
-    },
-    data: () => ({
-      tab: false
-    })
-  }
+
 </script>
 
 <!-- Style -->
@@ -42,14 +21,6 @@
     opacity: 1;
     transition: .5s;
     background: #fff;
-    #content {
-      padding: 1rem;
-      width: 100%;
-      position: relative;
-      align-content: flex-start;
-      transition: .5s;
-      z-index: 100;
-    }
   }
   #container.active {
     margin-left: 0;
@@ -90,3 +61,8 @@
     }
   }
 </style>
+
+
+<!--
+
+-->

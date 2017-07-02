@@ -1,13 +1,20 @@
 <!-- Template -->
 <template>
   <div id="container">
+    <app-navbar/>
     <nuxt/>
   </div>
 </template>
 
 <!-- Script -->
 <script>
-
+import NavBar from '~components/index-nav.vue'
+export default {
+  name: "IndexLayout",
+  components: {
+    "app-navbar" : NavBar
+  }
+}
 </script>
 
 <!-- Style -->
@@ -16,7 +23,7 @@
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
-    height: 100%;
+    min-height: 100%;
     margin-left: -10rem;
     opacity: 1;
     transition: .5s;

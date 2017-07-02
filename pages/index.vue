@@ -34,7 +34,7 @@ import Footer from '~components/pages-footer.vue'
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     background: rgb(133,241,193);
     img {
       width: 15rem;

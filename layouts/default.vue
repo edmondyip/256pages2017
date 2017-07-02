@@ -4,8 +4,8 @@
     <div class="nav-btn" v-on:click="tab = !tab">
       <div class="burger">Menu</div>
     </div>
-    <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
     <app-header/>
+    <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
     <article id="content">
       <div v-if="$route.name=='index'"></div>
       <h1 v-else-if class="title">{{ $route.name }}</h1>
@@ -37,7 +37,7 @@
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
-    height: 100%;
+    min-height: 100%;
     margin-left: -10rem;
     opacity: 1;
     transition: .5s;

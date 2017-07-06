@@ -87,21 +87,4 @@
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }
   }
-<<<<<<< HEAD
-  @include for-desktop {
-    #container {
-      width: 1200px;
-      height: 95vh;
-      margin: 2.5vh auto;
-      box-shadow: 0 0 5rem rgba(0,0,0,.2);
-    }
-  }
 </style>
-
-
-<!--
-
--->
-=======
-</style>
->>>>>>> b66a1517654f9e9e2d458c4649dc213099a20c81

@@ -1,15 +1,6 @@
 <!-- Template -->
 <template>
-  <div id="container" v-bind:class="{ active: tab }">
-    <div class="nav-btn" v-on:click="tab = !tab">
-      <div class="burger">Menu</div>
-    </div>
-    <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
-    <app-header/>
-    <article id="content">
       <nuxt/>
-    </article>
-  </div>
   <app-footer/>
 </template>
 

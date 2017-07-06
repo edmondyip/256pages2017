@@ -11,6 +11,7 @@
 <script>
   export default {
     name: "Index",
+    layout: "index.vue",
     head: {
       title: "Pages",
       meta: [

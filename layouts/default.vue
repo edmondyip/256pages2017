@@ -4,13 +4,13 @@
     <div class="nav-btn" v-on:click="tab = !tab">
       <div class="burger">Menu</div>
     </div>
-    <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
     <app-header/>
+    <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
     <article id="content">
       <nuxt/>
     </article>
+    <app-footer/>
   </div>
-  <app-footer/>
 </template>
 
 <!-- Script -->
@@ -35,7 +35,7 @@
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
-    height: 100%;
+    min-height: 100%;
     margin-left: -10rem;
     opacity: 1;
     transition: .5s;
@@ -87,6 +87,7 @@
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }
   }
+<<<<<<< HEAD
   @include for-desktop {
     #container {
       width: 1200px;
@@ -101,3 +102,6 @@
 <!--
 
 -->
+=======
+</style>
+>>>>>>> b66a1517654f9e9e2d458c4649dc213099a20c81

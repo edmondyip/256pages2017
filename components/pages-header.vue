@@ -25,7 +25,6 @@
 
   header {
     transition: .5s;
-    height: 100%;
     width: var(--header-width);
     padding: var(--header-padding);
     background: #fff;
@@ -46,18 +45,12 @@
       text-align: right;
     }
   }
-
+  @include for-desktop {
+    header {
+      height: 5rem;
+      width: var(--full-header-width);
+      display: block;
+    }
+  }
 
 </style>
-
-<!--
-
-@include for-tablet {
-  header {
-    height: 5rem;
-    width: var(--full-header-width);
-    display: block;
-  }
-}
-
--->

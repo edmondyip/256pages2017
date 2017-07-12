@@ -7,8 +7,6 @@
     <app-header/>
     <div class="overlay" v-show="tab" v-on:click="tab = !tab"></div>
     <article id="content">
-      <div v-if="$route.name=='index'"></div>
-      <h1 v-else-if class="title">{{ $route.name }}</h1>
       <nuxt/>
     </article>
     <app-footer/>

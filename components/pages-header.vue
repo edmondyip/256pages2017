@@ -47,7 +47,6 @@
   }
   @include for-desktop {
     header {
-      height: 5rem;
       width: var(--full-header-width);
       display: block;
     }

@@ -23,7 +23,6 @@ export default {
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
-    margin-left: -10rem;
     opacity: 1;
     transition: .5s;
     background: #fff;
@@ -61,7 +60,7 @@ export default {
   @include for-desktop {
     #container {
       width: 1200px;
-      height: 80vh;
+      height: 90vh;
       margin: 2.5vh auto;
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }

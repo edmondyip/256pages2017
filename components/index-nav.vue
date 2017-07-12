@@ -65,7 +65,6 @@
         li
         {
           margin: 0 1rem;
-          height: 1rem;
         }
       }
     }

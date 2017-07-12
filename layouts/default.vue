@@ -37,8 +37,6 @@
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
-    min-height: 100%;
-    margin-left: -10rem;
     opacity: 1;
     transition: .5s;
     background: #fff;
@@ -84,7 +82,7 @@
   @include for-desktop {
     #container {
       width: 1200px;
-      height: 95vh;
+      height: 90vh;
       margin: 2.5vh auto;
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }

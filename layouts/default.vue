@@ -31,7 +31,6 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
-@import "~assets/css/setting.scss";
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);

@@ -21,6 +21,7 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
+@import "~assets/css/setting.scss";
   header {
     transition: .5s;
     width: var(--header-width);

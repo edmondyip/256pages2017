@@ -80,8 +80,7 @@
   }
   @include for-desktop {
     #container {
-      width: 1200px;
-      height: 95vh;
+      width: var(--floated-container-width);
       margin: 2.5vh auto;
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }

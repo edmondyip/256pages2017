@@ -39,7 +39,7 @@
       li
       {
         margin: 1rem 0;
-        transition: .5s;
+        transition: all .5s ease;
         a
         {
           line-height: 2rem;
@@ -49,8 +49,7 @@
       }
       li:hover
       {
-        color: #333;
-        text-decoration: underline;
+        background: #fff;
       }
     }
     ul.active

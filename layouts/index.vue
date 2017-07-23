@@ -19,7 +19,6 @@ export default {
 
 <!-- Style -->
 <style lang="scss" scoped>
-@import "~assets/css/setting.scss";
   #container {
     flex-wrap: nowrap;
     width: var(--container-width);
@@ -59,8 +58,13 @@ export default {
   }
   @include for-desktop {
     #container {
+<<<<<<< HEAD
       width: 1200px;
       height: 90vh;
+=======
+      width: var(--floated-container-width);
+      height: var(--floated-container-height);
+>>>>>>> 32f8c880c3d3f872a65edef5fd42649bf28313c5
       margin: 2.5vh auto;
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }

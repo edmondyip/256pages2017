@@ -61,6 +61,16 @@ module.exports = {
   ],
   build: {
     assetsPublicPath: '/',
-    assetsSubDirectory: 'static'
+    assetsSubDirectory: 'static',
+    loaders : [
+      {
+        test: /\.(scss|sass)$/,
+        loader: 'sass-resources-loader',
+        query: {
+          limit: 1000, // 1KO
+          name: '~assets/css/[hash].scss'
+        }
+      }
+    ]
   }
 }

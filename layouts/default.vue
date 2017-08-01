@@ -33,9 +33,7 @@
 <style lang="scss" scoped>
   #container {
     flex-wrap: nowrap;
-    width: var(--container-width);
-    min-height: 100%;
-    margin-left: -10rem;
+    width: 100vw;
     opacity: 1;
     transition: .5s;
     background: #fff;
@@ -73,6 +71,7 @@
       background: darken(#52c6d6,20%);
     }
   }
+
   @include for-tablet {
     .nav-btn {
       display: none;
@@ -80,9 +79,10 @@
   }
   @include for-desktop {
     #container {
-      width: var(--floated-container-width);
+      width: 100vw;
       margin: 2.5vh auto;
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }
   }
+
 </style>

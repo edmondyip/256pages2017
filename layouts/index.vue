@@ -21,6 +21,7 @@ export default {
 
 <!-- Style -->
 <style lang="scss" scoped>
+@import "~assets/scss/setting.scss";
   #container {
     flex-wrap: nowrap;
     width: 100vw;

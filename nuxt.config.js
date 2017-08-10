@@ -44,8 +44,8 @@ module.exports = {
 */
   css: [
     '~assets/css/normalize.css',
-    { src: '~assets/css/setting.scss', lang: 'scss' },
-    { src: '~assets/css/main.scss', lang: 'scss' }
+    { src: '~assets/scss/setting.scss', lang: 'scss' },
+    { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
   /*
   ** Customize the progress-bar color
@@ -61,16 +61,6 @@ module.exports = {
   ],
   build: {
     assetsPublicPath: '/',
-    assetsSubDirectory: 'static',
-    loaders : [
-      {
-        test: /\.(scss|sass)$/,
-        loader: 'sass-resources-loader',
-        query: {
-          limit: 1000, // 1KO
-          name: '~assets/css/[hash].scss'
-        }
-      }
-    ]
+    assetsSubDirectory: 'static'
   }
 }

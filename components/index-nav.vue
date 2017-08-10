@@ -19,6 +19,7 @@
 
 <!-- Style -->
 <style lang="scss" scoped>
+@import "~assets/scss/setting.scss";
   nav
   {
     width: 100%;

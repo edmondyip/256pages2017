@@ -1,4 +1,9 @@
-@import "~assets/scss/setting.scss";
+/*  Color  */
+$font-color: #999;
+$title-color: #333;
+$theme-color: rgb(239,246,245);
+$container-color: #fff;
+$background-color: #fff;
 
 /* Basic */
 html {
@@ -22,7 +27,7 @@ h1 {
   color: $title-color;
 }
 h1::first-letter {
-   text-transform:uppercase;
+   text-transform: uppercase;
 }
 
 a, a:hover, a:focus, a:visited {

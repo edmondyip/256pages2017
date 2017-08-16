@@ -1,18 +1,13 @@
 <!-- Template -->
 <template>
-  <nav id="nav">
-    <ul>
-      <li><nuxt-link to="/">Home</nuxt-link></li>
-      <li><nuxt-link to="/about">About</nuxt-link></li>
-      <li><nuxt-link to="/project/">Project</nuxt-link></li>
-      <li><nuxt-link to="/contact">Contact</nuxt-link></li>
-      <li><a href="https://blog.256pages.com/" target="_blank">Blog</a></li>
-    </ul>
-    <!--
-    <div class="tab" v-on:click="tab = !tab" v-bind:class="{ active: tab }">
-      <i class="material-icons">arrow_back</i>
-    </div>
-  -->
+<nav id="nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <ul>
+    <li itemprop="name"><nuxt-link itemprop="url" to="/">Home</nuxt-link></li>
+    <li itemprop="name"><nuxt-link itemprop="url" to="/about">About</nuxt-link></li>
+    <li itemprop="name"><nuxt-link itemprop="url" to="/project/">Project</nuxt-link></li>
+    <li itemprop="name"><nuxt-link itemprop="url" to="/contact">Contact</nuxt-link></li>
+    <li><a itemprop="url" href="https://blog.256pages.com/" target="_blank">Blog</a></li>
+  </ul>
 </nav>
 </template>
 

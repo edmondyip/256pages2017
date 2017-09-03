@@ -18,5 +18,5 @@
 </script>
 
 <style scoped>
-
+@import "~assets/scss/setting.scss";
 </style>

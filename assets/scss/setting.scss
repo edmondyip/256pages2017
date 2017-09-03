@@ -6,16 +6,6 @@ $theme-color: rgb(239,246,245);
 $container-color: #fff;
 $background-color: #fff;
 
-:root {
-  --header-width: 100%;
-  --header-padding: 1rem;
-  --mobile-header-width: (var(--header-width) + var(--header-padding));
-  --full-header-width: (100% - var(--header-padding));
-  --container-width: 100%;
-  --floated-container-width: 100rem;
-  --floated-container-height: 90vh;
-}
-
 /*  Mixinz  */
 @mixin for-tablet {
   @media (min-width: 767px) { @content; }

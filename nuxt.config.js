@@ -44,8 +44,8 @@ module.exports = {
 */
   css: [
     '~assets/css/normalize.css',
-    { src: '~assets/css/setting.scss', lang: 'scss' },
-    { src: '~assets/css/main.scss', lang: 'scss' }
+    { src: '~assets/scss/setting.scss', lang: 'scss' },
+    { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
   /*
   ** Customize the progress-bar color

@@ -34,11 +34,7 @@
 @import "~assets/scss/setting.scss";
   #container {
     flex-wrap: nowrap;
-<<<<<<< HEAD
-    width: var(--container-width);
-=======
     width: 100vw;
->>>>>>> 908f81ba55806ca0b47c0eb501064a5a452c62fa
     opacity: 1;
     transition: .5s;
     background: #fff;
@@ -84,16 +80,7 @@
   }
   @include for-desktop {
     #container {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      width: 1200px;
-      height: 90vh;
-=======
-      width: var(--floated-container-width);
->>>>>>> 32f8c880c3d3f872a65edef5fd42649bf28313c5
-=======
       width: 100vw;
->>>>>>> 908f81ba55806ca0b47c0eb501064a5a452c62fa
       margin: 2.5vh auto;
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }

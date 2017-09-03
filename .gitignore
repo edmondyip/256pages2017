@@ -49,6 +49,7 @@ jspm_packages
 LICENSE
 *.yml
 .gitattributes
+.nuxt
 static
 assets/img
 assets/svg

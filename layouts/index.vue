@@ -9,6 +9,8 @@
 <!-- Script -->
 <script>
 import NavBar from '~components/index-nav.vue'
+import Footer from '~components/pages-footer.vue'
+
 export default {
   name: "IndexLayout",
   components: {
@@ -19,9 +21,15 @@ export default {
 
 <!-- Style -->
 <style lang="scss" scoped>
+@import "~assets/scss/setting.scss";
   #container {
     flex-wrap: nowrap;
+<<<<<<< HEAD
     width: var(--container-width);
+=======
+    width: 100vw;
+    margin-left: -10rem;
+>>>>>>> 908f81ba55806ca0b47c0eb501064a5a452c62fa
     opacity: 1;
     transition: .5s;
     background: #fff;
@@ -51,11 +59,16 @@ export default {
       background: darken(#52c6d6,20%);
     }
   }
-  @include for-tablet {
-    .nav-btn {
-      display: none;
-    }
+
+</style>
+
+<!--
+
+@include for-tablet {
+  .nav-btn {
+    display: none;
   }
+<<<<<<< HEAD
   @include for-desktop {
     #container {
 <<<<<<< HEAD
@@ -68,5 +81,15 @@ export default {
       margin: 2.5vh auto;
       box-shadow: 0 0 5rem rgba(0,0,0,.2);
     }
+=======
+}
+@include for-desktop {
+  #container {
+    width: 100vw;
+    margin: 2.5vh auto;
+    box-shadow: 0 0 5rem rgba(0,0,0,.2);
+>>>>>>> 908f81ba55806ca0b47c0eb501064a5a452c62fa
   }
-</style>
+}
+
+->

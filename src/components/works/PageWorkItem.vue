@@ -1,20 +1,25 @@
 <template>
-  <isotope ref="grid" :options='option' :list="list" :item-selector="'element-item'" v-images-loaded:on.progress="layout" class="works-list">
+  <isotope ref="grid" :options='option' :list="list" :item-selector="'project-grid'" v-images-loaded:on.progress="layout" class="works-list">
     <section v-for="(work, index) in list" :key="index" :class="{'checked': index === projectView}" @click="changeProjectView(index)">
-      <div class="wrapper">
-        <carousel :perPage="1" v-if="index === projectView">
+      <div class="description" v-if="index === projectView">
+        <carousel :perPage="1">
           <slide v-for="(image,index) in work.gallery" :key="index">
             <img :src="require('../../assets/img/works/' + work.path + '/' + image.fileName)" :alt="work.name + image.title">
           </slide>
         </carousel>
-        <img v-else :src="require('../../assets/img/works/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
-        <div class="description">
+        <div class="info">
           <h2>{{ work.name }}</h2>
           <p>{{ work.description }}</p>
-          <ul>
+          <ul class="type">
             <li v-for="type in work.typeList" :key="type.id">{{ type }}</li>
           </ul>
         </div>
+      </div>
+      <div class="cover" v-else>
+        <img :src="require('../../assets/img/works/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
+        <ul class="type">
+          <li v-for="type in work.typeList" :key="type.id">{{ type }}</li>
+        </ul>
       </div>
     </section>
   </isotope>
@@ -24,7 +29,10 @@
   import worksList from '@/assets/json/projects.json'
   import isotope from 'vueisotope'
   import imagesLoaded from 'vue-images-loaded'
-  import {Carousel, Slide} from 'vue-carousel'
+  import {
+    Carousel,
+    Slide
+  } from 'vue-carousel'
   export default {
     name: 'WorksItem',
     data: function () {
@@ -36,7 +44,8 @@
           stagger: 30,
           masonry: {
             fitwidth: true,
-            gutter: 20
+            gutter: 20,
+            columnWidth: 100
           }
         }
       }
@@ -44,14 +53,14 @@
     methods: {
       changeProjectView: function (index) {
         if (index === this.projectView) {
-          this.projectView = null
+          // this.projectView = null
         } else {
           this.projectView = index
         }
         var self = this
         setTimeout(function () {
           self.$refs.grid.iso.layout()
-        }, 400)
+        }, 500)
       },
       layout () {
         this.$refs.grid.layout('masonry')
@@ -90,36 +99,15 @@
         padding: 0 20px;
         display: none;
       }
-      img {
-        width: 100%;
-        display: block;
-      }
-      .description {
+      .info {
         position: absolute;
         display: block;
         padding: 0;
         margin: 0;
         text-decoration: none;
-        -webkit-transition-delay: .5s;
-        transition-delay: .5s;
         transition: .5s;
-        right: -100%;
-        bottom: 5px;
-        list-style: none;
-        p {
-          display: none;
-        }
-        li {
-          background: #85F1C1;
-          font-size: 12px;
-          line-height: 14px;
-          margin: 5px;
-          display: inline-block;
-          padding: 8px;
-        }
-        li:first-child {
-          margin: 5px 5px 5px 0;
-        }
+        height: 100%;
+        width: 100%;
       }
     }
     .VueCarousel {
@@ -127,41 +115,59 @@
       margin: 0;
       padding: 20px;
     }
+    .cover {
+      img {
+        width: 100%;
+      }
+    }
+    ul.type {
+      list-style: none;
+      position: absolute;
+      transition: .5s;
+      right: -100%;
+      bottom: 10px;
+          li {
+      background: #85F1C1;
+      font-size: 12px;
+      line-height: 14px;
+      margin: 5px;
+      display: inline-block;
+      padding: 8px;
+    }
+            li:first-child {
+          margin: 5px 5px 5px 0;
+        }
   }
+    }
+
 
   .works-list section:hover {
     h2 {
       left: 0px;
     }
-    ul.description {
+    ul.type {
       right: 5px;
     }
   }
-  
+
   /* checked */
 
   .works-list section.checked {
     width: 100%;
     background: rgba(255, 255, 255, 1);
-    .wrapper {
-      position: relative;
-      display: block;
-    }
+
     .description {
       display: inline-block;
       position: relative;
-      width: 40%;
+      width: 100%;
       background: rgba(255, 255, 255, 1);
       height: 100%;
-      left: 0px;
-      top: -50px;
-      bottom: 0px;
       h2,
       p {
         display: block;
       }
       h2,
-      ul {
+      ul.type {
         position: relative;
         width: auto;
         left: unset!important;
@@ -170,8 +176,11 @@
     }
     .VueCarousel {
       display: inline-block;
-      height: 100%;
-      width: 50%;
+            position: relative;
+      width: 420px;
+      img {
+        max-width: 100%;
+      }
     }
   } 
   

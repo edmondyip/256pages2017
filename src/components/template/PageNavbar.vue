@@ -81,7 +81,8 @@
           color: #85F1C1;
         }
         a:hover,
-        a.active {
+        a.active,
+        a.router-link-exact-active {
           background: #4A4A4A;
           color: #85F1C1;
         }

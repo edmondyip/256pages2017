@@ -1,32 +1,33 @@
 <template>
-  <isotope ref="grid" :options='option' :list="list" :item-selector="'project-grid'" v-images-loaded:on.progress="layout" class="works-list">
+  <isotope ref="grid" :options='option' :list="list" :item-selector="'element-item'" v-images-loaded:on.progress="layout" class="works-list">
     <section v-for="(work, index) in list" :key="index" :class="{'checked': index === projectView}" @click="changeProjectView(index)">
-      <div class="description" v-if="index === projectView">
-        <carousel :perPage="1">
-          <slide v-for="(image,index) in work.gallery" :key="index">
-            <img :src="require('../../assets/img/works/' + work.path + '/' + image.fileName)" :alt="work.name + image.title">
-          </slide>
-        </carousel>
-        <div class="info">
-          <h2>{{ work.name }}</h2>
-          <p>{{ work.description }}</p>
-          <ul class="type">
-            <li v-for="type in work.typeList" :key="type.id">{{ type }}</li>
-          </ul>
+      <transition>
+        <div class="description" v-if="index === projectView">
+          <carousel :perPage="1">
+            <slide v-for="(image,index) in work.gallery" :key="index">
+              <work-cover :image="image" :path="work.path" :name="work.name"></work-cover>
+            </slide>
+          </carousel>
+          <div class="info">
+            <div class="close" @click="index = null">close</div>
+            <h2>{{ work.name }}</h2>
+            <p>{{ work.description }}</p>
+            <work-type :typeList="work.typeList"></work-type>
+          </div>
         </div>
-      </div>
-      <div class="cover" v-else>
-        <img :src="require('../../assets/img/works/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
-        <ul class="type">
-          <li v-for="type in work.typeList" :key="type.id">{{ type }}</li>
-        </ul>
-      </div>
+        <div v-else class="cover">
+          <work-cover :image="work.gallery[0]" :path="work.path" :name="work.name"></work-cover>
+          <work-type :typeList="work.typeList"></work-type>
+        </div>
+      </transition>
     </section>
   </isotope>
 </template>
 
 <script>
   import worksList from '@/assets/json/projects.json'
+  import workType from '@/components/works/PageWorkType.vue'
+  import workCover from '@/components/works/PageWorkCover.vue'
   import isotope from 'vueisotope'
   import imagesLoaded from 'vue-images-loaded'
   import {
@@ -45,13 +46,14 @@
           masonry: {
             fitwidth: true,
             gutter: 20,
-            columnWidth: 100
+            columnWidth: 50
           }
         }
       }
     },
     methods: {
       changeProjectView: function (index) {
+        console.log(imgHeight)
         if (index === this.projectView) {
           // this.projectView = null
         } else {
@@ -60,16 +62,18 @@
         var self = this
         setTimeout(function () {
           self.$refs.grid.iso.layout()
-        }, 500)
+        }, 550)
       },
-      layout () {
+      layout() {
         this.$refs.grid.layout('masonry')
       }
     },
     components: {
       isotope,
       Carousel,
-      Slide
+      Slide,
+      workType,
+      workCover
     },
     directives: {
       imagesLoaded
@@ -86,101 +90,77 @@
       position: relative;
       overflow: hidden;
       display: block;
-      width: 22%;
-      cursor: pointer;
+      width: 24%;
       transition: width .5s, height .5s;
       h2 {
         background: #4A4A4A;
         color: #fff;
         line-height: 30px;
         height: 30px;
-        left: -200px;
-        transition: .5s;
-        padding: 0 20px;
-        display: none;
+        padding: 0 10px;
+        margin: 0;
       }
-      .info {
-        position: absolute;
+      img {
+        width: 100%;
+        display: block;
+        cursor: pointer;
+      }
+      .description {
         display: block;
         padding: 0;
         margin: 0;
         text-decoration: none;
         transition: .5s;
-        height: 100%;
-        width: 100%;
       }
     }
-    .VueCarousel {
-      background: #7ADDC9;
-      margin: 0;
-      padding: 20px;
-    }
-    .cover {
-      img {
-        width: 100%;
-      }
-    }
-    ul.type {
-      list-style: none;
+    .cover /deep/ ul.type {
       position: absolute;
-      transition: .5s;
-      right: -100%;
-      bottom: 10px;
-          li {
-      background: #85F1C1;
+    }
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
       font-size: 12px;
-      line-height: 14px;
-      margin: 5px;
-      display: inline-block;
-      padding: 8px;
+      color: #cccccc;
+      cursor: pointer;
     }
-            li:first-child {
-          margin: 5px 5px 5px 0;
+    section:hover {
+      h2 {
+        left: 0px;
+      }
+      .description .cover {
+        /deep/ ul.type {
+          right: 5px;
         }
-  }
-    }
-
-
-  .works-list section:hover {
-    h2 {
-      left: 0px;
-    }
-    ul.type {
-      right: 5px;
+      }
     }
   }
-
   /* checked */
 
   .works-list section.checked {
-    width: 100%;
+    width: 980px;
+    height: 500px;
     background: rgba(255, 255, 255, 1);
-
-    .description {
+    .info {
       display: inline-block;
       position: relative;
-      width: 100%;
+      width: 35%;
       background: rgba(255, 255, 255, 1);
       height: 100%;
-      h2,
-      p {
-        display: block;
-      }
-      h2,
-      ul.type {
+      vertical-align: top;
+      /deep/ ul.type {
         position: relative;
-        width: auto;
-        left: unset!important;
-        right: unset!important;
+        right: unset;
       }
     }
     .VueCarousel {
       display: inline-block;
-            position: relative;
-      width: 420px;
-      img {
-        max-width: 100%;
-      }
+      overflow: hidden;
+      height: 50%;
+      width: 60%;
+      background: #7ADDC9;
+      margin: 0;
+      padding: 20px;
     }
   } 
   

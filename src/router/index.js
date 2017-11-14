@@ -5,7 +5,7 @@ import Meta from 'vue-meta'
 import NotFound from '@/components/template/PageNotFound'
 import HomeVideo from '@/components/PageIntroVideo'
 import AboutContent from '@/components/about/PageProfileContent'
-import WorksList from '@/components/works/PageWorksList'
+import WorksList from '@/components/works/PageWorkList'
 import ContactInfo from '@/components/PageContactInfo'
 
 Vue.use(Router)

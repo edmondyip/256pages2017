@@ -30,10 +30,7 @@
   import workCover from '@/components/works/PageWorkCover.vue'
   import isotope from 'vueisotope'
   import imagesLoaded from 'vue-images-loaded'
-  import {
-    Carousel,
-    Slide
-  } from 'vue-carousel'
+  import {Carousel, Slide} from 'vue-carousel'
   export default {
     name: 'WorksItem',
     data: function () {
@@ -53,7 +50,6 @@
     },
     methods: {
       changeProjectView: function (index) {
-        console.log(imgHeight)
         if (index === this.projectView) {
           // this.projectView = null
         } else {
@@ -64,7 +60,7 @@
           self.$refs.grid.iso.layout()
         }, 550)
       },
-      layout() {
+      layout () {
         this.$refs.grid.layout('masonry')
       }
     },

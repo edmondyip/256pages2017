@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    props: ['image','path','name']
+    props: ['image', 'path', 'name']
   }
 </script>
 

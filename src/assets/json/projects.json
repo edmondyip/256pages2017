@@ -1,0 +1,180 @@
+{
+  "projects": [{
+      "id": 1,
+      "name": "Eventor",
+      "date": "2015",
+      "typeList": [
+        "UX Design",
+        "UI Design"
+      ],
+      "techList": [
+        "Sketch",
+        "Photoshop"
+      ],
+      "description": "Eventor Android iOS APP Design",
+      "path": "eventor",
+      "gallery": [{
+        "title": "Concept Image",
+        "imageType": "desktop",
+        "fileName": "eventor-banner.png"
+      }, {
+        "title": "Concept Image",
+        "imageType": "desktop",
+        "fileName": "eventor-banner2.png"
+      }, {
+        "title": "UX flow",
+        "imageType": "desktop",
+        "fileName": "eventor-ux.png"
+      }],
+      "themeColor": "#FFC056"
+    },
+    {
+      "id": 2,
+      "name": "Cloudnifier",
+      "date": "2016",
+      "typeList": [
+        "UI Design"
+      ],
+      "techList": [
+        "Sketch",
+        "Photoshop"
+      ],
+      "description": "Cloudnifier Offical Website",
+      "path": "cloudnifier",
+      "gallery": [{
+        "title": "Landing Page",
+        "imageType": "desktop",
+        "fileName": "cloudnifier_top.png"
+      }],
+      "themeColor": "#4D7EC2"
+    },
+    {
+      "id": 3,
+      "name": "Merchant Plus",
+      "date": "2016",
+      "typeList": [
+        "UI Design"
+      ],
+      "techList": [
+        "Sketch",
+        "Photoshop"
+      ],
+      "description": "Merchant Tablet UX UI design",
+      "path": "merchant-plus",
+      "gallery": [{
+        "title": "Landing Page",
+        "imageType": "desktop",
+        "fileName": "login.jpg"
+      }, {
+        "title": "Produst List",
+        "imageType": "desktop",
+        "fileName": "collection.jpg"
+      }, {
+        "title": "Produst",
+        "imageType": "desktop",
+        "fileName": "collection2.jpg"
+      }],
+      "themeColor": "#4D7EC2"
+    },
+    {
+      "id": 4,
+      "name": "Student Smart",
+      "date": "2016",
+      "typeList": [
+        "UX Design",
+        "UI Design"
+      ],
+      "techList": [
+        "Sketch",
+        "Photoshop"
+      ],
+      "description": "Student Management System",
+      "path": "student-smart",
+      "gallery": [{
+        "title": "Concept Image",
+        "imageType": "desktop",
+        "fileName": "profile.png"
+      }, {
+        "title": "Concept Image",
+        "imageType": "desktop",
+        "fileName": "student.png"
+      }, {
+        "title": "UX flow",
+        "imageType": "desktop",
+        "fileName": "bookmark.jpg"
+      }],
+      "themeColor": "#4D7EC2"
+    },
+    {
+      "id": 5,
+      "name": "Disenyland",
+      "date": "2016",
+      "typeList": [
+        "UI Design"
+      ],
+      "techList": [
+        "Sketch",
+        "Photoshop"
+      ],
+      "description": "Disenyland Survey",
+      "path": "disenyland",
+      "gallery": [{
+        "title": "Survey",
+        "imageType": "desktop",
+        "fileName": "survey.jpg"
+      }],
+      "themeColor": "#4D7EC2"
+    },
+    {
+      "id": 6,
+      "name": "Hatchya",
+      "date": "2015",
+      "typeList": [
+        "UI Design"
+      ],
+      "techList": [
+        "Sketch",
+        "Photoshop"
+      ],
+      "description": "Hatchya website",
+      "path": "hatchya",
+      "gallery": [{
+        "title": "Landing Page",
+        "imageType": "desktop",
+        "fileName": "login.jpg"
+      }, {
+        "title": "Produst List",
+        "imageType": "desktop",
+        "fileName": "banner.jpg"
+      }, {
+        "title": "Produst",
+        "imageType": "desktop",
+        "fileName": "card.png"
+      }]
+    },
+    {
+      "id": 7,
+      "name": "DTC",
+      "date": "2016",
+      "typeList": [
+        "UI Design"
+      ],
+      "techList": [
+        "Sketch",
+        "Illustrator"
+      ],
+      "description": "DTC UI",
+      "path": "dtc",
+      "gallery": [{
+        "title": "Dashboard",
+        "imageType": "desktop",
+        "fileName": "dashboard.jpg"
+      }, {
+        "title": "Project View",
+        "imageType": "desktop",
+        "fileName": "project.jpg"
+      }],
+      "themeColor": "#4D7EC2"
+    }
+  ]
+}

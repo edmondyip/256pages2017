@@ -36,7 +36,7 @@
     display: block;
     width: 60vw;
     margin: 0 auto;
-    padding: 10vh 0;
+    padding: 8vh 0;
     ul {
       list-style: none;
       margin: 0;

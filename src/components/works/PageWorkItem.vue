@@ -65,7 +65,7 @@
           self.$refs.grid.iso.layout()
         }, 550)
       },
-      layout() {
+      layout () {
         this.$refs.grid.layout('masonry')
       }
     },

@@ -4,7 +4,11 @@
 
 <script>
   export default {
+<<<<<<< HEAD
     props: ['image','path','name']
+=======
+    props: ['image', 'path', 'name']
+>>>>>>> 5357c7d093e6294a24636a4a89b5ad663338062e
   }
 </script>
 

@@ -30,10 +30,7 @@
   import workCover from '@/components/works/PageWorkCover.vue'
   import isotope from 'vueisotope'
   import imagesLoaded from 'vue-images-loaded'
-  import {
-    Carousel,
-    Slide
-  } from 'vue-carousel'
+  import {Carousel, Slide} from 'vue-carousel'
   export default {
     name: 'WorksItem',
     data: function () {

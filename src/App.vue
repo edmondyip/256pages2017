@@ -64,7 +64,10 @@
 <style>
   @import '~styles/normalize.css';
   @import '~styles/style.scss';
+</style>
 
+
+<style scoped lang="scss">
   .fade-enter-active,
   .fade-leave-active {
     transition: .5s;
@@ -73,7 +76,17 @@
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
-    left: 0;
+    margin-left: -100%;
   }
 
+  main {
+    padding: 20px;
+    margin: 0 100px;
+    background: rgba(255, 255, 255, 1);
+    transition: .5s;
+  }
+  #app.home main {
+    background: rgba(255, 255, 255, 0);
+    padding: 0;
+  }
 </style>

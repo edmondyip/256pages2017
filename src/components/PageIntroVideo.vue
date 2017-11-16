@@ -1,10 +1,9 @@
 <template>
   <div class="video-logo-container">
-    <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/videoseries?list=PLqPg4ZyANjyxgnWTAaDAvq2NaYjBH1pv1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&mute=1"
-      frameborder="0"></iframe>
+    <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/videoseries?list=PLqPg4ZyANjyxgnWTAaDAvq2NaYjBH1pv1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&mute=1" frameborder="0"></iframe>
+    <h1 class="index-title">edmond yip design portfolio</h1>
     <h2 class="video-logo-small-name">two hundred and fifty six pages</h2>
     <div class="video-logo">弐伍陸頁</div>
-    <h1 class="index-title">edmond yip design portfolio</h1>
   </div>
 </template>
 
@@ -37,8 +36,8 @@
       color: rgba(0, 0, 0, 1);
     }
     .video-logo:hover {
-      color: rgba(0, 0, 0, 0);
-      font-size: 200px;
+      color: rgba(0, 0, 0, .2);
+      font-size: 150px;
     }
     #ytplayer {
       position: absolute;
@@ -60,6 +59,7 @@
   h1.index-title {
     font-size: 11px;
     position: absolute;
-    bottom: -20px;
+    bottom: 10px;
+    left: 10px;
   }
 </style>

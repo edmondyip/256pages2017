@@ -6,9 +6,9 @@ import App from './App'
 import router from './router'
 
 const options = {
-  color: '#bffaf3',
+  color: '#4A4A4A',
   failedColor: '#874b4b',
-  thickness: '5px',
+  thickness: '3px',
   transition: {
     speed: '0.2s',
     opacity: '0.6s',

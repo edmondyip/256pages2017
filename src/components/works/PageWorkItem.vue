@@ -50,8 +50,6 @@
     },
     methods: {
       changeProjectView: function (index) {
-        var imgHeight = ('../../assets/img/works/' + this.list.path + '/' + this.list.gallery.fileName).clientHeight
-        console.log(imgHeight)
         if (index === this.projectView) {
           // this.projectView = null
         } else {

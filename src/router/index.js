@@ -14,18 +14,23 @@ Vue.use(Meta)
 export default new Router({
   mode: 'history',
   routes: [{
+    name: 'error',
     path: '*',
     component: NotFound
   }, {
+    name: 'home',
     path: '/',
     component: HomeVideo
   }, {
+    name: 'about',
     path: '/about',
     component: AboutContent
   }, {
+    name: 'works',
     path: '/works',
     component: WorksList
   }, {
+    name: 'contact',
     path: '/contact',
     component: ContactInfo
   }]

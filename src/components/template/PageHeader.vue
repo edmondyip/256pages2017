@@ -1,5 +1,7 @@
 <template>
-  <app-navbar />
+  <header>
+    <app-navbar />
+  </header>
 </template>
 
 <script>
@@ -11,3 +13,17 @@
     }
   }
 </script>
+
+<style scoped lang="scss">
+  #app header {
+    width: 60vw;
+    margin: 0 auto;
+    padding: 3vh 0;
+    transition: .5s;
+  }
+  #app.home header {
+    width: 60vw;
+    margin: 0 auto;
+    padding: 8vh 0;
+  }
+</style>

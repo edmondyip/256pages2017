@@ -22,6 +22,7 @@
     "vue-carousel": "^0.6.5",
     "vue-images-loaded": "^1.1.2",
     "vue-meta": "^1.2.0",
+    "vue-progressbar": "^0.7.3",
     "vue-router": "^3.0.1",
     "vueisotope": "^3.1.0"
   },

@@ -34,9 +34,6 @@
 <style scoped lang="scss">
   nav {
     display: block;
-    width: 60vw;
-    margin: 0 auto;
-    padding: 8vh 0;
     ul {
       list-style: none;
       margin: 0;

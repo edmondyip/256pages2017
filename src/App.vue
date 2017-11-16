@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="routeName">
     <app-header />
     <main>
       <transition name="fade" mode="out-in">
@@ -7,6 +7,7 @@
       </transition>
     </main>
     <app-footer />
+    <vue-progress-bar></vue-progress-bar>
   </div>
 </template>
 
@@ -14,7 +15,12 @@
   import Header from '@/components/template/PageHeader.vue'
   import Footer from '@/components/template/PageFooter.vue'
   export default {
-    name: 'app',
+    name: 'Layout',
+    data: function () {
+      return {
+        routeName: this.$route.name
+      }
+    },
     metaInfo: {
       title: 'edmond yip portfolio',
       titleTemplate: '%s | 256pages',
@@ -29,6 +35,28 @@
     components: {
       'app-header': Header,
       'app-footer': Footer
+    },
+    watch: {
+      '$route' (to, from) {
+        this.routeName = this.$route.name
+      }
+    },
+    mouted () {
+      this.$Progress.finish()
+    },
+    created () {
+      this.$Progress.start()
+      this.$router.beforeEach((to, from, next) => {
+        if (to.meta.progress !== undefined) {
+          let meta = to.meta.progress
+          this.$Progress.parseMeta(meta)
+        }
+        this.$Progress.start()
+        next()
+      })
+      this.$router.afterEach((to, from) => {
+        this.$Progress.finish()
+      })
     }
   }
 </script>
@@ -46,4 +74,9 @@
   .fade-leave-to {
     opacity: 0
   }
+
+  main {
+    /* border: 1px solid #4A4A4A; */
+  }
+
 </style>

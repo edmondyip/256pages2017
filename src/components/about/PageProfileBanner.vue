@@ -34,8 +34,8 @@
     position: relative;
     display: block;
     height: 321px;
-    width: 100vw;
-    left: 0;
+    // width: 100vw;
+    // left: 0;
     max-width: 100%;
     transition: .5s;
     opacity: 1;
@@ -50,7 +50,7 @@
       letter-spacing: 2px;
       position: absolute;
       right: 10vw;
-      color: #fff;
+      color: #000000;
       display: block;
       margin: 175px 0 0;
       transition: .4s;

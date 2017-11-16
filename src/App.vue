@@ -67,16 +67,13 @@
 
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity .5s
+    transition: .5s;
   }
 
   .fade-enter,
   .fade-leave-to {
-    opacity: 0
-  }
-
-  main {
-    /* border: 1px solid #4A4A4A; */
+    opacity: 0;
+    left: 0;
   }
 
 </style>

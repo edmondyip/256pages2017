@@ -61,9 +61,60 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   @import '~styles/normalize.css';
-  @import '~styles/style.scss';
+  @import '~styles/fonts.css';
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    // background: #85F1C1;
+  }
+
+  $titleFont: 'Bitter', sans-serif;
+  $contentFont: 'Arial', sans-serif;
+
+  p,
+  li,
+  h1,
+  h2,
+  h3,
+  a {
+    color: #333;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: $titleFont;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-family: $contentFont;
+    letter-spacing: 1px;
+    font-size: 12px;
+    text-transform: lowercase;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      text-transform: lowercase;
+    }
+  }
 </style>
 
 
@@ -86,6 +137,7 @@
     transition: .5s;
     overflow: hidden;
   }
+
   #app.home main {
     background: rgba(255, 255, 255, 0);
     padding: 0;

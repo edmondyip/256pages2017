@@ -1,10 +1,7 @@
 <template>
   <section>
-    <transition name="small-name">
-      <h2 class="small-name" v-if="nameAnimation === true">two hundred and fifty six pages</h2>
-    </transition>
     <div class="video-container">
-      <transition name="video-animation" tag="div" appear appear-active-class="video-animation" @after-appear="afterVideo">
+      <transition name="videoAnimation" appear appear-active-class="video-animation" @after-appear="afterVideo">
         <div class="video-wrapper">
           <iframe id="youtube" type="text/html" src="https://www.youtube.com/embed/videoseries?list=PLqPg4ZyANjyxgnWTAaDAvq2NaYjBH1pv1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&mute=1"
             frameborder="0"></iframe>
@@ -16,6 +13,9 @@
     </div>
     <transition name="title">
       <h1 class="index-title" v-if="titleAnimation === true">edmond yip design portfolio</h1>
+    </transition>
+    <transition name="small-name">
+      <h2 class="index-small-name" v-if="nameAnimation === true">two hundred and fifty six pages</h2>
     </transition>
   </section>
 </template>
@@ -34,11 +34,11 @@
       afterVideo: function (el) {
         self = this
         setTimeout(function () {
-          self.titleAnimation = true
+          self.logoAnimation = true
         }, 1000)
         setTimeout(function () {
           self.titleAnimation = true
-        }, 1000)
+        }, 1500)
         setTimeout(function () {
           self.nameAnimation = true
         }, 2000)
@@ -53,8 +53,7 @@
     width: 900px;
     margin: 0 auto;
     .video-container {
-      position: relative;
-      // overflow: hidden;
+      position: relative; // overflow: hidden;
       width: 100%;
       height: 380px;
       margin: 0 auto;
@@ -112,7 +111,7 @@
       bottom: 10px;
       left: 20px;
     }
-    h2.small-name {
+    h2.index-small-name {
       display: block;
       font-size: 20px;
       letter-spacing: 2px;
@@ -153,10 +152,10 @@
   }
 
   @keyframes video-load {
-    from {
-      transform: translateX(1000px)
+    0% {
+      transform: translateX(100vw)
     }
-    to {
+    100% {
       transform: translateX(0)
     }
   }

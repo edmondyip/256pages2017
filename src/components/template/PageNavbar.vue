@@ -1,33 +1,42 @@
 <template>
   <nav>
-    <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-      <li itemprop="name">
-        <router-link to="/" itemprop="url">home</router-link>
-        <span>welcome to my website</span>
-      </li>
-      <li itemprop="name">
-        <router-link to="about" itemprop="url">about</router-link>
-        <span>something about me</span>
-      </li>
-      <li itemprop="name">
-        <router-link to="works" itemprop="url">works</router-link>
-        <span>my old design</span>
-      </li>
-      <li itemprop="name">
-        <router-link to="contact" itemprop="url">contact</router-link>
-        <span>if you want to find me</span>
-      </li>
-      <li itemprop="name">
-        <a href="https://blog.256pages.com/" itemprop="url" target="blank">blog</a>
-        <span>my development blog</span>
-      </li>
-    </ul>
+      <transition-group tag="ul" name="navAnmation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+        <li v-for="(item, index) in list" itemprop="name" :key="index" stagger="500">
+          <router-link :to="item.url" itemprop="url">{{item.name}}</router-link>
+          <span>{{item.caption}}</span>
+        </li>
+      </transition-group>
   </nav>
 </template>
 
 <script>
   export default {
-    name: 'Navbar'
+    name: 'Navbar',
+    data: function () {
+      return {
+        list: [{
+          name: 'home',
+          url: '/',
+          caption: 'welcome to my website'
+        }, {
+          name: 'about',
+          url: 'about',
+          caption: 'something about me'
+        }, {
+          name: 'works',
+          url: 'works',
+          caption: 'my portfolio'
+        }, {
+          name: 'contact',
+          url: 'contact',
+          caption: 'if you want to find me'
+        }, {
+          name: 'blog',
+          url: 'https://blog.256pages.com',
+          caption: 'my development blog'
+        }]
+      }
+    }
   }
 </script>
 
@@ -83,6 +92,21 @@
           color: #85F1C1;
         }
       }
+    }
+  }
+
+  .nav-anmation {
+    animation: video-load 1s;
+  }
+
+  @keyframes video-load {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 

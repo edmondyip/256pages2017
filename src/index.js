@@ -6,7 +6,7 @@ import App from './App'
 import router from './router'
 
 const options = {
-  color: '#4A4A4A',
+  color: '#85F1C1',
   failedColor: '#874b4b',
   thickness: '3px',
   transition: {

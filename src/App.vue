@@ -70,6 +70,7 @@
     margin: 0;
     padding: 0;
     // background: #85F1C1;
+    overflow: hidden;
   }
 
   $titleFont: 'Bitter', sans-serif;
@@ -132,10 +133,9 @@
 
   main {
     padding: 20px;
-    margin: 0 100px;
+    // margin: 0 100px;
     background: rgba(255, 255, 255, .5);
     transition: .5s;
-    overflow: hidden;
   }
 
   #app.home main {

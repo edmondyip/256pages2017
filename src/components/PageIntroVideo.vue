@@ -1,14 +1,23 @@
 <template>
-  <div class="video-logo-container">
-    <transition name="video-animation" tag="div" appear appear-active-class="video-animation" @after-appear="afterVideo">
-      <div class="video-wrapper">
-        <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/videoseries?list=PLqPg4ZyANjyxgnWTAaDAvq2NaYjBH1pv1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&mute=1" frameborder="0"></iframe>
-      </div>
+  <section>
+    <transition name="small-name">
+      <h2 class="small-name" v-if="nameAnimation === true">two hundred and fifty six pages</h2>
     </transition>
-    <transition name="title-animation" tag="h1" class="index-title" appear appear-class="title-animation">edmond yip design portfolio</transition>
-    <h2 class="video-logo-small-name">two hundred and fifty six pages</h2>
-    <!-- <div class="video-logo">弐伍陸頁</div> -->
-  </div>
+    <div class="video-container">
+      <transition name="video-animation" tag="div" appear appear-active-class="video-animation" @after-appear="afterVideo">
+        <div class="video-wrapper">
+          <iframe id="youtube" type="text/html" src="https://www.youtube.com/embed/videoseries?list=PLqPg4ZyANjyxgnWTAaDAvq2NaYjBH1pv1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&mute=1"
+            frameborder="0"></iframe>
+        </div>
+      </transition>
+      <transition name="logo">
+        <div class="video-logo" v-if="logoAnimation === true">弐伍陸頁</div>
+      </transition>
+    </div>
+    <transition name="title">
+      <h1 class="index-title" v-if="titleAnimation === true">edmond yip design portfolio</h1>
+    </transition>
+  </section>
 </template>
 
 <script>
@@ -16,102 +25,139 @@
     name: 'Intro',
     data: function () {
       return {
-        titleAnimation: false
+        titleAnimation: false,
+        nameAnimation: false,
+        logoAnimation: false
       }
     },
     methods: {
-      self: this,
       afterVideo: function (el) {
-        console.log('Video Loaded')
-        this.titleAnimation = true
+        self = this
+        setTimeout(function () {
+          self.titleAnimation = true
+        }, 1000)
+        setTimeout(function () {
+          self.titleAnimation = true
+        }, 1000)
+        setTimeout(function () {
+          self.nameAnimation = true
+        }, 2000)
       }
     }
   }
 </script>
 
 <style scoped lang="scss">
-  .video-logo-container {
+  section {
     position: relative;
-    overflow: hidden;
     width: 900px;
-    height: 380px;
     margin: 0 auto;
-    transition: .5s;
-    .video-wrapper {
+    .video-container {
+      position: relative;
+      // overflow: hidden;
       width: 100%;
       height: 380px;
-      overflow: hidden;
-      background: #85F1C1;
-    }
-    .video-logo {
-      position: absolute;
-      background: rgba(74, 74, 74, .5);
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      font-family: kaiso, sans-serif;
-      font-size: 100px;
-      line-height: 380px;
-      transition: .5s ease-out;
-      cursor: cell;
-      color: rgba(0, 0, 0, 1);
-    }
-    #ytplayer {
-      position: absolute;
-      width: 980px;
-      height: 550px;
-      left: -40px;
-      top: -50px;
-      opacity: .1;
+      margin: 0 auto;
       transition: .5s;
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #85F1C1;
+      }
+      .video-logo {
+        position: absolute; // background: rgba(74, 74, 74, .5);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-family: kaiso, sans-serif;
+        font-size: 100px;
+        line-height: 380px;
+        transition: .5s ease-out;
+        cursor: cell;
+        color: rgba(0, 0, 0, 1);
+        top: 0;
+      }
+      #youtube {
+        position: absolute;
+        width: 980px;
+        height: 550px;
+        left: -40px;
+        top: -50px;
+        opacity: .1;
+        transition: .5s;
+        pointer-events: none;
+      }
     }
-    .video-logo-small-name {
+
+    .video-logo-container:hover {
+      width: 980px;
+      .video-logo {
+        color: rgba(0, 0, 0, 0);
+        font-size: 150px;
+      }
+      #youtube {
+        opacity: .9;
+        left: 0;
+      }
+    }
+
+    h1.index-title {
       font-size: 11px;
+      color: #000000;
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+    }
+    h2.small-name {
+      display: block;
+      font-size: 20px;
       letter-spacing: 2px;
       position: absolute;
-      top: 195px;
-      right: -100px;
-      transform: rotateZ(90deg);
       color: #000000;
+      right: 0;
     }
+  } // animation
+  .logo-enter-active {
+    transition: .3s ease;
   }
 
-  .video-logo-container:hover {
-    width: 980px;
-    .video-logo {
-      color: rgba(0, 0, 0, 0);
-      font-size: 150px;
-    }
-    #ytplayer {
-      opacity: .9;
-      left: 0;
-    }
+  .logo-enter {
+    transform: translateY(50px);
+    opacity: 0;
   }
 
-  h1.index-title {
-    font-size: 11px;
-    color: #000000;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+  .title-enter-active {
+    transition: .3s ease;
+  }
+
+  .title-enter {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  .small-name-enter-active {
+    transition: .3s ease;
+  }
+
+  .small-name-enter {
+    transform: translateX(200px);
+    opacity: 0;
   }
 
   .video-animation {
-    animation: go 2s;
+    animation: video-load 1s;
   }
 
-  .title-animation {
-    animation: go 2s;
-  }
-
-  @keyframes go {
+  @keyframes video-load {
     from {
-      width: 0;
+      transform: translateX(1000px)
     }
     to {
-      width: 900px;
+      transform: translateX(0)
     }
   }
 

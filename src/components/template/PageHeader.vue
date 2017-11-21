@@ -15,7 +15,7 @@
 </script>
 
 <style scoped lang="scss">
-  #app header {
+  header {
     width: 60vw;
     margin: 0 auto;
     padding: 3vh 0;

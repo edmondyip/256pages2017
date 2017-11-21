@@ -35,4 +35,10 @@
       left: -10px;
     }
   }
+
+  #app.home .logo-tag {
+    a {
+      left: -60px;
+    }
+  }
 </style>

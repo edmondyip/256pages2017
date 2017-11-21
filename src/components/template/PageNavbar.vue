@@ -1,9 +1,13 @@
 <template>
   <nav>
-      <transition-group tag="ul" name="navAnmation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <li v-for="(item, index) in list" itemprop="name" :key="index" stagger="500">
-          <router-link :to="item.url" itemprop="url">{{item.name}}</router-link>
+      <transition-group tag="ul" name="navAnimation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+        <li v-for="(item, index) in list" itemprop="name" :key="index">
+          <router-link :to="item.url" itemprop="url">{{item.name}}{{item.index}}</router-link>
           <span>{{item.caption}}</span>
+        </li>
+        <li itemprop="name" :key="0">
+          <a href="https://blog.256pages.com" itemprop="url">blog</a>
+          <span>my development blog</span>
         </li>
       </transition-group>
   </nav>
@@ -30,10 +34,6 @@
           name: 'contact',
           url: 'contact',
           caption: 'if you want to find me'
-        }, {
-          name: 'blog',
-          url: 'https://blog.256pages.com',
-          caption: 'my development blog'
         }]
       }
     }
@@ -87,7 +87,7 @@
           color: #85F1C1;
         }
         a:hover,
-        a.active {
+        a.router-link-exact-active {
           background: #4A4A4A;
           color: #85F1C1;
         }

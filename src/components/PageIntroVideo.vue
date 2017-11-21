@@ -11,12 +11,14 @@
         <div class="video-logo" v-if="logoAnimation === true">弐伍陸頁</div>
       </transition>
     </div>
-    <transition name="title">
-      <h1 class="index-title" v-if="titleAnimation === true">edmond yip design portfolio</h1>
-    </transition>
-    <transition name="small-name">
-      <h2 class="index-small-name" v-if="nameAnimation === true">two hundred and fifty six pages</h2>
-    </transition>
+    <div class="title-container">
+      <transition name="title">
+        <h1 class="index-title" v-if="titleAnimation === true">edmond yip design portfolio</h1>
+      </transition>
+      <transition name="small-name">
+        <h2 class="index-small-name" v-if="nameAnimation === true">two hundred and fifty six pages</h2>
+      </transition>
+    </div>
   </section>
 </template>
 
@@ -49,12 +51,9 @@
 
 <style scoped lang="scss">
   section {
-    position: relative;
-    width: 900px;
-    margin: 0 auto;
     .video-container {
-      position: relative; // overflow: hidden;
-      width: 100%;
+      position: relative;
+      width: 900px;
       height: 380px;
       margin: 0 auto;
       transition: .5s;
@@ -66,7 +65,7 @@
         background: #85F1C1;
       }
       .video-logo {
-        position: absolute; // background: rgba(74, 74, 74, .5);
+        position: absolute;
         width: 100%;
         height: 100%;
         text-align: center;
@@ -91,35 +90,41 @@
         pointer-events: none;
       }
     }
+    .title-container {
+      position: relative;
+      width: 900px;
+      margin: 0 auto;
+      transition: .5s;
+      h1.index-title {
+        font-size: 11px;
+        color: #000000;
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+      }
+      h2.index-small-name {
+        display: block;
+        font-size: 20px;
+        letter-spacing: 2px;
+        position: absolute;
+        color: #000000;
+        right: 0;
+      }
+    }
 
-    .video-logo-container:hover {
-      width: 980px;
+    .video-container:hover {
+      width: 970px;
       .video-logo {
-        color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0.2);
         font-size: 150px;
       }
       #youtube {
-        opacity: .9;
+        opacity: .8;
         left: 0;
       }
     }
+  }
 
-    h1.index-title {
-      font-size: 11px;
-      color: #000000;
-      position: absolute;
-      bottom: 10px;
-      left: 20px;
-    }
-    h2.index-small-name {
-      display: block;
-      font-size: 20px;
-      letter-spacing: 2px;
-      position: absolute;
-      color: #000000;
-      right: 0;
-    }
-  } // animation
   .logo-enter-active {
     transition: .3s ease;
   }

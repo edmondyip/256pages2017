@@ -26,7 +26,7 @@
       titleTemplate: '%s | 256pages',
       link: [{
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Bitter'
+        href: 'https://fonts.googleapis.com/css?family=Ubuntu:400,500'
       }, {
         rel: 'author',
         href: 'https://256pages.com/static/humans.txt'
@@ -72,8 +72,8 @@
     // background: #85F1C1;
     overflow: hidden;
   }
-
-  $titleFont: 'Bitter', sans-serif;
+  
+  $titleFont: 'Ubuntu', sans-serif;
   $contentFont: 'Arial', sans-serif;
 
   p,

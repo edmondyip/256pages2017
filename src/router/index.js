@@ -3,10 +3,10 @@ import Router from 'vue-router'
 import Meta from 'vue-meta'
 
 import NotFound from '@/components/template/PageNotFound'
-import HomeVideo from '@/components/PageIntroVideo'
-import AboutContent from '@/components/about/PageProfileContent'
-import WorksList from '@/components/works/PageWorkList'
-import ContactInfo from '@/components/PageContactInfo'
+import Home from '@/components/PageIntro'
+import About from '@/components/about/PageAbout'
+import Works from '@/components/works/PageWorkList'
+import Contact from '@/components/PageContactInfo'
 
 Vue.use(Router)
 Vue.use(Meta)
@@ -20,18 +20,18 @@ export default new Router({
   }, {
     name: 'home',
     path: '/',
-    component: HomeVideo
+    component: Home
   }, {
     name: 'about',
     path: '/about',
-    component: AboutContent
+    component: About
   }, {
     name: 'works',
     path: '/works',
-    component: WorksList
+    component: Works
   }, {
     name: 'contact',
     path: '/contact',
-    component: ContactInfo
+    component: Contact
   }]
 })

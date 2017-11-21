@@ -1,7 +1,6 @@
 <template>
   <article>
-    <app-banner />
-    <!-- <section>
+    <section>
       <h2>profile</h2>
       <p>full name : yip man lung</p>
       <p>date of birth : 10 nov 1981</p>
@@ -24,12 +23,12 @@
       <p>web front-end development</p>
       <p>javascript development</p>
       <p>search engine optimization</p>
-    </section> -->
+    </section>
   </article>
 </template>
 
 <script>
-  import Banner from '@/components/about/PageProfileBanner.vue'
+  import Banner from '@/components/about/PageAboutMe.vue'
   export default {
     name: 'Intro',
     components: {

@@ -128,7 +128,6 @@
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
-    margin-left: -100%;
   }
 
   main {

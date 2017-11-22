@@ -1,0 +1,54 @@
+@import '~styles/normalize.css';
+@import '~styles/fonts.css';
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0; // background: #85F1C1;
+  overflow: hidden;
+}
+
+$titleFont: 'Ubuntu',sans-serif;
+$fontColor: #4A4A4A;
+
+p,
+li,
+h1,
+h2,
+h3,
+a {
+  color: $fontColor;
+  font-family: $titleFont;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 1.8px;
+  text-transform: lowercase;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  letter-spacing: 1px;
+  font-size: .8rem;
+  text-transform: lowercase;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    font-size: 1rem;
+    text-transform: lowercase;
+  }
+}

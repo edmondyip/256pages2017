@@ -55,7 +55,7 @@
         } else {
           this.projectView = index
         }
-        var self = this
+        let self = this
         setTimeout(function () {
           self.$refs.grid.iso.layout()
         }, 550)

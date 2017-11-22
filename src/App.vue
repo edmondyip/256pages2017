@@ -1,11 +1,11 @@
 <template>
   <div id="app" :class="routeName">
     <app-header />
-    <main>
-      <transition name="fade" mode="out-in">
+    
+      <main><transition name="fade" mode="out-in">
         <router-view />
-      </transition>
-    </main>
+      </transition></main>
+    
     <app-footer />
     <vue-progress-bar></vue-progress-bar>
   </div>
@@ -41,10 +41,10 @@
         this.routeName = this.$route.name
       }
     },
-    mouted () {
+    mouted: function () {
       this.$Progress.finish()
     },
-    created () {
+    created: function () {
       this.$Progress.start()
       this.$router.beforeEach((to, from, next) => {
         if (to.meta.progress !== undefined) {
@@ -61,12 +61,10 @@
   }
 </script>
 
-
-
 <style scoped lang="scss">
   .fade-enter-active,
   .fade-leave-active {
-    transition: .5s;
+    transition: .3s ease;
   }
 
   .fade-enter,
@@ -76,13 +74,13 @@
 
   main {
     padding: 20px;
-    // margin: 0 100px;
     background: rgba(255, 255, 255, .5);
     transition: .5s;
   }
 
   #app.home main {
-    background: rgba(255, 255, 255, 0);
     padding: 0;
+    background: rgba(255, 255, 255, 0);
   }
+
 </style>

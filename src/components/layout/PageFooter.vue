@@ -17,7 +17,6 @@
       'app-tag': SmallTag
     }
   }
-
 </script>
 
 <style scoped lang="scss">

@@ -21,5 +21,4 @@
     width: 900px;
     margin: 0 auto;
   }
-
 </style>

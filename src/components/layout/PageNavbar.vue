@@ -54,7 +54,6 @@
         position: relative;
         padding: 20px;
         span {
-          font-family: 'Ubuntu', sans-serif;
           width: auto;
           display: block;
           transition-delay: .8s;
@@ -69,7 +68,6 @@
           white-space: nowrap;
         }
         a {
-          font-family: 'Ubuntu', sans-serif;
           color: #333;
           text-decoration: none;
           font-size: 18px;

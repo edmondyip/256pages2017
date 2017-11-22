@@ -19,10 +19,12 @@
         <h2 class="index-small-name" v-if="nameAnimation === true">two hundred and fifty six pages</h2>
       </transition>
     </div>
+    <size-checker />
   </section>
 </template>
 
 <script>
+import SizeChecker from "@/components/CheckSize"
   export default {
     name: 'Intro',
     data: function () {
@@ -34,7 +36,7 @@
     },
     methods: {
       afterVideo: function (el) {
-        self = this
+        const self = this
         setTimeout(function () {
           self.logoAnimation = true
         }, 1000)
@@ -45,6 +47,9 @@
           self.nameAnimation = true
         }, 2000)
       }
+    },
+    components: {
+      SizeChecker
     }
   }
 </script>

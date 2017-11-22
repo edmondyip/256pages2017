@@ -13,11 +13,11 @@
         WindowHeight: document.documentElement.clientHeight
       }
     },
-    methods: function () {
-      handleResize(function (e) {
+    methods: {
+      handleResize (e) {
         this.WindowHeight = document.documentElement.clientHeight
         this.WindowWidth = document.documentElement.clientWidth
-      })
+      }
     },
     // beforeDestroy: function () {
     //   window.removeEventListener('resize', this.handleResize)

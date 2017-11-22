@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Navbar from '@/components/template/PageNavbar'
+  import Navbar from '@/components/layout/PageNavbar'
   export default {
     name: 'Header',
     components: {

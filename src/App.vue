@@ -12,8 +12,8 @@
 </template>
 
 <script>
-  import Header from '@/components/template/PageHeader.vue'
-  import Footer from '@/components/template/PageFooter.vue'
+  import Header from '@/components/layout/PageHeader.vue'
+  import Footer from '@/components/layout/PageFooter.vue'
   export default {
     name: 'Layout',
     data: function () {
@@ -61,62 +61,6 @@
   }
 </script>
 
-<style lang="scss">
-  @import '~styles/normalize.css';
-  @import '~styles/fonts.css';
-  body,
-  html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    // background: #85F1C1;
-    overflow: hidden;
-  }
-  
-  $titleFont: 'Ubuntu', sans-serif;
-  $contentFont: 'Arial', sans-serif;
-
-  p,
-  li,
-  h1,
-  h2,
-  h3,
-  a {
-    color: #333;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-family: $titleFont;
-    letter-spacing: 2px;
-    text-transform: lowercase;
-  }
-
-  h1 {
-    font-size: 18px;
-  }
-
-  h2 {
-    font-size: 16px;
-  }
-
-  p {
-    font-family: $contentFont;
-    letter-spacing: 1px;
-    font-size: 12px;
-    text-transform: lowercase;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
-      text-transform: lowercase;
-    }
-  }
-</style>
 
 
 <style scoped lang="scss">

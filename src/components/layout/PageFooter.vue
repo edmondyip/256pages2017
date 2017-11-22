@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import SmallTag from '@/components/template/PageSmallTag'
+  import SmallTag from '@/components/layout/PageSmallTag'
   export default {
     name: 'Footer',
     components: {
@@ -21,14 +21,22 @@
 </script>
 
 <style scoped lang="scss">
-  #copyright {
-    font-family: 'Bitter', sans-serif;
+  footer {
+    display: block;
+    font-family: $titleFont;
     font-size: 11px;
     letter-spacing: 2px;
-    position: fixed;
-    bottom: 64px;
-    left: -46px;
-    transform: rotateZ(90deg);
+    position: fixed;  
+    bottom: 0;
+    left: 0;
+    #copyright {
+      display: block;
+      position: absolute;
+      bottom: 64px;
+      left: -40px;
+      white-space: nowrap;
+      transform: rotateZ(90deg);
+    }
   }
 
   .copy-animation {
@@ -38,7 +46,7 @@
   @keyframes video-load {
     0% {
       opacity: 0;
-      margin-bottom: -20px;
+      margin-bottom: -100px;
     }
     100% {
       opacity: 1;

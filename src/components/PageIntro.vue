@@ -103,12 +103,12 @@
         left: 20px;
       }
       h2.index-small-name {
-        display: block;
-        font-size: 20px;
+        font-size: 11px;
         letter-spacing: 2px;
         position: absolute;
         color: #000000;
-        right: 0;
+        bottom: 10px;
+        right: 20px;
       }
     }
 

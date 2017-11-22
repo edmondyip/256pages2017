@@ -15,23 +15,23 @@
     a {
       font-family: kaiso, sans-serif;
       font-size: 24px;
-      background: #222222;
-      color: #85F1C1;
-      height: 35px;
-      width: 50px;
-      line-height: 35px;
+      // background: #FFFFFF;
+      color: $fontColor;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
       display: block;
       position: fixed;
-      left: -20px;
-      bottom: 150px;
+      left: -12px;
+      bottom: 140px;
       transition: .5s;
       text-decoration: none;
       text-align: right;
-      padding: 0 10px 0 0;
+      padding: 0 5px 0 0;
     }
     a:hover {
-      color: #50aa82;
-      background: #4A4A4A;
+      color: $themeColor;
+      background: $fontColor;
       left: -10px;
     }
   }

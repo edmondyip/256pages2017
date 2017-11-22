@@ -19,12 +19,10 @@
         <h2 class="index-small-name" v-if="nameAnimation === true">two hundred and fifty six pages</h2>
       </transition>
     </div>
-    <size-checker />
   </section>
 </template>
 
 <script>
-import SizeChecker from "@/components/CheckSize"
   export default {
     name: 'Intro',
     data: function () {
@@ -48,9 +46,6 @@ import SizeChecker from "@/components/CheckSize"
         }, 2000)
       }
     },
-    components: {
-      SizeChecker
-    }
   }
 </script>
 
@@ -163,10 +158,10 @@ import SizeChecker from "@/components/CheckSize"
 
   @keyframes video-load {
     0% {
-      transform: translateX(100vw)
+      transform: translateY(100vw)
     }
     100% {
-      transform: translateX(0)
+      transform: translateY(0)
     }
   }
 

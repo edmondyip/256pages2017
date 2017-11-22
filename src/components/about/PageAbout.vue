@@ -1,14 +1,14 @@
 <template>
   <div class="about-cover">
     <div class="about-me">
-      <!-- <img src="~assets/img/about/about-me.jpg" alt="edmond yip"> -->
       <h1>about me</h1>
-      <personal-profile/>
+      <website-info v-if="About256Content === true"  @click="AboutMeContent = false" />
+      <img @click="AboutMeContent = true" v-else src="~assets/img/about/about-me.jpg" alt="edmond yip">
     </div>
     <div class="about-256">
-      <!-- <img src="~assets/img/about/about-256.jpg" alt="256 pages"> -->
       <h1>about 256</h1>
-      <website-info/>
+      <personal-profile v-if="AboutMeContent === true"  @click="AboutMeContent = false" />
+      <img @click="About256Content = true" v-else src="~assets/img/about/about-256.jpg" alt="256 pages">
     </div>
   </div>
 </template>
@@ -20,6 +20,8 @@
     name: 'Banner',
     data: function () {
       return {
+        AboutMeContent: false,
+        About256Content: false
       }
     },
     components: {
@@ -27,39 +29,43 @@
       WebsiteInfo
     }
   }
+
 </script>
 
 <style scoped lang="scss">
   .about-cover {
-    position: absolute;
+    position: relative;
     display: flex;
-    justify-content: center;
     width: 100%;
     transition: .5s;
-    opacity: 1;
     left: 0;
     right: 0;
     div {
       display: block;
+      position: relative;
       width: 50%;
       height: 100%;
       img {
-        position: absolute;
+        // position: absolute;
         transition-delay: .5s;
         transition: .8s;
+        width: 100%;
       }
       h1 {
         letter-spacing: 2px;
-        color: #000000;
+        color: #fff;
         display: block;
         transition: .4s;
-        }
+        position: absolute;
+        top: 10px;
       }
+    }
     .about-me {
-      background: #eeeeee;
+      background: #dddddd;
     }
     .about-256 {
       background: #cb3402;
     }
-    }
+  }
+
 </style>

@@ -1,19 +1,22 @@
 <template>
   <div id="app" :class="routeName">
-    <app-header />
-    
-      <main><transition name="fade" mode="out-in">
+    <size-checker />
+    <page-header />
+    <main>
+      <transition name="fade" mode="out-in">
         <router-view />
-      </transition></main>
-    
-    <app-footer />
-    <vue-progress-bar></vue-progress-bar>
+      </transition>
+    </main>
+    <page-footer />
+    <vue-progress-bar />
   </div>
 </template>
 
 <script>
-  import Header from '@/components/layout/PageHeader.vue'
-  import Footer from '@/components/layout/PageFooter.vue'
+  import PageHeader from '@/components/layout/PageHeader.vue'
+  import PageFooter from '@/components/layout/PageFooter.vue'
+  import SizeChecker from "@/components/CheckSize"
+
   export default {
     name: 'Layout',
     data: function () {
@@ -33,8 +36,9 @@
       }]
     },
     components: {
-      'app-header': Header,
-      'app-footer': Footer
+      PageHeader,
+      PageFooter,
+      SizeChecker
     },
     watch: {
       '$route' (to, from) {
@@ -64,7 +68,7 @@
 <style scoped lang="scss">
   .fade-enter-active,
   .fade-leave-active {
-    transition: .3s ease;
+    transition: 1s ease;
   }
 
   .fade-enter,
@@ -73,14 +77,12 @@
   }
 
   main {
-    padding: 20px;
-    background: rgba(255, 255, 255, .5);
+    padding: 20px; // background: rgba(255, 255, 255, .5);
     transition: .5s;
   }
 
   #app.home main {
-    padding: 0;
-    background: rgba(255, 255, 255, 0);
+    padding: 0; // background: rgba(255, 255, 255, 0);
   }
 
 </style>

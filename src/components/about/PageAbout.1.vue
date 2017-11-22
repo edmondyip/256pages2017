@@ -2,11 +2,11 @@
 <section>
   <div class="about-cover" :class="[scrolled ? 'scrolled' : '']">
     <div class="about-me">
-      <img v-on:scroll="handleScroll" src="~assets/img/about/about-me.jpg" alt="edmond yip">
+      <img :scroll="handleScroll" src="~assets/img/about/about-me.jpg" alt="edmond yip">
       <h1 class="about-title">about me</h1>
     </div>
     <div class="about-256">
-      <img v-on:scroll="handleScroll" src="~assets/img/about/about-256.jpg" alt="edmond yip">
+      <img :scroll="handleScroll" src="~assets/img/about/about-256.jpg" alt="edmond yip">
       <h1 class="about-title">about 256</h1>
     </div>
   </div>

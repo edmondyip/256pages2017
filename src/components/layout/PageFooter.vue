@@ -28,11 +28,12 @@
     position: fixed;  
     bottom: 0;
     left: 0;
+    background: #FFFFFF;
     #copyright {
       display: block;
       position: absolute;
       bottom: 64px;
-      left: -40px;
+      left: -50px;
       white-space: nowrap;
       transform: rotateZ(90deg);
     }

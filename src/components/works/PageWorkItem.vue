@@ -158,18 +158,5 @@
       margin: 0;
       padding: 20px;
     }
-  } // .filter-button-group {
-  //   margin: 0 auto;
-  //   display: flex;
-  //   width: 200px;
-  //   justify-content: space-around;
-  // }
-  // .filter-button-group button {
-  //   background: #4A4A4A;
-  //   color: #85F1C1;
-  //   font-family: 'Bitter', sans-serif;
-  //   border: 0;
-  //   padding: 10px;
-  // }
-
+  }
 </style>

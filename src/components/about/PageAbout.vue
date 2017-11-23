@@ -1,5 +1,6 @@
 <template>
   <div class="about-cover">
+
     <div class="about-me">
       <transition name="fade" mode="out-in">
         <website-info v-if="About256Content === true" />
@@ -9,6 +10,7 @@
         </div>
       </transition>
     </div>
+
     <div class="about-256">
       <transition name="fade" mode="out-in">
         <personal-profile v-if="AboutMeContent === true" />
@@ -18,7 +20,9 @@
         </div>
       </transition>
     </div>
+
   </div>
+
 </template>
 
 <script>

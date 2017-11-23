@@ -36,12 +36,15 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
+  margin: 1rem 0 .2rem;
 }
 
 p {
   letter-spacing: 1px;
   font-size: .8rem;
+  line-height: 1rem;
   text-transform: lowercase;
+  margin: .8rem 0;
 }
 
 ul {
@@ -49,7 +52,26 @@ ul {
   padding: 0;
   margin: 0;
   li {
-    font-size: 1rem;
+    font-size: .8rem;
+    line-height: 1.2rem;
     text-transform: lowercase;
   }
+}
+
+article {
+  padding: 20px;
+  ul {
+    list-style: square;
+    padding: 0 0 0 20px;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: 1s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }

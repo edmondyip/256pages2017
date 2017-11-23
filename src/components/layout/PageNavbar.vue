@@ -70,7 +70,7 @@
         a {
           color: #333;
           text-decoration: none;
-          font-size: 18px;
+          font-size: 1.2rem;
           padding: 5px 20px 5px 10px;
           text-rendering: auto;
           text-rendering: optimizeSpeed;

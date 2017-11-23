@@ -66,23 +66,12 @@
 </script>
 
 <style scoped lang="scss">
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: 1s ease;
-  }
-
-  .fade-enter,
-  .fade-leave-to {
-    opacity: 0;
-  }
-
   main {
-    padding: 20px; // background: rgba(255, 255, 255, .5);
+    padding: 20px;
     transition: .5s;
   }
 
   #app.home main {
-    padding: 0; // background: rgba(255, 255, 255, 0);
+    padding: 0;
   }
-
 </style>

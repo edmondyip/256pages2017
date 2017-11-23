@@ -1,14 +1,22 @@
 <template>
   <div class="about-cover">
     <div class="about-me">
-      <h1>about me</h1>
-      <website-info v-if="About256Content === true"  @click="AboutMeContent = false" />
-      <img @click="AboutMeContent = true" v-else src="~assets/img/about/about-me.jpg" alt="edmond yip">
+      <transition name="fade" mode="out-in">
+        <website-info v-if="About256Content === true" />
+        <div v-else>
+          <h1>about me</h1>
+          <img src="~assets/img/about/about-me.jpg" @click="AboutMeContent = !AboutMeContent" alt="edmond yip">
+        </div>
+      </transition>
     </div>
     <div class="about-256">
-      <h1>about 256</h1>
-      <personal-profile v-if="AboutMeContent === true"  @click="AboutMeContent = false" />
-      <img @click="About256Content = true" v-else src="~assets/img/about/about-256.jpg" alt="256 pages">
+      <transition name="fade" mode="out-in">
+        <personal-profile v-if="AboutMeContent === true" />
+        <div v-else>
+          <h1>about this website</h1>
+          <img src="~assets/img/about/about-256.jpg" @click="About256Content = !About256Content" alt="256 pages">
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -29,7 +37,6 @@
       WebsiteInfo
     }
   }
-
 </script>
 
 <style scoped lang="scss">
@@ -45,27 +52,28 @@
       position: relative;
       width: 50%;
       height: 100%;
-      img {
-        // position: absolute;
-        transition-delay: .5s;
-        transition: .8s;
+      div {
         width: 100%;
+        img {
+          transition-delay: .5s;
+          transition: .8s;
+          width: 100%;
+          cursor: pointer;
+        }
+        h1 {
+          letter-spacing: 2px;
+          color: #fff;
+          display: block;
+          transition: .4s;
+          position: absolute;
+          margin: 10px;
+          padding: 10px;
+          background: rgba(0, 0, 0, .5);
+        }
+        &:hover h1 {
+          background: rbga(0,0,0,1);
+        }
       }
-      h1 {
-        letter-spacing: 2px;
-        color: #fff;
-        display: block;
-        transition: .4s;
-        position: absolute;
-        top: 10px;
-      }
-    }
-    .about-me {
-      background: #dddddd;
-    }
-    .about-256 {
-      background: #cb3402;
     }
   }
-
 </style>

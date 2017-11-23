@@ -7,7 +7,7 @@
     </div>
     <div class="about-256">
       <img :scroll="handleScroll" src="~assets/img/about/about-256.jpg" alt="edmond yip">
-      <h1 class="about-title">about 256</h1>
+      <h1 class="about-title">test</h1>
     </div>
   </div>
 </section>

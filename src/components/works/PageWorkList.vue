@@ -11,6 +11,9 @@
     name: 'WorksList',
     components: {
       'app-items': WorksItem
+    },
+    metaInfo: {
+      title: 'my portfolio'
     }
   }
 </script>

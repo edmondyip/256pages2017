@@ -33,7 +33,7 @@
     </section>
 
     <section>
-      <p><a href="/static/human.txt">human.txt</a></p>
+      <p><a href="./human.txt">human.txt</a></p>
     </section>
   </article>
 </template>

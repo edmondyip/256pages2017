@@ -5,6 +5,17 @@ import VueProgressBar from 'vue-progressbar'
 import App from './App'
 import router from './router'
 
+import '@/assets/css/normalize.css';
+import '@/assets/css/_main.css';
+
+// const meta = app.$meta()
+
+// export default (context) => {
+//   router.push(context.url)
+//   context.meta = meta
+//   reuturn App
+// }
+
 const options = {
   color: '#85F1C1',
   failedColor: '#874b4b',

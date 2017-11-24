@@ -25,8 +25,11 @@
       }
     },
     metaInfo: {
-      title: 'edmond yip portfolio',
+      title: 'a designer + developer from hong kong',
       titleTemplate: '%s | 256pages',
+      // base: {
+      //   href: 'https://256pages.com/'
+      // },
       link: [{
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Ubuntu:400,500'
@@ -63,6 +66,7 @@
       })
     }
   }
+
 </script>
 
 <style scoped lang="scss">
@@ -74,4 +78,5 @@
   #app.home main {
     padding: 0;
   }
+
 </style>

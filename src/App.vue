@@ -32,7 +32,7 @@
         href: 'https://fonts.googleapis.com/css?family=Ubuntu:400,500'
       }, {
         rel: 'author',
-        href: 'https://256pages.com/static/humans.txt'
+        href: 'https://256pages.com/humans.txt'
       }]
     },
     components: {

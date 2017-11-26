@@ -9,6 +9,7 @@
     </main>
     <page-footer />
     <vue-progress-bar />
+
   </div>
 </template>
 
@@ -75,8 +76,14 @@
     transition: .5s;
   }
 
-  #app.home main {
-    padding: 0;
+  #app {
+    height: 100%;
+    .home main {
+      padding: 0;
+    }
+    .bg {
+      position: absolute;
+      top: 0px;
+    }
   }
-
 </style>

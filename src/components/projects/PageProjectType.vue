@@ -1,0 +1,31 @@
+<template>
+  <ul class="type">
+    <slot></slot>
+  </ul>
+</template>
+
+<script>
+  export default {}
+</script>
+
+<style scoped lang="scss">
+  ul.type {
+    position: relative;
+    transition: .5s;
+    li {
+      background: #85F1C1;
+      font-size: 12px;
+      line-height: 14px;
+      margin: 5px;
+      display: inline-block;
+      padding: 8px;
+      &:first-child {
+        margin: 5px 5px 5px 0;
+      }
+      &:hover {
+        opacity: .8;
+        cursor: pointer;
+      }
+    }
+  }
+</style>

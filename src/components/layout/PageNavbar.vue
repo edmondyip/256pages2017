@@ -31,6 +31,10 @@
           url: 'works',
           caption: 'my portfolio'
         }, {
+          name: 'projects',
+          url: 'projects',
+          caption: 'my projects'
+        }, {
           name: 'contact',
           url: 'contact',
           caption: 'if you want to find me'

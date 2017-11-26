@@ -3,7 +3,7 @@
 
     <div class="about-me">
       <transition name="fade" mode="out-in">
-        <website-info v-if="About256Content === true" />
+        <website-info v-if="About256Content === true" class="info" />
         <div v-else>
           <h1>about me</h1>
           <img src="~assets/img/about/about-me.jpg" @click="AboutMeContent = !AboutMeContent" alt="edmond yip">
@@ -13,7 +13,7 @@
 
     <div class="about-256">
       <transition name="fade" mode="out-in">
-        <personal-profile v-if="AboutMeContent === true" />
+        <personal-profile v-if="AboutMeContent === true" class="info" />
         <div v-else>
           <h1>about this website</h1>
           <img src="~assets/img/about/about-256.jpg" @click="About256Content = !About256Content" alt="256 pages">
@@ -56,6 +56,12 @@
       position: relative;
       width: 50%;
       height: 100%;
+      .info {
+        background: rgba(0,0,0,.2);
+        padding: 10px;
+        margin: 0 10px;
+        height: 100%;
+      }
       div {
         width: 100%;
         img {

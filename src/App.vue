@@ -17,7 +17,7 @@
   import PageHeader from '@/components/layout/PageHeader'
   import PageFooter from '@/components/layout/PageFooter'
   import SizeChecker from '@/components/CheckSize'
-  import BackgroundAnimation from '@/components/layout/PageBackground'
+  import BackgroundAnimation from '@/components/layout/PageBackground2'
 
   export default {
     name: 'Layout',

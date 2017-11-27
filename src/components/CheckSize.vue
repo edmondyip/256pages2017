@@ -13,18 +13,17 @@
         windowHeight: document.documentElement.clientHeight
       }
     },
-      mounted() {
-    this.$nextTick(function() {
-      window.addEventListener('resize', this.getWindowWidth);
-      window.addEventListener('resize', this.getWindowHeight);
-    })
+    mounted() {
+      this.$nextTick(function () {
+        window.addEventListener('resize', this.getWindowWidth);
+        window.addEventListener('resize', this.getWindowHeight);
+      })
 
-  },
+    },
     methods: {
-    getWindowWidth(event) {
+      getWindowWidth(event) {
         this.windowWidth = document.documentElement.clientWidth;
       },
-
       getWindowHeight(event) {
         this.windowHeight = document.documentElement.clientHeight;
       }

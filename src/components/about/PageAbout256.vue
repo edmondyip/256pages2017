@@ -39,12 +39,8 @@
 </template>
 
 <script>
-  import Banner from '@/components/about/PageAboutMe.vue'
   export default {
-    name: 'Intro',
-    components: {
-      'app-banner': Banner
-    }
+    name: 'About256'
   }
 </script>
 

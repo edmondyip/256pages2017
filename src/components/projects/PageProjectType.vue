@@ -1,5 +1,5 @@
 <template>
-  <ul class="type">
+  <ul class="tag">
     <slot></slot>
   </ul>
 </template>
@@ -9,7 +9,7 @@
 </script>
 
 <style scoped lang="scss">
-  ul.type {
+  ul.tag {
     position: relative;
     transition: .5s;
     li {

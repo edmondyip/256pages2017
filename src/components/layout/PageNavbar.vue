@@ -1,15 +1,15 @@
 <template>
   <nav>
-      <transition-group tag="ul" name="navAnimation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <li v-for="(item, index) in list" itemprop="name" :key="index">
-          <router-link :to="item.url" itemprop="url">{{item.name}}{{item.index}}</router-link>
-          <span>{{item.caption}}</span>
-        </li>
-        <li itemprop="name" :key="0">
-          <a href="https://blog.256pages.com" itemprop="url">blog</a>
-          <span>my development blog</span>
-        </li>
-      </transition-group>
+    <transition-group tag="ul" name="navAnimation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+      <li v-for="(item, index) in list" itemprop="name" :key="index">
+        <router-link :to="item.url" itemprop="url">{{item.name}}{{item.index}}</router-link>
+        <span>{{item.caption}}</span>
+      </li>
+      <li itemprop="name" :key="0">
+        <a href="https://blog.256pages.com" itemprop="url">blog</a>
+        <span>my development blog</span>
+      </li>
+    </transition-group>
   </nav>
 </template>
 
@@ -77,17 +77,17 @@
           text-rendering: optimizeLegibility;
           text-rendering: geometricPrecision;
           transition: .8s;
-        }
-        a:hover~span {
-          opacity: 1;
-          margin-top: 8px;
-          background: #4A4A4A;
-          color: #85F1C1;
-        }
-        a:hover,
-        a.router-link-exact-active {
-          background: #4A4A4A;
-          color: #85F1C1;
+          &:hover~span {
+            opacity: 1;
+            margin-top: 8px;
+            background: #4A4A4A;
+            color: #85F1C1;
+          }
+          &:hover,
+          &.router-link-exact-active {
+            background: #4A4A4A;
+            color: #85F1C1;
+          }
         }
       }
     }

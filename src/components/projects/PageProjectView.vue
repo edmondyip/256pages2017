@@ -1,20 +1,20 @@
 <template>
   <div class="project-list" :style="{gridTemplateColumns: gridCss}">
     <section v-for="(work, index) in list" :key="index">
-
+      <!-- info -->
       <header>
         <h1>{{index + 1}}</h1>
         <h2>{{work.name}}</h2>
         <p>{{work.description}}</p>
         <work-type>
+          <!-- slot -->
           <li v-for="type in work.typeList" :key="type.id">{{type}}</li>
         </work-type>
       </header>
-
+      <!-- image -->
       <div class="gallery">
         <img :src="require('../../assets/img/works/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
       </div>
-
     </section>
   </div>
 </template>
@@ -33,19 +33,18 @@
     metaInfo: {
       title: 'my portfolio',
       bodyAttrs: {
-        style: 'background: #85F1C1' //background color
+        style: 'background: #85F1C1' //change background color
       }
     },
     computed: {
       gridCss: function () {
-        return 'repeat(' + (this.list).length + ',1fr)'
+        return 'repeat(' + (this.list).length + ',1fr)' //section grid number from json
       }
     },
     components: {
       workType
     }
   }
-
 </script>
 
 <style lang="scss" scoped>
@@ -53,7 +52,6 @@
     padding: 20px 0;
     display: grid;
     section {
-      // width: 800px;
       display: grid;
       position: relative;
       background: rgba(255, 255, 255, .5);
@@ -62,7 +60,8 @@
       &:first-child {
         margin: 0 20px 0 30px;
       }
-      div, header {
+      div,
+      header {
         grid-template-rows: 1fr 300px;
       }
       .gallery {

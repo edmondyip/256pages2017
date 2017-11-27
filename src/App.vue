@@ -9,7 +9,6 @@
     </main>
     <page-footer />
     <vue-progress-bar />
-
   </div>
 </template>
 
@@ -46,6 +45,7 @@
     },
     watch: {
       '$route' (to, from) {
+        //add route name on #app
         this.routeName = this.$route.name
       }
     },
@@ -53,6 +53,7 @@
       this.$Progress.finish()
     },
     created: function () {
+      //progress bar
       this.$Progress.start()
       this.$router.beforeEach((to, from, next) => {
         if (to.meta.progress !== undefined) {
@@ -67,17 +68,15 @@
       })
     }
   }
-
 </script>
 
 <style scoped lang="scss">
-  main {
-    padding: 20px;
-    transition: .5s;
-  }
-
   #app {
     height: 100%;
+    main {
+      padding: 20px;
+      transition: .5s;
+    }
     .home main {
       padding: 0;
     }

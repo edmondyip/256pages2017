@@ -16,7 +16,6 @@
       ProjectView
     }
   }
-
 </script>
 
 <style lang="scss" scoped>
@@ -46,5 +45,4 @@
       }
     }
   }
-
 </style>

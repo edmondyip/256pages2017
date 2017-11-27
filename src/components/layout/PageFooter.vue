@@ -1,7 +1,7 @@
 <template>
   <transition name="copyAnimation" appear appear-active-class="copy-animation">
     <footer>
-      <app-tag />
+      <small-tag />
       <div id="copyright">
         256pages &copy 2017
       </div>
@@ -14,7 +14,7 @@
   export default {
     name: 'Footer',
     components: {
-      'app-tag': SmallTag
+      SmallTag
     }
   }
 </script>
@@ -25,10 +25,9 @@
     font-family: $titleFont;
     font-size: 11px;
     letter-spacing: 2px;
-    position: fixed;  
+    position: fixed;
     bottom: 0;
     left: 0;
-    background: #FFFFFF;
     #copyright {
       display: block;
       position: absolute;
@@ -53,5 +52,4 @@
       margin-bottom: 0px;
     }
   }
-
 </style>

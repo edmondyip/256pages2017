@@ -1,6 +1,7 @@
 <template>
   <nav>
     <transition-group tag="ul" name="navAnimation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+    <!-- loop nav bar -->
       <li v-for="(item, index) in list" itemprop="name" :key="index">
         <router-link :to="item.url" itemprop="url">{{item.name}}{{item.index}}</router-link>
         <span>{{item.caption}}</span>
@@ -107,5 +108,4 @@
       transform: translateY(0);
     }
   }
-
 </style>

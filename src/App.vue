@@ -1,5 +1,6 @@
 <template>
   <div id="app" :class="routeName">
+    <background-animation></background-animation>
     <size-checker />
     <page-header />
     <main>
@@ -13,9 +14,10 @@
 </template>
 
 <script>
-  import PageHeader from '@/components/layout/PageHeader.vue'
-  import PageFooter from '@/components/layout/PageFooter.vue'
-  import SizeChecker from "@/components/CheckSize"
+  import PageHeader from '@/components/layout/PageHeader'
+  import PageFooter from '@/components/layout/PageFooter'
+  import SizeChecker from '@/components/CheckSize'
+  import BackgroundAnimation from '@/components/layout/PageBackground'
 
   export default {
     name: 'Layout',
@@ -41,7 +43,8 @@
     components: {
       PageHeader,
       PageFooter,
-      SizeChecker
+      SizeChecker,
+      BackgroundAnimation
     },
     watch: {
       '$route' (to, from) {

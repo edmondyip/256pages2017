@@ -5,7 +5,6 @@ import Meta from 'vue-meta'
 import NotFound from '@/components/layout/PageNotFound'
 import Home from '@/components/PageIntro'
 import About from '@/components/about/PageAbout'
-import Works from '@/components/works/PageWorkList'
 import Projects from '@/components/projects/PageProjectList'
 import Contact from '@/components/contact/PageContactInfo'
 
@@ -26,10 +25,6 @@ export default new Router({
     name: 'about',
     path: '/about',
     component: About
-  }, {
-    name: 'works',
-    path: '/works',
-    component: Works
   }, {
     name: 'projects',
     path: '/projects',

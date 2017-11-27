@@ -1,11 +1,11 @@
 <template>
-    <!-- <ul class="filter">
+  <!-- <ul class="filter">
       <li>ui</li>
       <li>ux</li>
     </ul> -->
-    <div class="wrapper">
-      <project-view />
-    </div>
+  <div class="wrapper">
+    <project-view />
+  </div>
 </template>
 
 <script>
@@ -16,6 +16,7 @@
       ProjectView
     }
   }
+
 </script>
 
 <style lang="scss" scoped>
@@ -39,10 +40,11 @@
         margin: 5px;
         display: inline-block;
         padding: 8px;
-      }
-      li:first-child {
-        margin: 5px 5px 5px 0;
+        &:first-child {
+          margin: 5px 5px 5px 0;
+        }
       }
     }
   }
+
 </style>

@@ -25,9 +25,7 @@ module.exports = {
       '@': resolve('src'),
       'styles': path.resolve(__dirname, '../src/assets/css/'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'json': path.resolve(__dirname, '../src/assets/json'),
-      'masonry': 'masonry-layout',
-      'isotope': 'isotope-layout'
+      'json': path.resolve(__dirname, '../src/assets/json')
     }
   },
   module: {

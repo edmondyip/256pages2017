@@ -27,10 +27,6 @@
           url: 'about',
           caption: 'something about me'
         }, {
-          name: 'works',
-          url: 'works',
-          caption: 'my portfolio'
-        }, {
           name: 'projects',
           url: 'projects',
           caption: 'my projects'

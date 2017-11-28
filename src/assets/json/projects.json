@@ -172,6 +172,124 @@
         "fileName": "project.jpg"
       }],
       "themeColor": "#4D7EC2"
+    },
+    {
+      "id": 8,
+      "name": "Canon",
+      "date": "2016",
+      "typeList": [
+        "UI Design",
+        "UX Design"
+      ],
+      "techList": [
+        "Sketch",
+        "Illustrator"
+      ],
+      "description": "Canon Promoter App",
+      "path": "canon",
+      "gallery": [{
+        "title": "Login",
+        "imageType": "mobile",
+        "fileName": "login.jpg"
+      }, {
+        "title": "Dashboard",
+        "imageType": "mobile",
+        "fileName": "dashboard.jpg"
+      }, {
+        "title": "Main Function",
+        "imageType": "mobile",
+        "fileName": "main.jpg"
+      }, {
+        "title": "Pending Screen",
+        "imageType": "mobile",
+        "fileName": "pending.jpg"
+      }, {
+        "title": "UX Design",
+        "imageType": "desktop",
+        "fileName": "ux.jpg"
+      }],
+      "themeColor": "red"
+    },
+    {
+      "id": 9,
+      "name": "Glasses Gallery",
+      "date": "2017",
+      "typeList": [
+        "Web Design",
+        "Front-end Development",
+        "SEO"
+      ],
+      "techList": [
+        "Angular",
+        "Sketch",
+        "Illustrator"
+      ],
+      "description": "Glasses Gallery Website",
+      "path": "glassesgallery",
+      "gallery": [{
+        "title": "Homepage",
+        "imageType": "desktop",
+        "fileName": "index.png"
+      }, {
+        "title": "Products List",
+        "imageType": "desktop",
+        "fileName": "list.png"
+      }, {
+        "title": "Product Page",
+        "imageType": "desktop",
+        "fileName": "product.png"
+      }, {
+        "title": "Our Lens",
+        "imageType": "desktop",
+        "fileName": "lens.png"
+      }, {
+        "title": "Affiliate Program",
+        "imageType": "desktop",
+        "fileName": "affiliate.png"
+      }],
+      "themeColor": "black"
+    },
+    {
+      "id": 10,
+      "name": "Swisscoat",
+      "date": "2017",
+      "typeList": [
+        "Web Design",
+        "Front-end Development",
+        "SEO",
+        "Blog Building"
+      ],
+      "techList": [
+        "Php",
+        "VueJs",
+        "Photoshop",
+        "Sketch",
+        "Wordpress"
+      ],
+      "description": "Swisscoat Website",
+      "path": "swissocat",
+      "gallery": [{
+        "title": "Index",
+        "imageType": "desktop",
+        "fileName": "index.png"
+      }, {
+        "title": "info",
+        "imageType": "desktop",
+        "fileName": "info.png"
+      }, {
+        "title": "Lens",
+        "imageType": "desktop",
+        "fileName": "Lens.png"
+      }, {
+        "title": "Simlation",
+        "imageType": "desktop",
+        "fileName": "Simlation.png"
+      }, {
+        "title": "Blog",
+        "imageType": "desktop",
+        "fileName": "blog.png"
+      }],
+      "themeColor": "Blue"
     }
   ]
 }

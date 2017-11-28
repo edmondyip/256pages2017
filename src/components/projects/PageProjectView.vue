@@ -13,7 +13,7 @@
       </header>
       <!-- image -->
       <div class="gallery">
-        <img :src="require('../../assets/img/works/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
+        <img :src="require('../../assets/img/projects/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
       </div>
     </section>
   </div>
@@ -32,9 +32,10 @@
     },
     metaInfo: {
       title: 'my portfolio',
-      bodyAttrs: {
-        style: 'background: #85F1C1' //change background color
-      }
+      bodyAttrs: {        
+        style: 'background: rgba(133,241,193,.5)' //change background color
+      },
+      description: 'hong kong design personal portfolio, i can provide'
     },
     computed: {
       gridCss: function () {

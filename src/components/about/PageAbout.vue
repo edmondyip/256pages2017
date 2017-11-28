@@ -57,8 +57,8 @@
       width: 50%;
       height: 100%;
       .info {
-        background: rgba(0,0,0,.2);
-        padding: 10px;
+        background: rgba(133,241,193,1);
+        padding: 10px 50px;
         margin: 0 10px;
         height: 100%;
       }

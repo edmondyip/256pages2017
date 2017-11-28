@@ -28,7 +28,7 @@
         bgContact: '.bg04'
       }
     },
-    methods: {
+    mounted: {
       tween: function () {
         self = this
         KUTE.to((self.bgProjects), {
@@ -39,6 +39,7 @@
           reverseFirstPath: true
         }).start()
       }
+    }
     }
   }
 </script>

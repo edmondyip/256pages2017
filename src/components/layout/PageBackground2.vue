@@ -51,7 +51,6 @@
       }
     }
   }
-
 </script>
 
 <style lang="scss">
@@ -65,8 +64,7 @@
       stroke: #85F1C1;
       stroke-width: 1px;
       fill: none;
-      opacity: .5;
+      opacity: .8;
     }
   }
-
 </style>

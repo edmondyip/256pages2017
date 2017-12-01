@@ -81,13 +81,13 @@
           &:hover~span {
             opacity: 1;
             margin-top: 8px;
-            background: #4A4A4A;
-            color: #85F1C1;
+            background: $fontColor;
+            color: $themeColor;
           }
           &:hover,
           &.router-link-exact-active {
-            background: #4A4A4A;
-            color: #85F1C1;
+            background: $fontColor;;
+            color: $themeColor;
           }
         }
       }

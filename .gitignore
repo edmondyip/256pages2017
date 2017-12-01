@@ -4,9 +4,6 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-src/assets/img/
-package.json
-package-lock.json
 
 # Editor directories and files
 .idea
@@ -15,5 +12,3 @@ package-lock.json
 *.ntvs*
 *.njsproj
 *.sln
-package-lock.json
-package.json

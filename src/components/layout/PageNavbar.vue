@@ -73,10 +73,6 @@
           text-decoration: none;
           font-size: 1.2rem;
           padding: 5px 20px 5px 10px;
-          text-rendering: auto;
-          text-rendering: optimizeSpeed;
-          text-rendering: optimizeLegibility;
-          text-rendering: geometricPrecision;
           transition: .8s;
           &:hover~span {
             opacity: 1;

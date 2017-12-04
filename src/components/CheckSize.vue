@@ -1,6 +1,6 @@
 <template>
   <div class="size">
-    <p>{{windowWidth}} | {{windowHeight}}</p>
+    {{windowWidth}} | {{windowHeight}}
   </div>
 </template>
 
@@ -15,23 +15,19 @@
     },
     mounted() {
       this.$nextTick(function () {
-        window.addEventListener('resize', this.getWindowWidth);
-        window.addEventListener('resize', this.getWindowHeight);
+        window.addEventListener('resize', this.getWindowSize)
       })
 
     },
     methods: {
-      getWindowWidth(event) {
-        this.windowWidth = document.documentElement.clientWidth;
-      },
-      getWindowHeight(event) {
-        this.windowHeight = document.documentElement.clientHeight;
+      getWindowSize(event) {
+        this.windowWidth = document.documentElement.clientWidth
+        this.windowHeight = document.documentElement.clientHeight
       }
     },
     beforeDestroy: function () {
-      window.removeEventListener('resize', this.getWindowWidth);
-      window.removeEventListener('resize', this.getWindowHeight);
-    },
+      window.removeEventListener('resize', this.getWindowSize)
+    }
   }
 </script>
 
@@ -39,7 +35,10 @@
   .size {
     position: fixed;
     right: 10px;
-    bottom: 0;
+    bottom: -15px;
+    font-size: 3rem;
+    color: #ddd;
+    font-family: $titleFont;
+    font-weight: 300;
   }
-
 </style>

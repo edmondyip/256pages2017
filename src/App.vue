@@ -1,7 +1,8 @@
 <template>
-  <div id="app" :class="routeName">
-    <background-animation></background-animation>
+  <div id="app" :class="routeName" v-on:mouseover="showPosition">
+    <background-animation :position-x="positionX" :position-y="positionY" />
     <size-checker />
+    <position-checker>{{positionX}} | {{positionY}}</position-checker>
     <page-header />
     <main>
       <transition name="fade" mode="out-in">
@@ -17,13 +18,16 @@
   import PageHeader from '@/components/layout/PageHeader'
   import PageFooter from '@/components/layout/PageFooter'
   import SizeChecker from '@/components/CheckSize'
-  import BackgroundAnimation from '@/components/layout/PageBackground2'
+  import BackgroundAnimation from '@/components/layout/PageBackground'
+  import PositionChecker from '@/components/CheckPosition'
 
   export default {
     name: 'Layout',
     data: function () {
       return {
-        routeName: this.$route.name
+        routeName: this.$route.name,
+        positionX: 0,
+        positionY: 0
       }
     },
     metaInfo: {
@@ -34,7 +38,7 @@
       // },
       link: [{
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Ubuntu:400,500'
+        href: 'https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:300,400'
       }, {
         rel: 'author',
         href: 'https://256pages.com/humans.txt'
@@ -44,12 +48,19 @@
       PageHeader,
       PageFooter,
       SizeChecker,
-      BackgroundAnimation
+      BackgroundAnimation,
+      PositionChecker
     },
     watch: {
       '$route' (to, from) {
         //add route name on #app
         this.routeName = this.$route.name
+      }
+    },
+    methods: {
+      showPosition: function (event) {
+        this.positionX = event.clientX
+        this.positionY = event.clientY
       }
     },
     mouted: function () {
@@ -69,6 +80,10 @@
       this.$router.afterEach((to, from) => {
         this.$Progress.finish()
       })
+      window.addEventListener('mousemove', this.showPosition)
+    },
+    beforeDestroy: function () {
+      window.removeEventListener('mousemove', this.showPosition)
     }
   }
 </script>
@@ -88,4 +103,5 @@
       top: 0px;
     }
   }
+
 </style>

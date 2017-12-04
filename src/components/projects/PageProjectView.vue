@@ -6,16 +6,14 @@
         <h1>{{index + 1}}</h1>
         <h2>{{work.name}}</h2>
         <p>{{work.description}}</p>
-        <p>{{work.themeColor}}</p>
         <work-type>
           <!-- slot -->
           <li v-for="type in work.typeList" :key="type.id">{{type}}</li>
         </work-type>
       </header>
       <!-- image -->
-      <div class="gallery" >
-        <!-- :style="{border: '20px solid' + borderColor}" -->
-        <img :src="require('../../assets/img/projects/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
+      <div class="gallery" :style="{border: convertHex(work.themeColor)}">
+        <img :src="require('../../assets/img/projects/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title" >
       </div>
     </section>
   </div>
@@ -29,15 +27,15 @@
     data: function () {
       return {
         projectView: 1,
-        list: worksList.projects
+        list: worksList.projects,
+        opacity: 50
       }
     },
     metaInfo: {
       title: 'my portfolio',
-      bodyAttrs: {        
+      bodyAttrs: {
         style: 'background: rgba(133,241,193,.5)' //change background color
-      },
-      description: 'hong kong design personal portfolio, i can provide'
+      }
     },
     computed: {
       gridCss: function () {
@@ -46,22 +44,19 @@
     },
     components: {
       workType
+    },
+    methods: {
+      convertHex: function (color) {
+        color = color.replace('#', '')
+        let r = parseInt(color.substring(0, 2), 16)
+        let g = parseInt(color.substring(2, 4), 16)
+        let b = parseInt(color.substring(4, 6), 16)
+        let result = 'rgba(' + r + ',' + g + ',' + b + ',' + this.opacity / 100 + ')'
+        return '20px solid ' + result
+      }
     }
-    // methods: {
-    //   convertHex: function (hex,opacity) {
-    //     hex: hex.replace("#","")
-    //     r = parseInt(hex.substring(0,2),16)
-    //     g = parseInt(hex.substring(2,4),16)
-    //     b = parseInt(hex,substring(4,6),16)
-    //     result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity/100 + ')'
-    //     return result
-    //   },
-    //  borderColor: function (index) {
-    //     console.log(this.list[index].themeColor)
-    //     return this.convertHex(this.list.themeColor,50)
-    //   }
-    // }
   }
+
 </script>
 
 <style lang="scss" scoped>

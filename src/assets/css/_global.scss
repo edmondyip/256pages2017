@@ -1,6 +1,6 @@
 
-
 $titleFont: 'Ubuntu',sans-serif;
+$contentFont: 'Open Sans', sans-serif;
 $fontColor: #4A4A4A;
 $themeColor: #85F1C1;
 
@@ -19,6 +19,7 @@ h2,
 h3 {
   letter-spacing: 1.8px;
   text-transform: lowercase;
+  font-family: $titleFont;
 }
 
 h1 {
@@ -30,12 +31,15 @@ h2 {
   margin: 1rem 0 .2rem;
 }
 
-p {
+p,
+li,
+article {
   letter-spacing: 1px;
   font-size: .8rem;
   line-height: 1rem;
   text-transform: lowercase;
   margin: .8rem 0;
+  font-family: $contentFont;
 }
 
 ul {

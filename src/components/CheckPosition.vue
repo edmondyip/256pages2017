@@ -11,7 +11,8 @@
 <style lang="scss" scoped>
   .poisition {
     position: fixed;
-    right: 0;
+    display: block;
+    right: 10px;
     top: 0;
     font-size: .8rem;
     color: #999;
@@ -19,5 +20,6 @@
     font-weight: 300;
     background: #ffffff;
     padding: 8px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.5);
   }
 </style>

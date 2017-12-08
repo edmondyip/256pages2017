@@ -1,20 +1,11 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import VueProgressBar from 'vue-progressbar'
 import App from './App'
 import router from './router'
-
-import '@/assets/css/normalize.css';
-import '@/assets/css/_main.css';
-
-// const meta = app.$meta()
-
-// export default (context) => {
-//   router.push(context.url)
-//   context.meta = meta
-//   reuturn App
-// }
+import VueProgressBar from 'vue-progressbar'
+import '@/assets/css/normalize.css'
+import '@/assets/css/_main.css'
 
 const options = {
   color: '#85F1C1',
@@ -29,10 +20,50 @@ const options = {
   location: 'top',
   inverse: false
 }
-
 Vue.use(VueProgressBar, options)
 
-Vue.config.productionTip = false
+// Global Var
+Vue.mixin({
+  data: function () {
+    return {
+      routeName: this.$route.name,
+      positionX: 0,
+      positionY: 0,
+      windowWidth: document.documentElement.clientWidth,
+      windowHeight: document.documentElement.clientHeight
+    }
+  },
+  mounted() {
+    this.$nextTick(function () {
+      window.addEventListener('resize', this.getWindowSize)
+    })
+  },
+  methods: {
+    updatePosition: function (event) {
+      this.positionX = event.clientX
+      this.positionY = event.clientY
+    },
+    getWindowSize(event) {
+      this.windowWidth = document.documentElement.clientWidth
+      this.windowHeight = document.documentElement.clientHeight
+    }
+  },
+  created: function () {
+    window.addEventListener('mousemove', this.updatePosition)
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('mousemove', this.updatePosition)
+    window.removeEventListener('resize', this.getWindowSize)
+
+  },
+  watch: {
+    '$route' (to, from) {
+      this.routeName = this.$route.name
+    }
+  }
+})
+
+Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 new Vue({

@@ -14,7 +14,6 @@
 
   export default {
     name: 'Background',
-    props: ['positionX', 'positionY'],
     data: function () {
       return {
         myIcon: null,
@@ -41,25 +40,17 @@
       tween: function () {
         this.myIcon.to(this.target)
       }
-      // translatePosition: function (positionX, positionY) {
-      //   return 'translate(' + positionX + ',' + positionY + ')'
-      // }
     },
     mounted: function () {
       this.myIcon = new SVGMorpheus('#background-svg')
     },
     watch: {
       '$route' (to, from) {
-        this.target = this.$route.name
+        this.target = this.routeName
         this.tween()
-      },
-      positionX: function (positionX, positionY) {
-        let bg = document.getElementsByTagName("path")
-        bg.setTranslate(100,100)
       }
     }
   }
-
 </script>
 
 <style lang="scss">

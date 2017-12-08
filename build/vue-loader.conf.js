@@ -9,6 +9,10 @@ module.exports = {
       ? config.build.productionSourceMap
       : config.dev.cssSourceMap,
     extract: isProduction
+    // cssModules: {
+    //   localIdentName:'[path][name]__[local]___[hash:base64:5]',
+    //   camelCase: true
+    // }
   }),
   transformToRequire: {
     video: 'src',

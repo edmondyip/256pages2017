@@ -1,33 +1,12 @@
 <template>
   <div class="size">
-    {{windowWidth}} | {{windowHeight}}
+    {{this.windowWidth}} | {{this.windowHeight}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'Size',
-    data: function () {
-      return {
-        windowWidth: document.documentElement.clientWidth,
-        windowHeight: document.documentElement.clientHeight
-      }
-    },
-    mounted() {
-      this.$nextTick(function () {
-        window.addEventListener('resize', this.getWindowSize)
-      })
-
-    },
-    methods: {
-      getWindowSize(event) {
-        this.windowWidth = document.documentElement.clientWidth
-        this.windowHeight = document.documentElement.clientHeight
-      }
-    },
-    beforeDestroy: function () {
-      window.removeEventListener('resize', this.getWindowSize)
-    }
+    name: 'Size'
   }
 </script>
 

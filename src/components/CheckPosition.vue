@@ -1,6 +1,6 @@
 <template>
   <div class="position">
-    <slot></slot>
+    [X={{positionX}}] [Y={{positionY}}]
   </div>
 </template>
 
@@ -11,11 +11,13 @@
 <style lang="scss" scoped>
   .poisition {
     position: fixed;
-    left: 10px;
-    top: 10px;
+    right: 0;
+    top: 0;
     font-size: .8rem;
-    color: #ddd;
+    color: #999;
     font-family: $titleFont;
     font-weight: 300;
+    background: #ffffff;
+    padding: 8px;
   }
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <div id="app" :class="routeName" v-on:mouseover="showPosition">
-    <background-animation :position-x="positionX" :position-y="positionY" />
+  <div id="app">
+    <background-animation :position-x="this.positionX" :position-y="this.positionY" />
     <size-checker />
-    <position-checker>{{positionX}} | {{positionY}}</position-checker>
+    <position-checker>{{this.positionX}} | {{this.positionY}}</position-checker>
     <page-header />
     <main>
       <transition name="fade" mode="out-in">
@@ -23,13 +23,6 @@
 
   export default {
     name: 'Layout',
-    data: function () {
-      return {
-        routeName: this.$route.name,
-        positionX: 0,
-        positionY: 0
-      }
-    },
     metaInfo: {
       title: 'a designer + developer from hong kong',
       titleTemplate: '%s | 256pages',
@@ -44,30 +37,10 @@
         href: 'https://256pages.com/humans.txt'
       }]
     },
-    components: {
-      PageHeader,
-      PageFooter,
-      SizeChecker,
-      BackgroundAnimation,
-      PositionChecker
-    },
-    watch: {
-      '$route' (to, from) {
-        //add route name on #app
-        this.routeName = this.$route.name
-      }
-    },
-    methods: {
-      showPosition: function (event) {
-        this.positionX = event.clientX
-        this.positionY = event.clientY
-      }
-    },
     mouted: function () {
       this.$Progress.finish()
     },
     created: function () {
-      //progress bar
       this.$Progress.start()
       this.$router.beforeEach((to, from, next) => {
         if (to.meta.progress !== undefined) {
@@ -80,10 +53,13 @@
       this.$router.afterEach((to, from) => {
         this.$Progress.finish()
       })
-      window.addEventListener('mousemove', this.showPosition)
     },
-    beforeDestroy: function () {
-      window.removeEventListener('mousemove', this.showPosition)
+    components: {
+      PageHeader,
+      PageFooter,
+      SizeChecker,
+      BackgroundAnimation,
+      PositionChecker
     }
   }
 </script>
@@ -103,5 +79,4 @@
       top: 0px;
     }
   }
-
 </style>

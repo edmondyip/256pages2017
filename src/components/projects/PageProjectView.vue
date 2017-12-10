@@ -32,10 +32,10 @@
       }
     },
     metaInfo: {
-      title: 'my portfolio',
-      bodyAttrs: {
-        style: 'background: rgba(133,241,193,.5)' //change background color
-      }
+      title: 'my portfolio'
+      // bodyAttrs: {
+      //   style: 'background: rgba(133,241,193,.5)' //change background color
+      // }
     },
     computed: {
       gridCss: function () {

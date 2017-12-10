@@ -54,8 +54,9 @@
     div {
       display: block;
       position: relative;
-      width: 50%;
-      height: 100%;
+      width: calc(50% - 4px);
+      height: calc(100% - 4px);
+      border: 2px solid rgba(133,241,193,1);
       .info {
         background: rgba(133,241,193,1);
         padding: 10px 50px;

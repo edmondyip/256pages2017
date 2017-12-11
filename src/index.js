@@ -33,7 +33,7 @@ Vue.mixin({
       windowHeight: document.documentElement.clientHeight
     }
   },
-  mounted() {
+  mounted: function () {
     this.$nextTick(function () {
       window.addEventListener('resize', this.getWindowSize)
     })
@@ -43,18 +43,18 @@ Vue.mixin({
       this.positionX = event.clientX
       this.positionY = event.clientY
     },
-    getWindowSize(event) {
+    getWindowSize: function (event) {
       this.windowWidth = document.documentElement.clientWidth
       this.windowHeight = document.documentElement.clientHeight
     }
   },
   created: function () {
     window.addEventListener('mousemove', this.updatePosition)
+    this.routeName = this.$route.name
   },
   beforeDestroy: function () {
     window.removeEventListener('mousemove', this.updatePosition)
     window.removeEventListener('resize', this.getWindowSize)
-
   },
   watch: {
     '$route' (to, from) {

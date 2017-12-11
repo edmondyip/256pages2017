@@ -57,6 +57,7 @@
       width: calc(50% - 4px);
       height: calc(100% - 4px);
       border: 2px solid rgba(133,241,193,1);
+      background: $themeColor;
       .info {
         background: rgba(133,241,193,1);
         padding: 10px 50px;
@@ -84,6 +85,14 @@
         &:hover h1 {
           background: rbga(0,0,0,1);
         }
+      }
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    .about-cover {
+      display: block;
+      div {
+        width: calc(100% - 4px)
       }
     }
   }

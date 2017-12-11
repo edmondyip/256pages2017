@@ -8,7 +8,7 @@
         </div>
       </transition>
       <transition name="logo">
-        <div class="video-logo" v-if="logoAnimation === true">弐伍陸頁</div>
+        <div class="video-logo" v-if="logoAnimation === true"><span>弐伍</span><span>陸頁</span></div>
       </transition>
     </div>
     <div class="title-container">
@@ -178,9 +178,22 @@
     section {
       .video-container {
         width: 100%;
+        height: 350px;
         overflow: hidden;
         #youtube {
           width: 100%;
+          display: none;
+        }
+        .video-logo {
+          padding: 30px 0;
+          line-height: 120px;
+          display: block;
+          justify-content: center;
+          span {
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+          }
         }
       }
     }

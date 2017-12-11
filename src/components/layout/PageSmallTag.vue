@@ -42,4 +42,10 @@
       left: -60px;
     }
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    .logo-tag {
+      display: none;
+    }
+  }
 </style>

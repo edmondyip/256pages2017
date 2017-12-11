@@ -47,14 +47,23 @@
       }
     },
   }
+
 </script>
 
 <style scoped lang="scss">
+  $videoWidth: 980px;
+  $videoWidthOffside: 40px;
+  $videoHeight: 550px;
+  $videoHeightOffside: 50px;
+
+  $videoContainerWidth: $videoWidth - ($videoWidthOffside * 2);
+  $videoContainerHeight: $videoHeight - ($videoHeightOffside * 2);
+
   section {
     .video-container {
       position: relative;
-      width: 900px;
-      height: 380px;
+      width: $videoContainerWidth;
+      height: $videoContainerHeight;
       margin: 0 auto;
       transition: .5s;
       .video-wrapper {
@@ -73,7 +82,7 @@
         justify-content: center;
         font-family: kaiso, sans-serif;
         font-size: 100px;
-        line-height: 380px;
+        line-height: $videoContainerHeight;
         transition: .5s ease-out;
         cursor: cell;
         color: rgba(0, 0, 0, 1);
@@ -81,10 +90,10 @@
       }
       #youtube {
         position: absolute;
-        width: 980px;
-        height: 550px;
-        left: -40px;
-        top: -50px;
+        width: $videoWidth;
+        height: $videoHeight;
+        left: - $videoWidthOffside;
+        top: - $videoHeightOffside;
         opacity: .1;
         transition: .5s;
         pointer-events: none;
@@ -92,7 +101,7 @@
     }
     .title-container {
       position: relative;
-      width: 900px;
+      width: $videoContainerWidth;
       margin: 0 auto;
       transition: .5s;
       h1.index-title {
@@ -113,7 +122,7 @@
     }
 
     .video-container:hover {
-      width: 970px;
+      width: $videoWidth - 10px;
       .video-logo {
         color: rgba(0, 0, 0, 0.2);
         font-size: 150px;
@@ -162,6 +171,18 @@
     }
     100% {
       transform: translateY(0)
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    section {
+      .video-container {
+        width: 100%;
+        overflow: hidden;
+        #youtube {
+          width: 100%;
+        }
+      }
     }
   }
 

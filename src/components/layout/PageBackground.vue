@@ -11,7 +11,6 @@
 
 <script>
   import SVGMorpheus from "@/assets/js/svg-morpheus"
-
   export default {
     name: 'Background',
     data: function () {

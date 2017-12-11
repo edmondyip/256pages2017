@@ -2,7 +2,7 @@
   <div id="app">
     <background-animation :position-x="this.positionX" :position-y="this.positionY" />
     <size-checker />
-    <position-checker>{{this.positionX}} | {{this.positionY}}</position-checker>
+    <!-- <position-checker>{{this.positionX}} | {{this.positionY}}</position-checker> -->
     <page-header />
     <main>
       <transition name="fade" mode="out-in">

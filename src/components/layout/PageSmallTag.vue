@@ -17,7 +17,7 @@
       font-family: kaiso, sans-serif;
       font-size: 24px; 
       background: #FFFFFF;
-      color: $fontColor;
+      color: $darkColor;
       height: 40px;
       width: 40px;
       line-height: 40px;
@@ -31,7 +31,7 @@
       padding: 0 5px 0 0;
       &:hover {
         color: $themeColor;
-        background: $fontColor;
+        background: $darkColor;
         left: -10px;
       }
     }

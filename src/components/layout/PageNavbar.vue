@@ -1,7 +1,7 @@
 <template>
   <nav>
     <transition-group tag="ul" name="navAnimation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-    <!-- loop nav bar -->
+      <!-- loop nav bar -->
       <li v-for="(item, index) in list" itemprop="name" :key="index">
         <router-link :to="item.url" itemprop="url">{{item.name}}{{item.index}}</router-link>
         <span>{{item.caption}}</span>
@@ -39,11 +39,11 @@
       }
     }
   }
+
 </script>
 
 <style scoped lang="scss">
   nav {
-    display: block;
     ul {
       list-style: none;
       margin: 0;
@@ -77,12 +77,12 @@
           &:hover~span {
             opacity: 1;
             margin-top: 8px;
-            background: $fontColor;
+            background: $darkColor;
             color: $themeColor;
           }
           &:hover,
           &.router-link-exact-active {
-            background: $fontColor;;
+            background: $darkColor;
             color: $themeColor;
           }
         }
@@ -104,4 +104,33 @@
       transform: translateY(0);
     }
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    nav {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: .5s;
+      position: absolute;
+      z-index: 1;
+      background: rgba(255,255,255,.8);
+      ul {
+        display: block;
+        transition: .5s;
+        li {
+          span {
+            display: none;
+          }
+        }
+      }
+      &.open {
+        height: 100vh;
+        display: block;
+        ul {
+          height: 100%;
+        }
+      }
+    }
+  }
+
 </style>

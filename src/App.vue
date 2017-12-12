@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <background-animation :position-x="this.positionX" :position-y="this.positionY" />
-    <size-checker />
-    <!-- <position-checker>{{this.positionX}} | {{this.positionY}}</position-checker> -->
+    <background-animation />
     <page-header />
     <main>
       <transition name="fade" mode="out-in">
@@ -17,9 +15,7 @@
 <script>
   import PageHeader from '@/components/layout/PageHeader'
   import PageFooter from '@/components/layout/PageFooter'
-  import SizeChecker from '@/components/CheckSize'
   import BackgroundAnimation from '@/components/layout/PageBackground'
-  import PositionChecker from '@/components/CheckPosition'
 
   export default {
     name: 'Layout',
@@ -57,9 +53,7 @@
     components: {
       PageHeader,
       PageFooter,
-      SizeChecker,
-      BackgroundAnimation,
-      PositionChecker
+      BackgroundAnimation
     }
   }
 </script>

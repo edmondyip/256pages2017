@@ -45,4 +45,12 @@
       }
     }
   }
+  @media (max-width: $breakpoint-mobile) {
+    .wrapper {
+      overflow: initial;
+      position: relative;
+      left: auto;
+      right: auto;
+    }
+  }
 </style>

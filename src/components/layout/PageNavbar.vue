@@ -77,12 +77,12 @@
           &:hover~span {
             opacity: 1;
             margin-top: 8px;
-            background: $darkColor;
+            background: #333;
             color: $themeColor;
           }
           &:hover,
           &.router-link-exact-active {
-            background: $darkColor;
+            background: #333;
             color: $themeColor;
           }
         }

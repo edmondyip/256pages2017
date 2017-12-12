@@ -16,7 +16,7 @@
     data: function () {
       return {
         myIcon: null,
-        target: this.routeName,
+        target: this.$route.name,
         bgList: [{
             name: 'home',
             path: ["M1010.9,148.3c0,56.9,0,144.9,0,183.4c-113,0-259.7,0-362.7,0c0-24.3,0-149.9,0-183.4 C754,148.3,909.8,148.3,1010.9,148.3z",
@@ -44,6 +44,8 @@
     },
     mounted: function () {
       this.myIcon = new SVGMorpheus('#background-svg')
+      this.target = this.routeName
+      this.tween()
     },
     watch: {
       '$route' (to, from) {

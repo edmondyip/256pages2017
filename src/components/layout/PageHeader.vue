@@ -60,7 +60,7 @@
 
 <style scoped lang="scss">
   header {
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 3vh 0;
     transition: .5s;

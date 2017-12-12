@@ -13,7 +13,7 @@
       </header>
       <!-- image -->
       <div class="gallery" :style="{border: convertHex(work.themeColor)}">
-        <img :src="require('../../assets/img/projects/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title" >
+        <img :src="require('../../assets/img/projects/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
       </div>
     </section>
   </div>
@@ -56,7 +56,6 @@
       }
     }
   }
-
 </script>
 
 <style lang="scss" scoped>
@@ -81,6 +80,7 @@
         overflow: hidden;
         img {
           width: 100%;
+          display: block;
         }
       }
       header {
@@ -90,7 +90,16 @@
     }
   }
 
-@media (max-width: $breakpoint-mobile) {
-  
-}
+  @media (max-width: $breakpoint-mobile) {
+    .project-list {
+      display: block;
+      section {
+        margin-top: 10px;
+        .gallery {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
 </style>

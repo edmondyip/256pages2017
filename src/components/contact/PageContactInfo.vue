@@ -21,4 +21,10 @@
     width: 900px;
     margin: 0 auto;
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    section {
+      width: 100%;
+    }
+  }
 </style>

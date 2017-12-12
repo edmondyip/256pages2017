@@ -90,4 +90,7 @@
     }
   }
 
+@media (max-width: $breakpoint-mobile) {
+  
+}
 </style>

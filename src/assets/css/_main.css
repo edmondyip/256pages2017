@@ -15,3 +15,9 @@ body {
   src: url('../fonts/kaiso.eot');
   src: url('../fonts/kaiso.eot') format('embedded-opentype'), url('../fonts/kaiso.woff2') format('woff2'), url('../fonts/kaiso.woff') format('woff'), url('../fonts/kaiso.ttf') format('truetype'), url('../fonts/kaiso.svg') format('svg');
 }
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+}

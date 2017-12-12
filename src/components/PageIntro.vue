@@ -180,6 +180,7 @@
         width: 100%;
         height: 350px;
         overflow: hidden;
+        margin-top: 50px;
         #youtube {
           width: 100%;
           display: none;

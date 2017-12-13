@@ -1,8 +1,10 @@
 <template>
   <article>
+    <slot></slot>
     <section>
       <h2>Created by</h2>
       <p>edmond yip 2017</p>
+      <p>version 2.1</p>
     </section>
 
     <section>
@@ -31,10 +33,7 @@
         <li><a href="https://fonts.google.com/specimen/Ubuntu">Ubuntu</a></li>
       </ul>
     </section>
-
-    <section>
-      <p><a href="./human.txt">human.txt</a></p>
-    </section>
+    
   </article>
 </template>
 

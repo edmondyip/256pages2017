@@ -28,14 +28,11 @@
       return {
         projectView: 1,
         list: worksList.projects,
-        opacity: 50
+        opacity: 50,
       }
     },
     metaInfo: {
-      title: 'my portfolio',
-      bodyAttrs: {
-        style: 'overflow: hidden;'
-      }
+      title: 'my portfolio'
     },
     computed: {
       gridCss: function () {
@@ -56,6 +53,7 @@
       }
     }
   }
+
 </script>
 
 <style lang="scss" scoped>
@@ -86,22 +84,25 @@
       header {
         margin: 10px;
         padding: 10px;
-        background: rgba(255, 255, 255, .5);
-        // border: 20px solid rgba(255, 255, 255, .5);
+        background: rgba(255, 255, 255, .5); // border: 20px solid rgba(255, 255, 255, .5);
       }
     }
   }
 
-  // @media (max-width: $breakpoint-mobile) {
-  //   .project-list {
-  //     display: block;
-  //     section {
-  //       margin-top: 10px;
-  //       .gallery {
-  //         width: auto;
-  //         height: auto;
-  //       }
-  //     }
-  //   }
-  // }
+  @media (max-width: $breakpoint-mobile) {
+    .project-list {
+      display: block;
+      section {
+        transform: rotate(0);
+        transform-origin: initial;
+        width: 100%;
+        margin: 0;
+        .gallery {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+
 </style>

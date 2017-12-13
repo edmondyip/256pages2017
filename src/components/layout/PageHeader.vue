@@ -73,7 +73,7 @@
       top: 0;
       left: 0;
       width: 25px;
-      height: 25px; // border-radius: 50px;
+      height: 25px;
       padding: 10px;
       display: none;
       border: none;

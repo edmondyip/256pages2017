@@ -24,7 +24,7 @@
       }
       &:hover {
         opacity: .8;
-        cursor: pointer;
+        // cursor: pointer;
       }
     }
   }

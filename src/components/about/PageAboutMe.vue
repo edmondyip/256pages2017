@@ -1,5 +1,6 @@
 <template>
   <article>
+    <slot></slot>
     <section>
       <h2>profile</h2>
       <p>name : edmond yip</p>
@@ -29,7 +30,10 @@
   export default {
     name: 'AboutMe'
   }
+
 </script>
 
 <style scoped lang="scss">
+
+
 </style>

@@ -136,7 +136,6 @@
     }
   }
 
-
   .logo-enter-active {
     transition: .3s ease;
   }
@@ -211,6 +210,21 @@
             width: 100%;
             white-space: nowrap;
           }
+        }
+      }
+      .title-container {
+        width: 100%;
+        h1.index-title {
+          text-align: center;
+          bottom: 30px;
+          left: 0;
+          right: 0;
+        }
+        h2.index-small-name {
+          text-align: center;
+          bottom: 10px;
+          left: 0;
+          right: 0;
         }
       }
     }

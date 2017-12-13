@@ -27,9 +27,8 @@
 <style lang="scss" scoped>
   .wrapper {
     position: absolute;
-    padding: 0;
     width: 1000px;
-    height: 1000px;
+    height: 100vw;
     padding: 450px 0 0;
     top: 700px;
     overflow-y: auto;
@@ -44,13 +43,21 @@
     position: absolute;
     left: 50vw;
   }
-  // @media (max-width: $breakpoint-mobile) {
-  //   .wrapper {
-  //     overflow: initial;
-  //     position: relative;
-  //     left: auto;
-  //     right: auto;
-  //   }
-  // }
+
+  @media (max-width: $breakpoint-mobile) {
+    .wrapper {
+      position: relative;
+      width: 100%;
+      height: unset;
+      padding: 0 0 50px 0;
+      top: 100px;
+      overflow: initial;
+      transform: rotate(0);
+      transform-origin: initial;
+    }
+    #scroll-svg {
+      display: none;
+    }
+  }
 
 </style>

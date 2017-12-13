@@ -59,7 +59,7 @@
 <style lang="scss">
   svg#background-svg {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: -100;
     path {
       width: 100%;

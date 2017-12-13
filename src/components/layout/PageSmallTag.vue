@@ -1,6 +1,6 @@
 <template>
-  <div class="logo-tag">
-    <router-link to="/">弐</router-link>
+  <div class="logo-tag" >
+    <router-link to="/" :class="{hide: this.routeName === 'home'}">弐</router-link>
   </div>
 </template>
 
@@ -8,14 +8,13 @@
   export default {
     name: 'Tag'
   }
-
 </script>
 
 <style scoped lang="scss">
   .logo-tag {
     a {
       font-family: kaiso, sans-serif;
-      font-size: 24px; 
+      font-size: 24px;
       background: #FFFFFF;
       color: $darkColor;
       height: 40px;
@@ -34,6 +33,9 @@
         background: $darkColor;
         left: -10px;
       }
+      &.hide {
+        left: -52px;
+      }
     }
   }
 
@@ -48,4 +50,5 @@
       display: none;
     }
   }
+
 </style>

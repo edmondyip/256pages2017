@@ -18,7 +18,7 @@
 
 <style scoped lang="scss">
   section {
-    width: 900px;
+    width: 850px;
     margin: 0 auto;
   }
 

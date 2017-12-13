@@ -9,6 +9,12 @@
           <img src="~assets/img/about/about-me.jpg" @click="AboutMeContent = !AboutMeContent" alt="edmond yip">
         </div>
       </transition>
+      <svg v-if="About256Content === true" @click="About256Content = !About256Content" x="0px" y="0px" id="close-btn" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+        viewBox="0 0 25 25" preserveAspectRatio="none">
+        <g id="close">
+          <polygon points="23,4.7 20.3,2 12.5,9.8 4.7,2 2,4.7 9.8,12.5 2,20.3 4.7,23 12.5,15.2 20.3,23 23,20.3 15.2,12.5" />
+        </g>
+      </svg>
     </div>
 
     <div class="about-256">
@@ -19,6 +25,12 @@
           <img src="~assets/img/about/about-256.jpg" @click="About256Content = !About256Content" alt="256 pages">
         </div>
       </transition>
+      <svg v-if="AboutMeContent === true" @click="AboutMeContent = !AboutMeContent" x="0px" y="0px" id="close-btn" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+        viewBox="0 0 25 25" preserveAspectRatio="none">
+        <g id="close">
+          <polygon points="23,4.7 20.3,2 12.5,9.8 4.7,2 2,4.7 9.8,12.5 2,20.3 4.7,23 12.5,15.2 20.3,23 23,20.3 15.2,12.5" />
+        </g>
+      </svg>
     </div>
 
   </div>
@@ -41,25 +53,25 @@
       WebsiteInfo
     }
   }
+
 </script>
 
 <style scoped lang="scss">
   .about-cover {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 960px;
     transition: .5s;
-    left: 0;
-    right: 0;
+    margin: 0 auto;
     div {
       display: block;
       position: relative;
-      width: calc(50% - 4px);
-      height: calc(100% - 4px);
-      border: 2px solid rgba(133,241,193,1);
+      width: 50%;
+      height: 100%;
       background: $themeColor;
+      // margin: 0 1px;
       .info {
-        background: rgba(133,241,193,1);
+        background: rgba(133, 241, 193, 1);
         padding: 10px 50px;
         margin: 0 10px;
         height: 100%;
@@ -71,6 +83,7 @@
           transition: .8s;
           width: 100%;
           cursor: pointer;
+          display: block;
         }
         h1 {
           letter-spacing: 2px;
@@ -82,12 +95,21 @@
           padding: 10px;
           background: rgba(0, 0, 0, .5);
         }
-        &:hover h1 {
-          background: rbga(0,0,0,1);
+        &:hover {
+          background: rgba(0, 0, 0, 1);
         }
       }
     }
+    #close-btn {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
   }
+
   @media (max-width: $breakpoint-mobile) {
     .about-cover {
       display: block;
@@ -96,4 +118,5 @@
       }
     }
   }
+
 </style>

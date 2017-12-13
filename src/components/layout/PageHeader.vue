@@ -60,6 +60,10 @@
 
 <style scoped lang="scss">
   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     max-width: 900px;
     margin: 0 auto;
     padding: 3vh 0;

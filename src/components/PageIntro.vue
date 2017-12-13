@@ -8,7 +8,10 @@
         </div>
       </transition>
       <transition name="logo">
-        <div class="video-logo" v-if="logoAnimation === true"><span>弐伍</span><span>陸頁</span></div>
+        <div class="video-logo" v-if="logoAnimation === true">
+          <span>弐伍</span>
+          <span>陸頁</span>
+        </div>
       </transition>
     </div>
     <div class="title-container">
@@ -98,6 +101,17 @@
         transition: .5s;
         pointer-events: none;
       }
+      &:hover {
+        width: $videoWidth - 10px;
+        .video-logo {
+          color: rgba(0, 0, 0, 0.2);
+          font-size: 150px;
+        }
+        #youtube {
+          opacity: .8;
+          left: 0;
+        }
+      }
     }
     .title-container {
       position: relative;
@@ -120,19 +134,8 @@
         right: 20px;
       }
     }
-
-    .video-container:hover {
-      width: $videoWidth - 10px;
-      .video-logo {
-        color: rgba(0, 0, 0, 0.2);
-        font-size: 150px;
-      }
-      #youtube {
-        opacity: .8;
-        left: 0;
-      }
-    }
   }
+
 
   .logo-enter-active {
     transition: .3s ease;
@@ -174,6 +177,18 @@
     }
   }
 
+  @media (max-width: $breakpoint-tablet) {
+    section {
+      .video-container {
+        width: 100%;
+        pointer-events: none;
+      }
+      .title-container {
+        width: 100%;
+      }
+    }
+  }
+
   @media (max-width: $breakpoint-mobile) {
     section {
       .video-container {
@@ -181,6 +196,7 @@
         height: 350px;
         overflow: hidden;
         margin-top: 50px;
+        pointer-events: none;
         #youtube {
           width: 100%;
           display: none;

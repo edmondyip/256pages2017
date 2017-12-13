@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <background-animation />
-    <page-header />
     <main>
       <transition name="fade" mode="out-in">
         <router-view />
@@ -9,6 +8,7 @@
     </main>
     <page-footer />
     <vue-progress-bar />
+    <page-header />
   </div>
 </template>
 
@@ -56,21 +56,27 @@
       BackgroundAnimation
     }
   }
+
 </script>
 
 <style scoped lang="scss">
   #app {
     height: 100%;
     main {
-      padding: 20px;
+      padding: 150px 0 0;
       transition: .5s;
     }
     .home main {
       padding: 0;
     }
-    .bg {
-      position: absolute;
-      top: 0px;
+  }
+
+@media (max-width: $breakpoint-mobile) {
+  #app {
+    main {
+      padding: 50px 20px 20px
     }
   }
+}
+
 </style>

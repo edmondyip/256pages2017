@@ -1,10 +1,16 @@
 <template>
-  <!-- <ul class="filter">
-      <li>ui</li>
-      <li>ux</li>
-    </ul> -->
-  <div class="wrapper">
-    <project-view />
+  <div>
+    <svg id="scroll-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 86">
+      <path class="cls-1" d="M0,34V52a18,18,0,0,0,36,0V34A18,18,0,0,0,0,34ZM18,20A14,14,0,0,1,32,34V52A14,14,0,0,1,4,52V34A14,14,0,0,1,18,20Z"
+      />
+      <path class="cls-1" d="M18,37a2,2,0,0,0,2-2V29a2,2,0,0,0-4,0v6A2,2,0,0,0,18,37Z" />
+      <path class="cls-1" d="M16.6,85.4a1.93,1.93,0,0,0,2.8,0l5-5a2,2,0,0,0-2.8-2.8L18,81.2l-3.6-3.6a2,2,0,0,0-2.8,2.8Z" />
+      <path class="cls-1" d="M16.6.6l-5,5a1.93,1.93,0,0,0,0,2.8,1.93,1.93,0,0,0,2.8,0L18,4.8l3.6,3.6a1.93,1.93,0,0,0,2.8,0,1.93,1.93,0,0,0,0-2.8l-5-5A1.93,1.93,0,0,0,16.6.6Z"
+      />
+    </svg>
+    <div class="wrapper">
+      <project-view />
+    </div>
   </div>
 </template>
 
@@ -20,37 +26,31 @@
 
 <style lang="scss" scoped>
   .wrapper {
-    overflow-x: auto;
-    overflow-y: hidden;
-    height: 100%;
     position: absolute;
-    left: 0;
-    right: 0;
     padding: 0;
-    ul.filter {
-      position: relative;
-      list-style: none;
-      transition: .5s;
-      margin: 0 auto;
-      li {
-        background: #85F1C1;
-        font-size: 12px;
-        line-height: 14px;
-        margin: 5px;
-        display: inline-block;
-        padding: 8px;
-        &:first-child {
-          margin: 5px 5px 5px 0;
-        }
-      }
-    }
+    width: 1000px;
+    height: 1000px;
+    padding: 450px 0 0;
+    top: 700px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+  } 
+
+  #scroll-svg {
+    fill: #fff;
+    width: 20px;
+    position: absolute;
+    left: 50vw;
   }
-  @media (max-width: $breakpoint-mobile) {
-    .wrapper {
-      overflow: initial;
-      position: relative;
-      left: auto;
-      right: auto;
-    }
-  }
+  // @media (max-width: $breakpoint-mobile) {
+  //   .wrapper {
+  //     overflow: initial;
+  //     position: relative;
+  //     left: auto;
+  //     right: auto;
+  //   }
+  // }
+
 </style>

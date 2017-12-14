@@ -7,12 +7,17 @@
         <a href="mailto:neta.edmond@gmail.com">neta.edmond@gmail.com</a>
       </li>
     </ul>
+    <guest-book/>
   </section>
 </template>
 
 <script>
+import GuestBook from "@/components/contact/PageGuestbook"
   export default {
-    name: 'Contact'
+    name: 'Contact',
+    components: {
+      GuestBook
+    }
   }
 </script>
 

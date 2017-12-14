@@ -13,7 +13,8 @@ li,
 h1,
 h2,
 h3,
-a {
+a,
+legend {
   color: $darkColor;
   font-family: $titleFont;
   text-rendering: auto;
@@ -24,7 +25,8 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+legend {
   letter-spacing: 1.8px;
   text-transform: lowercase;
   font-family: $titleFont;
@@ -34,14 +36,18 @@ h1 {
   font-size: 1.5rem;
 }
 
-h2 {
+h2,
+legend {
   font-size: 1.2rem;
   margin: 1rem 0 .2rem;
 }
 
 p,
 li,
-article {
+article,
+input,
+textarea,
+button {
   letter-spacing: 1px;
   font-size: .8rem;
   line-height: 1rem;

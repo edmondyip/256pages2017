@@ -7,6 +7,7 @@ import Home from '@/components/PageIntro'
 import About from '@/components/about/PageAbout'
 import Projects from '@/components/projects/PageProjectList'
 import Contact from '@/components/contact/PageContactInfo'
+import Test from '@/textAPI'
 
 Vue.use(Router)
 Vue.use(Meta)
@@ -33,5 +34,9 @@ export default new Router({
     name: 'contact',
     path: '/contact',
     component: Contact
+  }, {
+    name: 'test',
+    path: '/test',
+    component: Test
   }]
 })

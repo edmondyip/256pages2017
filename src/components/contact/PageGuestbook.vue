@@ -1,5 +1,4 @@
 <template>
-  <div>
     <fieldset>
       <legend>leave me a message</legend>
       <input type="text" v-model="cmName" placeholder="name">
@@ -8,7 +7,6 @@
       <button v-if="message === ''" @click="sendComment">send</button>
       <button v-else disabled>{{message}}</button>
     </fieldset>
-  </div>
 </template>
 
 <script>
@@ -52,6 +50,7 @@
     margin: 50px 0;
     border: 0;
     padding: 0;
+    position: relative;
     input {
       font-size: 1rem;
       padding: 3px;
@@ -77,4 +76,14 @@
     }
   }
 
+@media (max-width: $breakpoint-mobile) {
+  fieldset {
+    input {
+      width: 100%;
+    }
+    textarea {
+      width: 100%;
+    }
+  }
+}
 </style>

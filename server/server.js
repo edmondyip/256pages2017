@@ -1,19 +1,20 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+var Express = require('express');
+var BodyParser = require('body-parser');
+
+// CORS
 var cors = require('cors');
 
 // create express app
-var app = express();
+var app = Express();
+app.use(BodyParser.urlencoded({
+    extended: true
+}));
+app.use(BodyParser.json());
 
 app.use(cors());
 
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
 // parse requests of content-type - application/json
-app.use(bodyParser.json());
+app.use(BodyParser.json());
 
 // Configuring the database
 var dbConfig = require('./config/database.config.js');
@@ -35,7 +36,7 @@ mongoose.connection.once('open', function () {
 // define a simple route
 app.get('/', cors(), function (req, res) {
     res.json({
-        "message": "Welcome to 256pages, please leave comment to me."
+        "message": "Welcome to 256pages with token, please leave comment to me."
     });
 });
 

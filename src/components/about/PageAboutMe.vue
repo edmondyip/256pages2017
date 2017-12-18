@@ -2,14 +2,11 @@
   <article>
     <slot></slot>
     <section>
-      <h2>profile</h2>
-      <p>name : edmond yip</p>
-      <p>nationality : hong kong</p>
-    </section>
-
-    <section>
-      <h2>about</h2>
-      <p>hi, i am edmond. welcome to 256 pages, you can find some of my works in this place. feel free to <router-link to="contact">contact me</router-link> if you have any idea need to realize.</p>
+      <h1>Edmond Yip</h1>
+      <h1>Designer</h1>
+      <h1>Development</h1>
+      <p>Hi, i am a designer come from Hong Kong. As my position is a full stack designer, that's mean i can design from graphic to user experience, also the front-end programming. </p>
+      <p>When I start to build website from graphic, but programmer always create website exactly not i design. So I try to build it myself,</p>
     </section>
 
     <section>
@@ -30,10 +27,14 @@
   export default {
     name: 'AboutMe'
   }
-
 </script>
 
 <style scoped lang="scss">
-
-
+  article {
+    section {
+      h1 {
+        text-align: right;
+      }
+    }
+  }
 </style>

@@ -3,8 +3,11 @@
     <div class="video-container">
       <transition name="videoAnimation" appear appear-active-class="video-animation" @after-appear="afterVideo">
         <div class="video-wrapper">
-          <iframe id="youtube" type="text/html" src="https://www.youtube.com/embed/videoseries?list=PLqPg4ZyANjyxgnWTAaDAvq2NaYjBH1pv1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&mute=1"
-            frameborder="0"></iframe>
+          <!-- <iframe id="youtube" type="text/html" src="https://www.youtube.com/embed/videoseries?list=PLqPg4ZyANjyxgnWTAaDAvq2NaYjBH1pv1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&mute=1"
+            frameborder="0"></iframe> -->
+          <video id="youtube" autoplay loop muted>
+            <source src="~assets/video/bg.mp4" type="video/mp4">
+          </video>
         </div>
       </transition>
       <transition name="logo">
@@ -48,7 +51,7 @@
           self.nameAnimation = true
         }, 2000)
       }
-    },
+    }
   }
 
 </script>
@@ -70,11 +73,14 @@
       margin: 0 auto;
       transition: .5s;
       .video-wrapper {
+        background: $themeColor;
         position: relative;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background: #85F1C1;
+        // mask-image: url(~assets/img/logo.svg);
+        // mask-repeat: no-repeat;
+        // mask-position: center center;
       }
       .video-logo {
         position: absolute;

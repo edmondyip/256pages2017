@@ -13,7 +13,7 @@
     position: relative;
     transition: .5s;
     li {
-      background: #85F1C1;
+      background: $themeColor;
       font-size: 12px;
       line-height: 14px;
       margin: 5px;

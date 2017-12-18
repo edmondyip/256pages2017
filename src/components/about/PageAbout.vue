@@ -2,12 +2,10 @@
   <div class="about-cover">
 
     <div class="about-me">
-
       <div class="image">
-        <h1>about me</h1>
+        <!-- <h1>about me</h1> -->
         <img src="~assets/img/about/about-me.jpg" @click="AboutMeContent = !AboutMeContent" alt="about me">
       </div>
-
       <personal-profile :class="{open: AboutMeContent === true}" class="info">
         <!-- <svg v-if="AboutMeContent === true" @click="AboutMeContent = !AboutMeContent" x="0px" y="0px" class="close-btn" xmlns="http://www.w3.org/2000/svg"
           xml:space="preserve" viewBox="0 0 25 25" preserveAspectRatio="none">
@@ -16,15 +14,8 @@
           </g>
         </svg> -->
       </personal-profile>
-
     </div>
-
     <div class="about-256">
-
-      <div class="image">
-        <h1>about this website</h1>
-        <img src="~assets/img/about/about-256.jpg" @click="About256Content = !About256Content" alt="about 256">
-      </div>
 
       <website-info :class="{open: About256Content === true}" class="info">
         <!-- <svg v-if="About256Content === true" @click="About256Content = !About256Content" x="0px" y="0px" class="close-btn" xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +25,10 @@
           </g>
         </svg> -->
       </website-info>
-
+      <div class="image">
+        <!-- <h1>about this website</h1> -->
+        <img src="~assets/img/about/about-256.jpg" @click="About256Content = !About256Content" alt="about 256">
+      </div>
     </div>
   </div>
 
@@ -67,17 +61,17 @@
     margin: 0 auto;
     div {
       position: relative;
-      display: grid;
-      width: 50%;
+      display: flex;
+      width: 100%;
       height: 100%;
       .info {
-        width: 100%;
+        width: 50%;
         display: block;
         transition: .5s;
-        background: $themeColor;
+        background: #ffffff;
       }
       .image {
-        width: 100%;
+        width: 50%;
         display: block;
         img {
           transition-delay: .5s;
@@ -92,8 +86,6 @@
           display: block;
           transition: .4s;
           position: absolute;
-          margin: 10px;
-          padding: 10px;
           background: rgba(0, 0, 0, .5);
         }
         &:hover {
@@ -101,14 +93,14 @@
         }
       }
     }
-    .close-btn {
-      width: 25px;
-      height: 25px;
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      cursor: pointer;
-    }
+    // .close-btn {
+    //   width: 25px;
+    //   height: 25px;
+    //   position: absolute;
+    //   right: 15px;
+    //   top: 15px;
+    //   cursor: pointer;
+    // }
   }
 
   @media (max-width: $breakpoint-mobile) {

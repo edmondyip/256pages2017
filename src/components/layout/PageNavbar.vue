@@ -93,10 +93,10 @@
   }
 
   .nav-anmation {
-    animation: video-load 1s;
+    animation: nav-load 1s;
   }
 
-  @keyframes video-load {
+  @keyframes nav-load {
     0% {
       opacity: 0;
       transform: translateY(-100px);

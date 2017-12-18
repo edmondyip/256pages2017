@@ -66,7 +66,7 @@
       height: 100%;
       // stroke: #85F1C1;
       // stroke-width: 1px;
-      fill: #85F1C1;
+      fill: $themeColor;
       opacity: .8;
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{scrolled: scrolled === true}">
     <div class="nav-btn" @click="navOpen = !navOpen">
       <svg x="0px" y="0px" id="mobile-btn" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 25 25" preserveAspectRatio="none">
         <g id="close">
@@ -18,18 +18,22 @@
 
 <script>
   import SVGMorpheus from "@/assets/js/svg-morpheus"
-  import Navbar from '@/components/layout/PageNavbar'
+  import Navbar from "@/components/layout/PageNavbar"
   export default {
     name: 'Header',
     data: function () {
       return {
         tab: null,
-        navOpen: false
+        navOpen: false,
+        scrolled: false
       }
     },
     methods: {
       tween: function (target) {
         this.tab.to(target)
+      },
+      scrollPoisition: function () {
+        this.scrolled = window.scrollY > 0;
       }
     },
     mounted: function () {
@@ -37,6 +41,12 @@
       {
         duration: 300
       })
+    },
+    created: function () {
+      window.addEventListener('scroll', this.scrollPoisition)
+    },
+    beforeDestroy: function () {
+      window.removeEventListener('scroll', this.scrollPoisition)
     },
     components: {
       Navbar
@@ -64,8 +74,7 @@
     top: 0;
     left: 0;
     right: 0;
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
     padding: 3vh 0;
     transition: .5s;
     .nav-btn {
@@ -84,6 +93,9 @@
         height: 100%;
         fill: #ffffff;
       }
+    }
+    &.scrolled {
+      background: rgba($color: #ffffff, $alpha: .7);
     }
   }
 

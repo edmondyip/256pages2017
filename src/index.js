@@ -22,13 +22,13 @@ const options = {
 }
 Vue.use(VueProgressBar, options)
 
-// Global Var
+// Global data
 Vue.mixin({
   data: function () {
     return {
       routeName: this.$route.name,
-      positionX: 0,
-      positionY: 0,
+      // positionX: 0,
+      // positionY: 0,
       windowWidth: document.documentElement.clientWidth,
       windowHeight: document.documentElement.clientHeight
     }
@@ -39,21 +39,21 @@ Vue.mixin({
     })
   },
   methods: {
-    updatePosition: function (event) {
-      this.positionX = event.clientX
-      this.positionY = event.clientY
-    },
+    // updatePosition: function (event) {
+    //   this.positionX = event.clientX
+    //   this.positionY = event.clientY
+    // },
     getWindowSize: function (event) {
       this.windowWidth = document.documentElement.clientWidth
       this.windowHeight = document.documentElement.clientHeight
     }
   },
   created: function () {
-    window.addEventListener('mousemove', this.updatePosition)
+    // window.addEventListener('mousemove', this.updatePosition)
     this.routeName = this.$route.name
   },
   beforeDestroy: function () {
-    window.removeEventListener('mousemove', this.updatePosition)
+    // window.removeEventListener('mousemove', this.updatePosition)
     window.removeEventListener('resize', this.getWindowSize)
   },
   watch: {
@@ -63,7 +63,7 @@ Vue.mixin({
   }
 })
 
-Vue.config.productionTip = true
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({

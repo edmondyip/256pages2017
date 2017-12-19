@@ -34,7 +34,8 @@ legend {
 
 h1 {
   font-size: 2rem;
-  text-transform: uppercase;
+  letter-spacing: 2px;
+  // text-transform: uppercase;
 }
 
 h2,
@@ -55,6 +56,8 @@ button {
   text-transform: lowercase;
   margin: .8rem 0;
   font-family: $contentFont;
+  text-align: justify;
+  hyphens: auto;
 }
 
 ul {

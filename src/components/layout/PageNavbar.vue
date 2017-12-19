@@ -6,7 +6,7 @@
         <router-link :to="item.url" itemprop="url">{{item.name}}{{item.index}}</router-link>
         <span>{{item.caption}}</span>
       </li>
-      <li itemprop="name" :key="0">
+      <li itemprop="name" :key="5">
         <a href="https://blog.256pages.com" itemprop="url">blog</a>
         <span>my development blog</span>
       </li>

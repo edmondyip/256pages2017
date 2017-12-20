@@ -5,7 +5,7 @@
       <ul class="skill-bar">
         <transition-group name="loading" appear>
           <li v-for="skill in skills" :key="skill.name">
-            <span :style="{width: skill.percent + '%'}"></span>
+            <span :class="{zero: loadBar === false}" :style="{width: skill.percent + '%'}">{{skill.percent + '%'}}</span>
             <div>{{skill.name}}</div>
           </li>
         </transition-group>
@@ -19,6 +19,7 @@
     name: 'AboutMe',
     data: function () {
       return {
+        loadBar: false,
         skills: [{
             name: 'User Experience Design',
             percent: 68
@@ -53,8 +54,17 @@
     methods: {
       barBg: function (per) {
         return 'background: linear-gradient(left, black ' + per + '%, white ' + (100 - per) + '%)'
+      },
+      playBar: function () {
+        this.loadBar = window.scrollY > 220;
       }
-    }
+    },
+    created: function () {
+      window.addEventListener('scroll', this.playBar)
+    },
+    beforeDestroy: function () {
+      window.removeEventListener('scroll', this.playBar)
+    },
   }
 </script>
 
@@ -73,7 +83,7 @@
           width: 100%;
           height: 30px;
           position: relative;
-          background: #cccccc;
+          background: #eeeeee;
           overflow: hidden;
           div {
             display: block;
@@ -88,6 +98,15 @@
             background: $themeColor;
             position: absolute;
             height: 30px;
+            line-height: 30px;
+            text-align: right;
+            padding: 0 5px 0 0;
+            transition: .5s;
+            &.zero {
+              width: 0%!important;
+              overflow: hidden;
+              left: -10px;
+            }
           }
         }
       }

@@ -17,8 +17,11 @@
     </div>
 
     <div class="about-256">
-      <website-info  class="info" />
+      <website-info class="info" />
       <div class="image">
+        <header>
+          <h1>256pages Tech Stack</h1>
+        </header>
       </div>
     </div>
 
@@ -32,8 +35,7 @@
   export default {
     name: 'About',
     data: function () {
-      return {
-      }
+      return {}
     },
     components: {
       PersonalProfile,
@@ -47,9 +49,9 @@
 <style scoped lang="scss">
   .about-cover {
     position: relative;
-    max-width: 920px;
+    max-width: 940px;
     margin: 0 auto;
-    div {
+    .about-me {
       position: relative;
       display: flex;
       width: 100%;
@@ -58,8 +60,9 @@
         width: 50%;
         display: block;
         padding: 0 20px 20px;
-        margin: 0;
+        margin: 15px 0;
         background: #ffffff;
+        margin-left: -30px;
       }
       .image {
         width: 50%;
@@ -70,20 +73,39 @@
           width: 100%;
           background: url(~assets/img/about/about-me.jpg) no-repeat;
           background-size: cover;
-          height: 400px;
+          height: 350px;
           padding: 20px;
           display: flex;
           flex-flow: column wrap;
           justify-content: flex-end;
-          h1 {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            color: rgba($color: #ffffff, $alpha: .8);
-            text-align: left;
-          }
         }
       }
+    }
+    h1 {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      color: rgba($color: #ffffff, $alpha: .8);
+      text-align: left;
+    }
+    .about-256 {
+      position: relative;
+      .image {
+        overflow: hidden;
+        header {
+          background: url(~assets/img/about/about-256.jpg) no-repeat;
+          background-size: contain;
+          width: 100%;
+          height: 300px;
+          padding: 20px;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: flex-end;
+        }
+      }
+    }
+    .about-skills {
+      margin: 50px 0;
     }
   }
 

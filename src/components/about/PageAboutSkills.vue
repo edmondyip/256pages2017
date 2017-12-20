@@ -3,7 +3,12 @@
     <section>
       <h2>Skills</h2>
       <ul class="skill-bar">
-        <!-- <li v-for="skill in skills" >{{skill.name}}<span :style="barBg(skill.percent)"></span></li> -->
+        <transition-group name="loading" appear>
+          <li v-for="skill in skills" :key="skill.name">
+            <span :style="{width: skill.percent + '%'}"></span>
+            <div>{{skill.name}}</div>
+          </li>
+        </transition-group>
       </ul>
     </section>
   </article>
@@ -32,7 +37,7 @@
           },
           {
             name: 'Web Front-end Development',
-            percent: 90
+            percent: 95
           },
           {
             name: 'API Development',
@@ -51,23 +56,38 @@
       }
     }
   }
-
 </script>
 
 <style scoped lang="scss">
   article {
+    width: 100%;
     section {
       h1 {
         text-align: right;
       }
       ul.skill-bar {
         list-style: none;
+        width: 100%;
         padding: 0;
         li {
           width: 100%;
-          padding: 5px 10px;
+          height: 30px;
+          position: relative;
+          background: #cccccc;
+          overflow: hidden;
+          div {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 0 0 10px;
+          }
           span {
+            display: block;
             background: $themeColor;
+            position: absolute;
+            height: 30px;
           }
         }
       }

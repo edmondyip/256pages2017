@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import ScrollMon from 'scrollmonitor'
   export default {
     name: 'AboutMe',
     data: function () {
@@ -54,17 +55,21 @@
     methods: {
       barBg: function (per) {
         return 'background: linear-gradient(left, black ' + per + '%, white ' + (100 - per) + '%)'
-      },
-      playBar: function () {
-        this.loadBar = window.scrollY > 220;
       }
     },
-    created: function () {
-      window.addEventListener('scroll', this.playBar)
-    },
-    beforeDestroy: function () {
-      window.removeEventListener('scroll', this.playBar)
-    },
+    mounted: function () {
+      let self = this
+      let checkSkill = document.getElementsByClassName("skill-bar")
+      let skillWatcher = ScrollMon.create(checkSkill)
+      skillWatcher.fullyEnterViewport(function () {
+        console.log('in')
+        self.loadBar = true
+      })
+      skillWatcher.partiallyExitViewport(function () {
+        console.log('out')
+        self.loadBar = false
+      })
+    }
   }
 </script>
 

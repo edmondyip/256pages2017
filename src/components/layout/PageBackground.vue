@@ -64,10 +64,9 @@
     path {
       width: 100%;
       height: 100%;
-      // stroke: #85F1C1;
-      // stroke-width: 1px;
       fill: $themeColor;
       opacity: .8;
     }
   }
+
 </style>

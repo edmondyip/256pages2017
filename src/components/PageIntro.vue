@@ -185,6 +185,7 @@
   @media (max-width: $breakpoint-tablet) {
     section {
       .video-container {
+        margin: 120px 0 0;
         width: 100%;
         pointer-events: none;
       }
@@ -200,7 +201,7 @@
         width: 100%;
         height: 350px;
         overflow: hidden;
-        margin-top: 50px;
+        margin-top: 100px;
         pointer-events: none;
         #youtube {
           width: 100%;

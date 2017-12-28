@@ -81,17 +81,17 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       padding: 10px;
       display: none;
       border: none;
-      background: $darkColor;
+      background: #ffffff;
       z-index: 2;
       #mobile-btn {
         width: 100%;
         height: 100%;
-        fill: #ffffff;
+        fill: $darkColor;
       }
     }
     &.scrolled {
@@ -106,6 +106,8 @@
   @media (max-width: $breakpoint-mobile) {
     header {
       width: 100%;
+      height: 50px;
+      padding: 0;
       .nav-btn {
         display: block;
       }

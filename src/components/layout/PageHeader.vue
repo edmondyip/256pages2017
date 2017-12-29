@@ -79,15 +79,16 @@
     transition: .5s;
     .nav-btn {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 30px;
-      height: 30px;
-      padding: 10px;
+      top: 5px;
+      left: 5px;
+      width: 25px;
+      height: 25px;
+      padding: 5px;
       display: none;
       border: none;
-      background: #ffffff;
+      // background: #ffffff;
       z-index: 2;
+      // border-radius: 30px;
       #mobile-btn {
         width: 100%;
         height: 100%;

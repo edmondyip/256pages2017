@@ -1,7 +1,7 @@
 <template>
   <div class="about-cover">
 
-    <div class="about-me">
+    <section class="about-me">
       <div class="image">
         <header>
           <h1>Edmond Yip</h1>
@@ -10,20 +10,24 @@
         </header>
       </div>
       <personal-profile class="info" />
-    </div>
+    </section>
 
-    <div class="about-skills">
+    <section class="about-skills">
       <personal-skills />
-    </div>
+    </section>
 
-    <div class="about-256">
-      <website-info class="info" />
+    <section class="about-256">
       <div class="image">
         <header>
           <h1>256pages Tech Stack</h1>
         </header>
       </div>
-    </div>
+      <website-info class="info" />
+    </section>
+
+    <section class="about-stack">
+      <tech-stack />
+    </section>
 
   </div>
 </template>
@@ -32,6 +36,7 @@
   import PersonalProfile from "@/components/about/PageAboutMe"
   import WebsiteInfo from "@/components/about/PageAbout256"
   import PersonalSkills from "@/components/about/PageAboutSkills"
+  import TechStack from "@/components/about/PageAbout256Stack"
   export default {
     name: 'About',
     data: function () {
@@ -40,7 +45,8 @@
     components: {
       PersonalProfile,
       WebsiteInfo,
-      PersonalSkills
+      PersonalSkills,
+      TechStack
     }
   }
 
@@ -51,11 +57,23 @@
     position: relative;
     max-width: 940px;
     margin: 0 auto;
-    .about-me {
+    section {
       position: relative;
       display: flex;
       width: 100%;
       height: 100%;
+      &.about-me {
+        header {
+          background: url(~assets/img/about/about-me.jpg) no-repeat;
+          background-size: cover;
+        }
+      }
+      &.about-256 {
+        header {
+          background: url(~assets/img/about/about-256.jpg) no-repeat center;
+          background-size: cover;
+        }
+      }
       .info {
         width: 50%;
         display: block;
@@ -71,8 +89,6 @@
         header {
           display: block;
           width: 100%;
-          background: url(~assets/img/about/about-me.jpg) no-repeat;
-          background-size: cover;
           height: 350px;
           padding: 20px;
           display: flex;
@@ -88,22 +104,6 @@
       color: rgba($color: #ffffff, $alpha: .8);
       text-align: left;
     }
-    .about-256 {
-      position: relative;
-      .image {
-        overflow: hidden;
-        header {
-          background: url(~assets/img/about/about-256.jpg) no-repeat;
-          background-size: contain;
-          width: 100%;
-          height: 300px;
-          padding: 20px;
-          display: flex;
-          flex-flow: column wrap;
-          justify-content: flex-end;
-        }
-      }
-    }
     .about-skills {
       margin: 50px 0;
     }
@@ -112,9 +112,17 @@
   @media (max-width: $breakpoint-mobile) {
     .about-cover {
       display: block;
-      width: 100%;
-      div {
-        width: calc(100% - 4px)
+      width: 95%;
+      padding: 10px 0;
+      .about-me {
+        width: 100%;
+        display: block;
+        .info {
+          width: 100%;
+        }
+        .image {
+          width: 100%;
+        }
       }
     }
   }

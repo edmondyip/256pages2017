@@ -56,13 +56,15 @@
       padding: 3px;
       display: inline-block;
       margin: 5px 5px 5px 0;
-      border: 1px solid #cccccc;
+      border: 0;
+      border-bottom: 1px solid #cccccc;
       width: 200px;
     }
     textarea {
       font-size: 1rem;
       display: block;
-      border: 1px solid #cccccc;
+      border: 0;
+      border-bottom: 1px solid #cccccc;
       width: 415px;
       height: 200px;
       padding: 3px;
@@ -70,7 +72,8 @@
     }
     button {
       background: #ffffff;
-      border: 1px solid #cccccc;
+      border: 0;
+      border-bottom: 1px solid #cccccc;
       border-radius: 0;
       padding: 8px 15px;
     }

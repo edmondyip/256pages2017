@@ -1,7 +1,7 @@
 {
-  "name": "demo",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "name": "256pages",
+  "version": "2.1.0",
+  "description": "Edmond's Portfolio Website",
   "author": "",
   "private": true,
   "scripts": {
@@ -21,7 +21,7 @@
     "autoprefixer": "^7.2.3",
     "axios": "^0.17.1",
     "babel-core": "^6.22.1",
-    "babel-eslint": "^8.0.3",
+    "babel-eslint": "^8.1.2",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.6.1",
@@ -71,7 +71,7 @@
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.9.1",
-    "webpack-dev-middleware": "^2.0.2",
+    "webpack-dev-middleware": "^2.0.3",
     "webpack-hot-middleware": "^2.21.0",
     "webpack-merge": "^4.1.0"
   },

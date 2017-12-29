@@ -1,34 +1,8 @@
 <template>
   <article>
-    <section>
       <h2>Front-end</h2>
-      <ul>
-        <li><a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vuejs</a></li>
-        <li><a href="http://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass</a></li>
-        <li><a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener noreferrer">Normalize.css</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Server Side</h2>
-      <ul>
-        <li><a href="https://www.ubuntu.com/" target="_blank" rel="noopener noreferrer">Ubuntu</a></li>
-        <li><a href="https://www.nginx.com/" target="_blank" rel="noopener noreferrer">Nginx</a></li>
-        <li><a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">Nodejs</a></li>
-        <li><a href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer">Webpack</a></li>
-        <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">Express</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Font type</h2>
-      <ul>
-        <li><a href="https://moji-waku.com/" target="_blank" rel="noopener noreferrer">kaiso</a></li>
-        <li><a href="https://fonts.google.com/specimen/Ubuntu" target="_blank" rel="noopener noreferrer">Ubuntu</a></li>
-        <li><a href="https://fonts.google.com/specimen/Open+Sans" target="_blank" rel="noopener noreferrer">Open Sans</a></li>
-      </ul>
-    </section>
-    
+      <p>I design this website for my portfolio. Not the projects page, this is just a practice. This website created by different tech i know.</p>
+      <p>This website used VueJs as main framework, on a ubuntu server and using nginx for reverse proxy server. I generated static html by server side rendering, for better site performance and SEO crawling allowable.</p>
   </article>
 </template>
 
@@ -39,5 +13,9 @@
 </script>
 
 <style scoped lang="scss">
-
+  article {
+      h2 {
+        text-align: right;
+    }
+  }
 </style>

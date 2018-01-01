@@ -77,10 +77,11 @@
       .info {
         width: 50%;
         display: block;
-        padding: 0 20px 20px;
+        padding: 10px 20px;
         margin: 15px 0;
         background: #ffffff;
         margin-left: -30px;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05)
       }
       .image {
         width: 50%;
@@ -105,7 +106,7 @@
       text-align: left;
     }
     .about-skills {
-      margin: 50px 0;
+      margin: 20px 0;
     }
   }
 
@@ -114,11 +115,13 @@
       display: block;
       width: 95%;
       padding: 10px 0;
-      .about-me {
+      section {
         width: 100%;
         display: block;
         .info {
           width: 100%;
+          margin: 20px 0;
+          width: calc(100% - 40px);
         }
         .image {
           width: 100%;

@@ -62,11 +62,9 @@ import ScrollMon from 'scrollmonitor'
       let checkSkill = document.getElementsByClassName("skill-bar")
       let skillWatcher = ScrollMon.create(checkSkill)
       skillWatcher.fullyEnterViewport(function () {
-        console.log('in')
         self.loadBar = true
       })
       skillWatcher.partiallyExitViewport(function () {
-        console.log('out')
         self.loadBar = false
       })
     }
@@ -118,4 +116,11 @@ import ScrollMon from 'scrollmonitor'
     }
   }
 
+  @media (max-width: $breakpoint-mobile) {
+    article {
+      section {
+        width: 100%;
+      }
+    }
+  }
 </style>

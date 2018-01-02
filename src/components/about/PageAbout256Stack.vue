@@ -1,5 +1,6 @@
 <template>
   <article>
+
     <section>
       <h2>Front-end</h2>
       <ul>
@@ -43,15 +44,25 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    
+    position: relative;
     section {
       padding: 10px 30px;
       margin: 0 10px 0 0;
       background: #ffffff;
-      // box-shadow: 0 0 10px rgba($color: #000000, $alpha: .2);
-      border: 1px solid #efefef;
-      min-width: 35%;
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
+      // border: 1px solid #efefef;
+      width: 33%;
     }
   }
 
+  @media (max-width: $breakpoint-mobile) {
+    article {
+      display: block;
+      width: 100%;
+      section {
+        width: calc(100% - 60px);
+        margin: 0 0 10px;
+      }
+    }
+  }
 </style>

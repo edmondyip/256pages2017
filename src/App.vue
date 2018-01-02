@@ -16,7 +16,6 @@
   import PageHeader from '@/components/layout/PageHeader'
   import PageFooter from '@/components/layout/PageFooter'
   import BackgroundAnimation from '@/components/layout/PageBackground'
-
   export default {
     name: 'Layout',
     metaInfo: {
@@ -56,7 +55,6 @@
       BackgroundAnimation
     }
   }
-
 </script>
 
 <style scoped lang="scss">
@@ -65,6 +63,7 @@
     main {
       padding: 150px 0 0;
       transition: .5s;
+      position: relative;
     }
     .home main {
       padding: 0;

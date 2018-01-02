@@ -49,7 +49,6 @@
       TechStack
     }
   }
-
 </script>
 
 <style scoped lang="scss">
@@ -81,7 +80,7 @@
         margin: 15px 0;
         background: #ffffff;
         margin-left: -30px;
-        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05)
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
       }
       .image {
         width: 50%;
@@ -113,7 +112,7 @@
   @media (max-width: $breakpoint-mobile) {
     .about-cover {
       display: block;
-      width: 95%;
+      width: 100%;
       padding: 10px 0;
       section {
         width: 100%;
@@ -129,5 +128,4 @@
       }
     }
   }
-
 </style>

@@ -96,7 +96,7 @@
         transform: rotate(0);
         transform-origin: initial;
         width: 100%;
-        margin: 0;
+        margin: 20px 0 0;
         .gallery {
           width: auto;
           height: auto;

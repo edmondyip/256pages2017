@@ -58,8 +58,8 @@
 
 <style lang="scss">
   svg#background-svg {
-    max-width: 1366px;
-    max-height: 768px;
+    // max-width: 1366px;
+    // max-height: 768px;
     margin: auto;
     display: block;
     position: fixed;
@@ -75,5 +75,4 @@
       opacity: .8;
     }
   }
-
 </style>

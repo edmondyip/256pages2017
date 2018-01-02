@@ -43,7 +43,7 @@ import ScrollMon from 'scrollmonitor'
           },
           {
             name: 'API Development',
-            percent: 62
+            percent: 65
           },
           {
             name: 'Project Management',
@@ -101,6 +101,7 @@ import ScrollMon from 'scrollmonitor'
             background: $themeColor;
             position: absolute;
             height: 30px;
+            font-size: 20px;
             line-height: 30px;
             text-align: right;
             padding: 0 5px 0 0;

@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="wrapper">
     <h1>Projects</h1>
-    <div class="wrapper">
+    <!-- <div class="wrapper"> -->
       <project-view />
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -25,7 +25,9 @@
   }
   .wrapper {
     // position: absolute;
-    // width: 1000px;
+    width: calc(100% - 40px);
+    position: relative;
+    padding: 0 20px;
     // height: 100vw;
     // padding: 450px 0 0;
     // top: 700px;
@@ -35,12 +37,12 @@
     // transform-origin: left top;
   } 
 
-  #scroll-svg {
-    fill: #fff;
-    width: 20px;
-    position: absolute;
-    left: 50vw;
-  }
+  // #scroll-svg {
+  //   fill: #fff;
+  //   width: 20px;
+  //   position: absolute;
+  //   left: 50vw;
+  // }
 
   @media (max-width: $breakpoint-mobile) {
     div {

@@ -81,9 +81,9 @@
         display: block;
         padding: 10px 20px;
         margin: 15px 0;
-        background: #ffffff;
+        background: $themeColor;
         margin-left: -30px;
-        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
+        position: relative;
       }
       .image {
         width: 50%;

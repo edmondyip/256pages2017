@@ -50,8 +50,9 @@
       flex: 1 1 auto;
       padding: 10px 30px;
       margin: 0 10px 0 0;
-      background: #ffffff;
-      box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
+      background: $themeColor;
+      // box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
+      // border: 5px solid #cccccc;
       &:last-child {
         margin: 0;
       }

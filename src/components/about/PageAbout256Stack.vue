@@ -41,23 +41,26 @@
 
 <style scoped lang="scss">
   article {
+    width: 100%;
+    margin: 20px 0;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-flow: row;
     position: relative;
     section {
+      flex: 1 1 auto;
       padding: 10px 30px;
       margin: 0 10px 0 0;
       background: #ffffff;
       box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
-      // border: 1px solid #efefef;
-      width: 33%;
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 
   @media (max-width: $breakpoint-mobile) {
     article {
-      display: block;
+      flex-flow: column;
       width: 100%;
       section {
         width: calc(100% - 60px);

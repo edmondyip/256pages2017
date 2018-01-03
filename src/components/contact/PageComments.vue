@@ -79,4 +79,10 @@
     }
   }
 
+  @media (max-width: $breakpoint-mobile) {
+    ul {
+      width: 100%;
+    }
+  }
+
 </style>

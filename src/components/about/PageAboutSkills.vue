@@ -52,11 +52,6 @@ import ScrollMon from 'scrollmonitor'
         ]
       }
     },
-    methods: {
-      barBg: function (per) {
-        return 'background: linear-gradient(left, black ' + per + '%, white ' + (100 - per) + '%)'
-      }
-    },
     mounted: function () {
       let self = this
       let checkSkill = document.getElementsByClassName("skill-bar")
@@ -83,7 +78,6 @@ import ScrollMon from 'scrollmonitor'
         width: 100%;
         padding: 0;
         li {
-          width: 100%;
           height: 30px;
           position: relative;
           background: #eeeeee;
@@ -91,8 +85,6 @@ import ScrollMon from 'scrollmonitor'
           div {
             display: block;
             position: absolute;
-            width: 100%;
-            height: 30px;
             line-height: 30px;
             padding: 0 0 0 10px;
           }
@@ -101,7 +93,7 @@ import ScrollMon from 'scrollmonitor'
             background: $themeColor;
             position: absolute;
             height: 30px;
-            font-size: 20px;
+            font-size: 2rem;
             line-height: 30px;
             text-align: right;
             padding: 0 5px 0 0;
@@ -111,16 +103,11 @@ import ScrollMon from 'scrollmonitor'
               overflow: hidden;
               left: -10px;
             }
+            // &:hover {
+            //   width: 100%!important;
+            // }
           }
         }
-      }
-    }
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    article {
-      section {
-        width: 100%;
       }
     }
   }

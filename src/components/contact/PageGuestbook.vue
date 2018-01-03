@@ -57,14 +57,14 @@
       display: inline-block;
       margin: 5px 5px 5px 0;
       border: 0;
-      border-bottom: 1px solid #cccccc;
+      box-shadow: inset 0 0 5px rgba($color: #000000, $alpha: .1);
       width: 200px;
     }
     textarea {
       font-size: 1rem;
       display: block;
       border: 0;
-      border-bottom: 1px solid #cccccc;
+      box-shadow: inset 0 0 5px rgba($color: #000000, $alpha: .1);
       width: 415px;
       height: 200px;
       padding: 3px;
@@ -73,7 +73,7 @@
     button {
       background: #ffffff;
       border: 0;
-      border-bottom: 1px solid #cccccc;
+      box-shadow: inset 0 0 5px rgba($color: #000000, $alpha: .1);
       border-radius: 0;
       padding: 8px 15px;
     }

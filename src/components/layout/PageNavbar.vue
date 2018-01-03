@@ -62,7 +62,7 @@
           transition-delay: .8s;
           transition: .6s;
           position: absolute;
-          font-size: 12px;
+          font-size: 1.2rem;
           color: #333;
           margin-top: 2px;
           opacity: 0;
@@ -73,7 +73,7 @@
         a {
           color: #333;
           text-decoration: none;
-          font-size: 1.2rem;
+          font-size: 1.8rem;
           padding: 5px 20px 5px 10px;
           transition: .8s;
           &:hover~span {

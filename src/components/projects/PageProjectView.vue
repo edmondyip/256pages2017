@@ -1,22 +1,20 @@
 <template>
-  <div class="project-list" :style="{gridTemplateRow: gridCss}">
-    <section v-for="(work, index) in list" :key="index">
+    <section>
       <!-- info -->
       <header>
-        <h1>{{index + 1}}</h1>
-        <h2>{{work.name}}</h2>
-        <p>{{work.description}}</p>
+        <h1>{{list[projectView].id}}</h1>
+        <h2>{{list[projectView].name}}</h2>
+        <p>{{list[projectView].description}}</p>
         <work-type>
           <!-- slot -->
-          <li v-for="type in work.typeList" :key="type.id">{{type}}</li>
+          <li v-for="type in list[projectView].typeList" :key="type.id">{{type}}</li>
         </work-type>
       </header>
       <!-- image -->
-      <div class="gallery" :style="{border: convertHex(work.themeColor)}">
-        <img :src="require('../../assets/img/projects/' + work.path + '/' + work.gallery[0].fileName)" :alt="work.name + work.gallery[0].title">
+      <div class="gallery" :style="{border: convertHex(list[projectView].themeColor)}">
+        <img :src="require('../../assets/img/projects/' + list[projectView].path + '/' + list[projectView].gallery[0].fileName)" :alt="list[projectView].name + list[projectView].gallery[0].title">
       </div>
     </section>
-  </div>
 </template>
 
 <script>
@@ -26,7 +24,7 @@
     name: 'ProjectItem',
     data: function () {
       return {
-        projectView: 1,
+        projectView: 0,
         list: worksList.projects,
         opacity: 50,
       }
@@ -59,15 +57,15 @@
 <style lang="scss" scoped>
   .project-list {
     // padding: 20px 0;
-    display: grid;
+    // display: grid;
     section {
       display: grid;
       width: 440px;
       position: relative;
       background: rgba(255, 255, 255, .5);
       margin: 20px;
-      transform: rotate(90deg);
-      transform-origin: right top;
+      // transform: rotate(90deg);
+      // transform-origin: right top;
       div,
       header {
         grid-template-rows: 1fr 300px;
@@ -93,8 +91,8 @@
     .project-list {
       display: block;
       section {
-        transform: rotate(0);
-        transform-origin: initial;
+        // transform: rotate(0);
+        // transform-origin: initial;
         width: 100%;
         margin: 20px 0 0;
         .gallery {

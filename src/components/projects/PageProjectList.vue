@@ -24,15 +24,15 @@
     }
   }
   .wrapper {
-    position: absolute;
-    width: 1000px;
-    height: 100vw;
-    padding: 450px 0 0;
-    top: 700px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transform: rotate(-90deg);
-    transform-origin: left top;
+    // position: absolute;
+    // width: 1000px;
+    // height: 100vw;
+    // padding: 450px 0 0;
+    // top: 700px;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    // transform: rotate(-90deg);
+    // transform-origin: left top;
   } 
 
   #scroll-svg {

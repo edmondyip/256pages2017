@@ -16,6 +16,9 @@
 import GuestBook from "@/components/contact/PageGuestbook"
   export default {
     name: 'Contact',
+    metaInfo: {
+      title: 'find edmond'
+    },
     components: {
       GuestBook
     }

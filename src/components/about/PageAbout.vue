@@ -39,6 +39,9 @@
   import TechStack from "@/components/about/PageAbout256Stack"
   export default {
     name: 'About',
+    metaInfo: {
+      title: 'about edmond & 256'
+    },
     data: function () {
       return {}
     },

@@ -25,7 +25,6 @@
     name: 'ProjectItem',
     data: function () {
       return {
-        projectView: 0,
         list: worksList.projects,
         opacity: 50,
       }
@@ -58,14 +57,9 @@
 <style lang="scss" scoped>
     section {
       display: grid;
-      width: calc(100% - 80px);
+      width: 100%;
       position: relative;
-      padding: 30px 40px;
-      // background: rgba(255, 255, 255, .5);
       background: #ffffff;
-      // margin: 20px;
-      // transform: rotate(90deg);
-      // transform-origin: right top;
       grid-template-columns: 50% 50%;
       div,
       header {

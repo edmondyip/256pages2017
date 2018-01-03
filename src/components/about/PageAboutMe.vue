@@ -1,6 +1,6 @@
 <template>
   <article>
-    <h2>About</h2>
+    <h2>About me</h2>
     <p>Hi, i am a designer from Hong Kong. As my position is a full stack designer, that's mean i can design from graphic to user experience, also the front-end programming. </p>
     <p>When I design website UI for coder at the beginning, but they always create website exactly not i want. So I try to build it myself, from CSS / HTML to jquery.</p>
     <p>But jquery still have limitation. Performance problems and only can run at front-end, so i learn some php for layout templating</p>

@@ -19,7 +19,7 @@
     <section class="about-256">
       <div class="image">
         <header>
-          <h1>256pages Tech Stack</h1>
+          <h1>256pages.com</h1>
         </header>
       </div>
       <website-info class="info" />
@@ -80,7 +80,7 @@
         width: 50%;
         display: block;
         padding: 10px 20px;
-        margin: 15px 0;
+        margin: 25px 0;
         background: $themeColor;
         margin-left: -30px;
         position: relative;

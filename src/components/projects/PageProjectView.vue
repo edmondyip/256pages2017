@@ -1,19 +1,16 @@
 <template>
     <section>
-      <!-- info -->
       <header>
-        <h1>{{list[projectView].id}}</h1>
-        <h2>{{list[projectView].name}}</h2>
-        <p>{{list[projectView].description}}</p>
+        <h1>{{list[projectId].id}}</h1>
+        <h2>{{list[projectId].name}}</h2>
+        <p>{{list[projectId].description}}</p>
         <work-type>
-          <!-- slot -->
-          <li v-for="type in list[projectView].typeList" :key="type.id">{{type}}</li>
+          <li v-for="type in list[projectId].typeList" :key="type.id">{{type}}</li>
         </work-type>
       </header>
-      <!-- image -->
-      <!-- <div class="gallery" :style="{border: convertHex(list[projectView].themeColor)}"> -->
+      <!-- <div class="gallery" :style="{border: convertHex(list[projectId].themeColor)}"> -->
       <div class="gallery">        
-        <img :src="require('../../assets/img/projects/' + list[projectView].path + '/' + list[projectView].gallery[0].fileName)" :alt="list[projectView].name + list[projectView].gallery[0].title">
+        <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + list[projectId].gallery[0].fileName)" :alt="list[projectId].name + list[projectId].gallery[0].title">
       </div>
     </section>
 </template>
@@ -23,33 +20,34 @@
   import workType from '@/components/projects/PageProjectType'
   export default {
     name: 'ProjectItem',
+    props: ['projectId'],
     data: function () {
       return {
-        list: worksList.projects,
-        opacity: 50,
+        list: worksList.projects
+        // opacity: 50,
       }
     },
     metaInfo: {
       title: 'my projects'
     },
-    computed: {
-      gridCss: function () {
-        return 'repeat(' + (this.list).length + ',1fr)' //section grid number from json
-      }
-    },
+    // computed: {
+    //   gridCss: function () {
+    //     return 'repeat(' + (this.list).length + ',1fr)' //section grid number from json
+    //   }
+    // },
     components: {
       workType
-    },
-    methods: {
-      convertHex: function (color) {
-        color = color.replace('#', '')
-        let r = parseInt(color.substring(0, 2), 16)
-        let g = parseInt(color.substring(2, 4), 16)
-        let b = parseInt(color.substring(4, 6), 16)
-        let result = 'rgba(' + r + ',' + g + ',' + b + ',' + this.opacity / 100 + ')'
-        return '10px solid ' + result
-      }
     }
+    // methods: {
+    //   convertHex: function (color) {
+    //     color = color.replace('#', '')
+    //     let r = parseInt(color.substring(0, 2), 16)
+    //     let g = parseInt(color.substring(2, 4), 16)
+    //     let b = parseInt(color.substring(4, 6), 16)
+    //     let result = 'rgba(' + r + ',' + g + ',' + b + ',' + this.opacity / 100 + ')'
+    //     return '10px solid ' + result
+    //   }
+    // }
   }
 
 </script>

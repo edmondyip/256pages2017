@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
     <h1>Projects</h1>
-    <project-view id="projectId" />
-    <button @click="backProject()">Back</button>
-    <button @click="nextProject()">Next</button>
+    <button @click="backProject()" v-if="projectId > 0">Back</button>
+    <button @click="nextProject()" v-if="projectId >= 0">Next</button>
+    <project-view :project-id="projectId" />
   </div>
 </template>
 
@@ -21,10 +21,10 @@
     },
     methods: {
       backProject: function () {
-        return projectId + 1
+        return this.projectId -= 1
       },
       nextProject: function () {
-        return projectId - 1
+        return this.projectId += 1
       }
     }
   }

@@ -1,7 +1,7 @@
 <template>
     <section>
       <header>
-        <h1>{{list[projectId].id}}</h1>
+        <h1>{{projectId + 1}}</h1>
         <h2>{{list[projectId].name}}</h2>
         <p>{{list[projectId].description}}</p>
         <work-type>
@@ -56,6 +56,7 @@
     section {
       display: grid;
       width: 100%;
+      height: 500px;
       position: relative;
       background: #ffffff;
       grid-template-columns: 50% 50%;

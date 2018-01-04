@@ -1,19 +1,21 @@
 <template>
   <div class="wrapper">
     <h1>Projects</h1>
-    <button @click="backProject()" v-if="projectId > 0">Back</button>
-    <button @click="nextProject()" v-if="projectId >= 0">Next</button>
+    <button @click="backProject()" :disabled="projectId < 0">Back</button>
+    <button @click="nextProject()" :disabled="projectId == (list.length - 1)">Next</button>
     <project-view :project-id="projectId" />
   </div>
 </template>
 
 <script>
+  import worksList from '@/assets/json/projects.json'
   import ProjectView from "@/components/projects/PageProjectView"
   export default {
     name: 'ProjectList',
     data: function () {
       return {
-        projectId: 0
+        projectId: 0,
+        list: worksList.projects
       }
     },
     components: {

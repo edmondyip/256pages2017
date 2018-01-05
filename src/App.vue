@@ -73,7 +73,7 @@
 @media (max-width: $breakpoint-mobile) {
   #app {
     main {
-      padding: 50px 20px 20px
+      padding: 20px;
     }
   }
 }

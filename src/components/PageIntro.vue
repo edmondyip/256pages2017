@@ -142,26 +142,13 @@
     }
   }
 
-  .logo-enter-active {
+  .logo-enter-active, .title-enter-active, .small-name-enter-active {
     transition: .3s ease;
   }
 
-  .logo-enter {
+  .logo-enter, .title-enter {
     transform: translateY(50px);
     opacity: 0;
-  }
-
-  .title-enter-active {
-    transition: .3s ease;
-  }
-
-  .title-enter {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  .small-name-enter-active {
-    transition: .3s ease;
   }
 
   .small-name-enter {
@@ -185,7 +172,7 @@
   @media (max-width: $breakpoint-tablet) {
     section {
       .video-container {
-        margin: 120px 0 0;
+        margin: 10% 0 0;
         width: 100%;
         pointer-events: none;
       }
@@ -199,9 +186,9 @@
     section {
       .video-container {
         width: 100%;
-        height: 350px;
+        height: 50vh;
         overflow: hidden;
-        margin-top: 100px;
+        margin-top: 20vh;
         pointer-events: none;
         #youtube {
           width: 100%;

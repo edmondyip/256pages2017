@@ -40,7 +40,7 @@
   export default {
     name: 'About',
     metaInfo: {
-      title: 'about edmond & 256'
+      title: 'about edmond & website'
     },
     data: function () {
       return {}

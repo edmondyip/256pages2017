@@ -1,5 +1,6 @@
 <template>
     <section>
+      <transition>
       <header>
         <h1>{{projectId + 1}}</h1>
         <h2>{{list[projectId].name}}</h2>
@@ -8,6 +9,7 @@
           <li v-for="type in list[projectId].typeList" :key="type.id">{{type}}</li>
         </work-type>
       </header>
+      </transition>
       <!-- <div class="gallery" :style="{border: convertHex(list[projectId].themeColor)}"> -->
       <div class="gallery">        
         <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + list[projectId].gallery[0].fileName)" :alt="list[projectId].name + list[projectId].gallery[0].title">
@@ -60,23 +62,15 @@
       position: relative;
       background: #ffffff;
       grid-template-columns: 50% 50%;
-      div,
-      header {
-        grid-template-rows: 1fr 300px;
-      }
       .gallery {
-        // width: 420px;
-        // height: 200px;
-        // overflow: hidden;
+        overflow: hidden;
         img {
-          width: 100%;
+          height: 100%;
           display: block;
         }
       }
       header {
-        margin: 10px;
-        // padding: 10px;
-        // background: rgba(255, 255, 255, .5);
+        padding: 50px;
       }
     }
 

@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <h1>Projects</h1>
-    <p><router-link to="/projects/eventor">Open</router-link></p>
-  </div>
+  <project-list />
 </template>
 
 <script>
@@ -16,7 +13,10 @@
 </script>
 
 <style lang="scss" scoped>
-  div {
+  section {
+    width: 950px;
+    height: 450px;
+    background: #ffffff;
     h1 {
       display: none;
     }

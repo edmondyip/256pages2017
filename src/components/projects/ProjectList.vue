@@ -1,8 +1,6 @@
 <template>
   <div class="wrapper">
-    <!-- <transition name="fade" mode="out-in"> -->
     <project-view :project-id="projectId" />
-    <!-- </transition> -->
     <div class="back btn" @click="backProject()" :class="{disabled: projectId < 1}">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17.5 25.6"
         xml:space="preserve">

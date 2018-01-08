@@ -63,7 +63,8 @@
     },
     watch: {
       '$route' (to, from) {
-        if (to.params.url === undefined) {
+        console.log(to, from)
+        if (to.params.url === undefined || 'eventor' && from.params.url === undefined) {
           this.target = this.routeName
           this.tween()
         }

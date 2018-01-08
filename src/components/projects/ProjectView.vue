@@ -29,24 +29,9 @@
     metaInfo: {
       title: 'my projects'
     },
-    // computed: {
-    //   gridCss: function () {
-    //     return 'repeat(' + (this.list).length + ',1fr)' //section grid number from json
-    //   }
-    // },
     components: {
       workType
     }
-    // methods: {
-    //   convertHex: function (color) {
-    //     color = color.replace('#', '')
-    //     let r = parseInt(color.substring(0, 2), 16)
-    //     let g = parseInt(color.substring(2, 4), 16)
-    //     let b = parseInt(color.substring(4, 6), 16)
-    //     let result = 'rgba(' + r + ',' + g + ',' + b + ',' + this.opacity / 100 + ')'
-    //     return '10px solid ' + result
-    //   }
-    // }
   }
 
 </script>
@@ -57,10 +42,10 @@
       width: 100%;
       height: 500px;
       position: relative;
-      background: #ffffff;
       grid-template-columns: 50% 50%;
       .gallery {
         overflow: hidden;
+        background: #ffffff;
         img {
           height: 100%;
           display: block;
@@ -68,6 +53,7 @@
       }
       header {
         padding: 50px;
+        background: #ffffff;
       }
     }
 

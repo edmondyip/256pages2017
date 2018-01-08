@@ -6,7 +6,7 @@ import NotFound from '@/components/layout/PageNotFound'
 import Home from '@/components/PageIndex'
 import About from '@/components/PageAbout'
 import Project from '@/components/projects/ProjectList'
-import Projects from '@/components/PageProject'
+// import Projects from '@/components/PageProject'
 import Contact from '@/components/PageContact'
 import Comments from '@/components/contact/ContactComments'
 
@@ -34,7 +34,7 @@ export default new Router({
   }, {    
     name: 'projects',
     path: '/projects',
-    component: Projects
+    redirect: '/projects/eventor'
   }, {
     name: 'contact',
     path: '/contact',

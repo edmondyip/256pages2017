@@ -1,6 +1,5 @@
 <template>
     <section>
-      <transition>
       <header>
         <h1>{{projectId + 1}}</h1>
         <h2>{{list[projectId].name}}</h2>
@@ -9,7 +8,6 @@
           <li v-for="type in list[projectId].typeList" :key="type.id">{{type}}</li>
         </work-type>
       </header>
-      </transition>
       <!-- <div class="gallery" :style="{border: convertHex(list[projectId].themeColor)}"> -->
       <div class="gallery">        
         <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + list[projectId].gallery[0].fileName)" :alt="list[projectId].name + list[projectId].gallery[0].title">
@@ -19,14 +17,13 @@
 
 <script>
   import worksList from '@/assets/json/projects.json'
-  import workType from '@/components/projects/PageProjectType'
+  import workType from '@/components/projects/ProjectType'
   export default {
     name: 'ProjectItem',
     props: ['projectId'],
     data: function () {
       return {
         list: worksList.projects
-        // opacity: 50,
       }
     },
     metaInfo: {

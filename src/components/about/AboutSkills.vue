@@ -3,12 +3,10 @@
     <section>
       <h2>Skills</h2>
       <ul class="skill-bar">
-        <transition-group name="loading" appear>
           <li v-for="skill in skills" :key="skill.name">
             <span :class="{zero: loadBar === false}" :style="{width: skill.percent + '%'}">{{skill.percent + '%'}}</span>
             <div>{{skill.name}}</div>
           </li>
-        </transition-group>
       </ul>
     </section>
   </article>

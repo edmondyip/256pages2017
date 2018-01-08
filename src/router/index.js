@@ -3,11 +3,12 @@ import Router from 'vue-router'
 import Meta from 'vue-meta'
 
 import NotFound from '@/components/layout/PageNotFound'
-import Home from '@/components/PageIntro'
-import About from '@/components/about/PageAbout'
-import Projects from '@/components/projects/PageProjectList'
-import Contact from '@/components/contact/PageContactInfo'
-import Comments from '@/components/contact/PageComments'
+import Home from '@/components/PageIndex'
+import About from '@/components/PageAbout'
+import Project from '@/components/projects/ProjectList'
+import Projects from '@/components/PageProject'
+import Contact from '@/components/PageContact'
+import Comments from '@/components/contact/ContactComments'
 
 Vue.use(Router)
 Vue.use(Meta)
@@ -27,6 +28,10 @@ export default new Router({
     path: '/about',
     component: About
   }, {
+    name: 'projects',
+    path: '/projects/:url',
+    component: Project
+  }, {    
     name: 'projects',
     path: '/projects',
     component: Projects

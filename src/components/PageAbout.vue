@@ -33,10 +33,10 @@
 </template>
 
 <script>
-  import PersonalProfile from "@/components/about/PageAboutMe"
-  import WebsiteInfo from "@/components/about/PageAbout256"
-  import PersonalSkills from "@/components/about/PageAboutSkills"
-  import TechStack from "@/components/about/PageAbout256Stack"
+  import PersonalProfile from "@/components/about/AboutMe"
+  import WebsiteInfo from "@/components/about/About256"
+  import PersonalSkills from "@/components/about/AboutSkills"
+  import TechStack from "@/components/about/About256Stack"
   export default {
     name: 'About',
     metaInfo: {

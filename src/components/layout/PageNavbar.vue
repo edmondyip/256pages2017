@@ -3,7 +3,7 @@
     <transition-group tag="ul" name="navAnimation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
       <!-- loop nav bar -->
       <li v-for="(item, index) in list" itemprop="name" :key="index">
-        <router-link :to="item.url" itemprop="url">{{item.name}}{{item.index}}</router-link>
+        <router-link :class="item.name" :to="item.url" itemprop="url">{{item.name}}{{item.index}}</router-link>
         <span>{{item.caption}}</span>
       </li>
       <li itemprop="name" :key="5">
@@ -25,15 +25,15 @@
           caption: 'welcome to my website'
         }, {
           name: 'about',
-          url: 'about',
+          url: '/about',
           caption: 'something about me'
         }, {
           name: 'projects',
-          url: 'projects',
+          url: '/projects',
           caption: 'my projects'
         }, {
           name: 'contact',
-          url: 'contact',
+          url: '/contact',
           caption: 'if you want to find me'
         }]
       }
@@ -63,7 +63,7 @@
           transition: .6s;
           position: absolute;
           font-size: 1.2rem;
-          color: #333;
+          color: $darkColor;
           margin-top: 2px;
           opacity: 0;
           text-align: left;
@@ -71,7 +71,7 @@
           white-space: nowrap;
         }
         a {
-          color: #333;
+          color: $darkColor;
           text-decoration: none;
           font-size: 1.8rem;
           padding: 5px 20px 5px 10px;
@@ -79,12 +79,21 @@
           &:hover~span {
             opacity: 1;
             margin-top: 8px;
-            background: #333;
+            background: $darkColor;
             color: $themeColor;
           }
           &:hover,
-          &.router-link-exact-active {
-            background: #333;
+          &.router-link-active {
+            background: $darkColor;
+            color: $themeColor;
+          }
+          &.home.router-link-active {
+            color: $darkColor;
+            background: none;
+          }
+          &:hover.home,
+          &.home.router-link-exact-active {
+            background: $darkColor;
             color: $themeColor;
           }
         }

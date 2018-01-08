@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import GuestBook from "@/components/contact/PageGuestbook"
+import GuestBook from "@/components/contact/ContactGuestbook"
   export default {
     name: 'Contact',
     metaInfo: {

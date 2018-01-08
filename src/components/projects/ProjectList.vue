@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
-    <h1>Projects</h1>
+    <!-- <transition name="fade" mode="out-in"> -->
     <project-view :project-id="projectId" />
+    <!-- </transition> -->
     <div class="back btn" @click="backProject()" :class="{disabled: projectId < 1}">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17.5 25.6"
         xml:space="preserve">
@@ -19,13 +20,13 @@
 
 <script>
   import worksList from '@/assets/json/projects.json'
-  import ProjectView from "@/components/projects/PageProjectView"
+  import ProjectView from "@/components/projects/ProjectView"
   export default {
     name: 'ProjectList',
     data: function () {
       return {
-        projectId: 0,
-        list: worksList.projects
+        list: worksList.projects,
+        projectId: worksList.projects.findIndex(obj => obj.path === this.$route.params.url)
       }
     },
     components: {
@@ -33,10 +34,23 @@
     },
     methods: {
       backProject: function () {
-        return this.projectId -= 1
+        self = this
+        this.$router.push({
+          name: 'projects',
+          params: {
+            url: self.list[self.projectId-=1].path
+          }
+        })
       },
       nextProject: function () {
-        return this.projectId += 1
+        self = this
+        // self.updateId()
+        this.$router.push({
+          name: 'projects',
+          params: {
+            url: self.list[self.projectId+=1].path
+          }
+        })
       }
     }
   }
@@ -50,9 +64,6 @@
     margin: 0 auto;
     position: relative;
     padding: 0 20px;
-    h1 {
-      display: none;
-    }
     .btn {
       width: 15px;
       height: 15px;
@@ -90,11 +101,6 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    div {
-      h1 {
-        display: block;
-      }
-    }
     .wrapper {
       position: relative;
       width: 100%;
@@ -108,5 +114,4 @@
       display: none;
     }
   }
-
 </style>

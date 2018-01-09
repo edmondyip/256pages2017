@@ -65,8 +65,11 @@
       background: #ffffff;
       padding: 25px;
       box-shadow: 0 0 10px rgba($color: #000000, $alpha: .3);
+      h2 {
+        font-size: 1rem;
+      }
       span {
-        font-size: .7rem;
+        font-size: .9rem;
         color: #aaa;
         position: absolute;
         right: 10px;
@@ -76,6 +79,13 @@
         right: 10px;
         top: 10px;
       }
+    }
+    button {
+      background: #ffffff;
+      border: 0;
+      box-shadow: inset 0 0 5px rgba($color: #000000, $alpha: .1);
+      border-radius: 0;
+      padding: 8px 15px;
     }
   }
 

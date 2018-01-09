@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <project-view :project-id="projectId" />
+    <project-view :project-id="projectId" :class="loading" />
     <div class="back btn" @click="backProject()" :class="{disabled: projectId < 1}">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17.5 25.6"
         xml:space="preserve">
@@ -24,7 +24,8 @@
     data: function () {
       return {
         list: worksList.projects,
-        projectId: worksList.projects.findIndex(obj => obj.path === this.$route.params.url)
+        projectId: worksList.projects.findIndex(obj => obj.path === this.$route.params.url),
+        loading: false
       }
     },
     components: {
@@ -42,13 +43,17 @@
       },
       nextProject: function () {
         self = this
-        // self.updateId()
         this.$router.push({
           name: 'projects',
           params: {
             url: self.list[self.projectId+=1].path
           }
         })
+      }
+    },
+    watch: {
+      loader: function () {
+        this.loading
       }
     }
   }

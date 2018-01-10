@@ -14,8 +14,8 @@
     transition: .5s;
     li {
       background: $themeColor;
-      font-size: 12px;
-      line-height: 14px;
+      font-size: 1rem;
+      line-height: 1rem;
       margin: 5px;
       display: inline-block;
       padding: 8px;

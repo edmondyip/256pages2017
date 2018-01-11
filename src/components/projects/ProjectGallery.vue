@@ -1,10 +1,16 @@
 <template>
   <section>
-    <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + list[projectId].gallery[0].fileName)" :alt="list[projectId].name + list[projectId].gallery[0].title">
+  <carousel paginationActiveColor="#2c7957" paginationColor="#ffffff" easing="linear" :perPage="1">
+    <slide v-for="img in list[projectId].gallery" :key="img.id">
+     <!-- <img :src="require('../../assets/img/projects/' + project.path + '/' + project.gallery.fileName)" :alt="project.name + project.gallery.title"> -->
+     <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + img.fileName)" :alt="list[projectId].name + img.title" />
+    </slide>
+  </carousel>
   </section>
 </template>
 
 <script>
+  import {Carousel, Slide} from 'vue-carousel'
   import worksList from '@/assets/json/projects.json'
   export default {
     name: 'ProjectGallery',
@@ -13,6 +19,10 @@
       return {
         list: worksList.projects
       }
+    },
+    components: {
+      Carousel,
+      Slide
     }
   }
 
@@ -20,34 +30,34 @@
 
 <style lang="scss" scoped>
   section {
-    background: #ffffff;
-    height: 500px;
+    // height: 500px;
+    min-width: 100%;
     opacity: 1;
     transition: .4s;
     .load {
-      // opacity: 0;
       transform: translateX(100%);
     }
+    .VueCarousel-slide {
+      // height: 500px;
+      overflow: hidden;
     img {
-      height: 100%;
-      display: block;
+        width: 100%;
+      }
     }
-  } 
-  
-  // @media (max-width: $breakpoint-mobile) {
-  //   .project-list {
-  //     display: block;
-  //     section {
-  //        transform: rotate(0);
-  //        transform-origin: initial;
-  //       width: 100%;
-  //       margin: 20px 0 0;
-  //       .gallery {
-  //         width: auto;
-  //         height: auto;
-  //       }
-  //     }
-  //   }
-  // }
+    .VueCarousel-pagination {
+      bottom: 0px;
+      position: absolute;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    section {
+      height: 250px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 
 </style>

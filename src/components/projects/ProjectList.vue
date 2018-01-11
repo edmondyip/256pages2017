@@ -77,7 +77,7 @@
     max-width: 900px;
     margin: 0 auto;
     position: relative;
-    padding: 0 20px;
+    padding: 20px;
     section.container {
       display: grid;
       width: 100%;
@@ -85,14 +85,14 @@
       position: relative;
       grid-template-columns: 40% 60%;
       overflow: hidden;
-      background: #ffffff;
+      // background: #ffffff;
     }
     .btn {
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
       display: block;
       padding: 15px;
-      background: #ffffff;
+      background: rgba($color: #ffffff, $alpha: .9);
       transition: .3s;
       cursor: pointer;
       svg {
@@ -102,39 +102,49 @@
       }
       &.back {
         position: absolute;
-        left: 0;
-        top: 50%;
+        left: 330px;
+        top: 470px;
       }
       &.next {
         position: absolute;
-        right: 0;
-        top: 50%;
+        left: 380px;
+        top: 470px;
         svg {
           transform: rotate(180deg);
         }
       }
       &:hover {
-        background: rgba($color: #ffffff, $alpha: .6)
+        background: rgba($color: #ffffff, $alpha: .6);
       }
       &.disabled {
-        opacity: 0;
+        opacity: .5;
         pointer-events: none;
+        svg {
+          fill: rgba($color: $darkColor, $alpha: .5)
+        }
       }
     }
   }
 
   @media (max-width: $breakpoint-mobile) {
     .wrapper {
-      position: relative;
       width: 100%;
-      height: unset;
-      padding: 0 0 50px 0;
-      overflow: initial;
-      transform: rotate(0);
-      transform-origin: initial;
-    }
-    #scroll-svg {
-      display: none;
+      padding: 100px 0;
+      section.container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50%;
+        background: none;
+      }
+      .btn {
+        &.back {
+          top: 308px;
+          left: -15px;
+        }
+        &.next {
+          top: 308px;
+          right: -15px;
+        }
+      }
     }
   }
 

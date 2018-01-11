@@ -3,12 +3,12 @@
     <div class="nav-btn" @click="navOpen = !navOpen">
       <svg x="0px" y="0px" id="mobile-btn" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 25 25" preserveAspectRatio="none">
         <g id="close">
-          <polygon points="23,4.7 20.3,2 12.5,9.8 4.7,2 2,4.7 9.8,12.5 2,20.3 4.7,23 12.5,15.2 20.3,23 23,20.3 15.2,12.5"/>
+          <polygon points="23,4.7 20.3,2 12.5,9.8 4.7,2 2,4.7 9.8,12.5 2,20.3 4.7,23 12.5,15.2 20.3,23 23,20.3 15.2,12.5" />
         </g>
         <g id="open">
-          <rect x="3.04" y="5.04" width="18.93" height="2.92" />
-          <rect x="3.04" y="11.04" width="18.93" height="2.92" />
-          <rect x="3.04" y="17.04" width="18.93" height="2.92" />
+          <rect x="3" y="5" width="19" height="3" />
+          <rect x="3" y="11" width="19" height="3" />
+          <rect x="3" y="17" width="19" height="3" />
         </g>
       </svg>
     </div>
@@ -37,8 +37,7 @@
       }
     },
     mounted: function () {
-      this.tab = new SVGMorpheus('#mobile-btn',
-      {
+      this.tab = new SVGMorpheus('#mobile-btn', {
         duration: 300
       })
     },
@@ -55,13 +54,15 @@
       navOpen: function () {
         if (this.navOpen === false) {
           this.tween('open')
-        }else {
+        } else {
           this.tween('close')
         }
       },
-      '$route' (to,from) {
-        this.tween('open')
-        this.navOpen = false
+      '$route' (to, from) {
+        if (to.params.url === undefined || 'eventor' && from.params.url === undefined) {
+          this.tween('open')
+          this.navOpen = false
+        }
       }
     }
   }
@@ -75,20 +76,18 @@
     left: 0;
     right: 0;
     width: 100%;
-    padding: 3vh 0;
+    padding: 50px 0;
     transition: .5s;
     .nav-btn {
       position: fixed;
       top: 5px;
       left: 5px;
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       padding: 5px;
       display: none;
       border: none;
-      // background: #ffffff;
       z-index: 2;
-      // border-radius: 30px;
       #mobile-btn {
         width: 100%;
         height: 100%;

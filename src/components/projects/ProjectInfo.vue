@@ -1,7 +1,8 @@
 <template>
   <section>
-    <h1>{{projectId + 1}}</h1>
-    <h2>{{list[projectId].name}}</h2>
+    <h2><slot v-if="projectId <= 9">0</slot>{{projectId + 1}}</h2>
+    <span class="block" :style="{background: list[projectId].themeColor}"></span>
+    <h1>{{list[projectId].name}}</h1>
     <p>{{list[projectId].description}}</p>
     <work-type>
       <li v-for="type in list[projectId].typeList" :key="type.id">{{type}}</li>
@@ -29,30 +30,48 @@
 
 <style lang="scss" scoped>
   section {
+    position: relative;
     padding: 50px;
     background: #ffffff;
-    opacity: 1;
+    text-indent: 0px;
     transition: .4s;
-    .load {
-      opacity: 0;
-      // transform: translateX(-500px);
+    .block {
+      position: absolute;
+      top: 400px;
+      right: 0;
+      height: 100px;
+      width: 100px;
+      transition: .5s;
     }
-  } 
-  
-  // @media (max-width: $breakpoint-mobile) {
-  //   .project-list {
-  //     display: block;
-  //     section {
-  //        transform: rotate(0);
-  //        transform-origin: initial;
-  //       width: 100%;
-  //       margin: 20px 0 0;
-  //       .gallery {
-  //         width: auto;
-  //         height: auto;
-  //       }
-  //     }
-  //   }
-  // }
+    h2 {
+      font-size: 15rem;
+      color: #efefef;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    h1,
+    h2,
+    p,
+    ul {
+      transition: .4s;
+      margin-left: 0;
+    }
+    &.load {
+      h1,
+      h2,
+      p,
+      ul {
+        margin-left: -500px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    section {
+      height: 200px;
+      padding: 25px;
+    }
+  }
 
 </style>

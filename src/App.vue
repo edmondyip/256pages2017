@@ -19,7 +19,7 @@
   export default {
     name: 'Layout',
     metaInfo: {
-      title: 'a designer + developer from hong kong',
+      title: '256pages',
       titleTemplate: '%s | 256pages',
       // base: {
       //   href: 'https://256pages.com/'

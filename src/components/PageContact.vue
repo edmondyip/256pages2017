@@ -6,6 +6,7 @@
     <ul>
       <li>Email :
         <a href="mailto:neta.edmond@gmail.com">neta.edmond@gmail.com</a>
+        <a href="https://github.com/edmondyip" target="_blank" rel="noopener noreferrer">GitHub @edmondyip</a>
       </li>
     </ul>
     <guest-book/>
@@ -17,7 +18,14 @@ import GuestBook from "@/components/contact/ContactGuestbook"
   export default {
     name: 'Contact',
     metaInfo: {
-      title: 'find edmond'
+      title: "Contact Edmond",
+      meta: [
+        {
+          vmid: 'description',
+          name: 'description',
+          content: "Contact Edmond if you want to have more information."
+        }
+      ]
     },
     components: {
       GuestBook

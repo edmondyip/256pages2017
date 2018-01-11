@@ -116,7 +116,7 @@
     .about-cover {
       display: block;
       width: 100%;
-      padding: 10px 0;
+      padding: 30px 0 10px;
       section {
         width: 100%;
         display: block;

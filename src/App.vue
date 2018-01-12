@@ -18,24 +18,31 @@
   import BackgroundAnimation from '@/components/layout/PageBackground'
   export default {
     name: 'Layout',
-    metaInfo: {
-      title: '256pages',
-      titleTemplate: '%s | 256pages',
-      // base: {
-      //   href: 'https://256pages.com/'
-      // },
-      link: [{
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:300,400'
-      }, {
-        rel: 'author',
-        href: 'https://256pages.com/humans.txt'
-      }]
+    metaInfo: function () {
+      return {
+        title: '256pages',
+        titleTemplate: '%s | 256pages',
+        // base: {
+        //   href: 'https://256pages.com/'
+        // },
+        link: [{
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:300,400'
+        }, {
+          rel: 'author',
+          href: 'https://256pages.com/humans.txt'
+        }, {
+          rel: 'canonical',
+          href: 'https://256pages.com' + this.routePath
+        }]
+      }
     },
     mouted: function () {
       this.$Progress.finish()
+
     },
     created: function () {
+      console.log(this.$route.name)
       this.$Progress.start()
       this.$router.beforeEach((to, from, next) => {
         if (to.meta.progress !== undefined) {
@@ -55,6 +62,7 @@
       BackgroundAnimation
     }
   }
+
 </script>
 
 <style scoped lang="scss">
@@ -70,11 +78,12 @@
     }
   }
 
-@media (max-width: $breakpoint-mobile) {
-  #app {
-    main {
-      padding: 20px;
+  @media (max-width: $breakpoint-mobile) {
+    #app {
+      main {
+        padding: 20px;
+      }
     }
   }
-}
+
 </style>

@@ -27,6 +27,7 @@ Vue.mixin({
   data: function () {
     return {
       routeName: this.$route.name,
+      routePath: this.$route.fullPath,
       // positionX: 0,
       // positionY: 0,
       windowWidth: document.documentElement.clientWidth,
@@ -51,6 +52,7 @@ Vue.mixin({
   created: function () {
     // window.addEventListener('mousemove', this.updatePosition)
     this.routeName = this.$route.name
+    this.routePath = this.$route.fullPath
   },
   beforeDestroy: function () {
     // window.removeEventListener('mousemove', this.updatePosition)
@@ -59,6 +61,7 @@ Vue.mixin({
   watch: {
     '$route' (to, from) {
       this.routeName = this.$route.name
+      this.routePath = this.$route.fullPath
     }
   }
 })

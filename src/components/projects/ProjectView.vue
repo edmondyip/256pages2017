@@ -8,26 +8,17 @@
           <li v-for="type in list[projectId].typeList" :key="type.id">{{type}}</li>
         </work-type>
       </header>
-      <!-- <div class="gallery" :style="{border: convertHex(list[projectId].themeColor)}"> -->
-      <div class="gallery">        
-        <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + list[projectId].gallery[0].fileName)" :alt="list[projectId].name + list[projectId].gallery[0].title">
-      </div>
     </section>
 </template>
 
 <script>
-  import worksList from '@/assets/json/projects.json'
   import workType from '@/components/projects/ProjectType'
   export default {
     name: 'ProjectItem',
-    props: ['projectId'],
+    props: ['projectId', 'list'],
     data: function () {
       return {
-        list: worksList.projects
-      }
-    },
-    metaInfo: {
-      title: 'my projects'
+z      }
     },
     components: {
       workType

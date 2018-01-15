@@ -1,9 +1,11 @@
 <template>
-  <div class="page-not-found">
+  <section>
     <h1>404</h1>
     <h2>page not found</h2>
-    <p><router-link to="/">back to home</router-link></p>
-  </div>
+    <p>
+      <router-link to="/">back to home</router-link>
+    </p>
+  </section>
 </template>
 
 <script>
@@ -13,14 +15,21 @@
       title: 'Page not found'
     }
   }
+
 </script>
 
 <style scoped lang="scss">
-  .page-not-found {
+  section {
     text-align: center;
     h1 {
       font-size: 50px;
     }
   }
-</style>
 
+  @media (max-width: $breakpoint-mobile) {
+    section {
+      margin: 100px 0;
+    }
+  }
+
+</style>

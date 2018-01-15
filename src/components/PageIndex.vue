@@ -7,7 +7,7 @@
   export default {
     name: 'IndexPage',
     metaInfo: {
-      title: "Edmond Yip's personal website",
+      title: "edmond yip's personal website",
       meta: [
         {
           vmid: 'description',

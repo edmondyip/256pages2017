@@ -47,7 +47,7 @@
 
 <style lang="scss" scoped>
   fieldset {
-    margin: 50px 0;
+    margin: 50px 0 0;
     border: 0;
     padding: 0;
     position: relative;

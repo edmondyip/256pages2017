@@ -4,25 +4,23 @@
     <span class="block" :style="{background: list[projectId].themeColor}"></span>
     <h1>{{list[projectId].name}}</h1>
     <p>{{list[projectId].description}}</p>
-    <work-type>
+    <project-type>
       <li v-for="type in list[projectId].typeList" :key="type.id">{{type}}</li>
-    </work-type>
+    </project-type>
   </section>
 </template>
 
 <script>
-  import worksList from '@/assets/json/projects.json'
-  import workType from '@/components/projects/ProjectType'
+  import ProjectType from '@/components/projects/ProjectType'
   export default {
     name: 'ProjectItem',
-    props: ['projectId'],
+    props: ['projectId', 'list'],
     data: function () {
       return {
-        list: worksList.projects
       }
     },
     components: {
-      workType
+      ProjectType
     }
   }
 
@@ -41,7 +39,7 @@
       right: 0;
       height: 100px;
       width: 100px;
-      transition: .5s;
+      transition: .8s;
     }
     h2 {
       font-size: 15rem;

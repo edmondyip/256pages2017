@@ -44,7 +44,7 @@
 
 <style scoped lang="scss">
   nav {
-    max-width: 900px;
+    max-width: 940px;
     margin: 0 auto;
     ul {
       list-style: none;
@@ -131,6 +131,9 @@
         li {
           span {
             display: none;
+            a {
+              padding: 5px 10px;
+            }
           }
         }
       }

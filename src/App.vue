@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <background-animation />
-    <main>
+    <main :class="{home: routeName === 'home'}">
       <transition name="fade" mode="out-in">
         <router-view />
       </transition>
@@ -73,15 +73,18 @@
       transition: .5s;
       position: relative;
     }
-    .home main {
-      padding: 0;
+    main.home {
+      padding: 180px 0 0;
     }
   }
 
   @media (max-width: $breakpoint-mobile) {
     #app {
       main {
-        padding: 20px;
+        padding: 40px 20px;
+        &.home {
+          padding: 0 20px;
+        }
       }
     }
   }

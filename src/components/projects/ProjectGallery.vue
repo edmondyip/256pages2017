@@ -2,8 +2,7 @@
   <section>
   <carousel paginationActiveColor="#2c7957" paginationColor="#ffffff" easing="linear" :perPage="1">
     <slide v-for="img in list[projectId].gallery" :key="img.id">
-     <!-- <img :src="require('../../assets/img/projects/' + project.path + '/' + project.gallery.fileName)" :alt="project.name + project.gallery.title"> -->
-     <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + img.fileName)" :alt="list[projectId].name + img.title" />
+      <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + img.fileName)" :alt="list[projectId].name + img.title" />
     </slide>
   </carousel>
   </section>
@@ -11,13 +10,11 @@
 
 <script>
   import {Carousel, Slide} from 'vue-carousel'
-  import worksList from '@/assets/json/projects.json'
   export default {
     name: 'ProjectGallery',
-    props: ['projectId'],
+    props: ['projectId', 'list'],
     data: function () {
       return {
-        list: worksList.projects
       }
     },
     components: {
@@ -34,6 +31,7 @@
     min-width: 100%;
     opacity: 1;
     transition: .4s;
+    background: #ffffff;
     .load {
       transform: translateX(100%);
     }

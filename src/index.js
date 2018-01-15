@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueProgressBar from 'vue-progressbar'
+import Is from "is_js"
+
 import '@/assets/css/normalize.css'
 import '@/assets/css/_main.css'
 
@@ -27,11 +29,11 @@ Vue.mixin({
   data: function () {
     return {
       routeName: this.$route.name,
-      routePath: this.$route.fullPath,
       // positionX: 0,
       // positionY: 0,
       windowWidth: document.documentElement.clientWidth,
-      windowHeight: document.documentElement.clientHeight
+      windowHeight: document.documentElement.clientHeight,
+      mobileCheck: false
     }
   },
   mounted: function () {
@@ -47,12 +49,18 @@ Vue.mixin({
     getWindowSize: function (event) {
       this.windowWidth = document.documentElement.clientWidth
       this.windowHeight = document.documentElement.clientHeight
+      // this.mobileCheck = Is.touchDevice()
+      if (this.windowWidth < this.windowHeight) {
+        this.mobileCheck = true
+      }
     }
   },
   created: function () {
     // window.addEventListener('mousemove', this.updatePosition)
     this.routeName = this.$route.name
-    this.routePath = this.$route.fullPath
+    if (this.windowWidth < this.windowHeight) {
+      this.mobileCheck = true
+    }
   },
   beforeDestroy: function () {
     // window.removeEventListener('mousemove', this.updatePosition)
@@ -61,7 +69,6 @@ Vue.mixin({
   watch: {
     '$route' (to, from) {
       this.routeName = this.$route.name
-      this.routePath = this.$route.fullPath
     }
   }
 })

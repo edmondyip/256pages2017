@@ -57,9 +57,9 @@
       updateProject: function (id) {
         console.log(id - 1)
         self = this
-        self.projectId = ProjectList.projects.findIndex(obj => obj.path === this.$route.params.url)
         self.loading = true
         setTimeout(function () {
+          self.projectId = ProjectList.projects.findIndex(obj => obj.path === self.$route.params.url)
           self.$router.push({
             name: 'project',
             params: {

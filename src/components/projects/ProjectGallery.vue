@@ -1,6 +1,6 @@
 <template>
   <section>
-  <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" speed="300" easing="ease" :perPage="1">
+  <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :speed="300" easing="ease" :perPage="1">
     <slide v-for="img in list[projectId].gallery" :key="img.id">
       <img :src="require('../../assets/img/projects/' + list[projectId].path + '/' + img.fileName)" :alt="list[projectId].name + img.title" />
     </slide>

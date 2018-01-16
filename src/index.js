@@ -4,7 +4,6 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueProgressBar from 'vue-progressbar'
-import Is from "is_js"
 
 import '@/assets/css/normalize.css'
 import '@/assets/css/_main.css'

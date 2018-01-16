@@ -3,7 +3,7 @@
     <ul>
       <slot></slot>
     </ul>
-    <span :style="{top: (projectId + 1) * 33 + 'px'}"></span>
+    <span :style="{top: (projectId + 1) * 34 + 'px'}"></span>
   </section>
 </template>
 

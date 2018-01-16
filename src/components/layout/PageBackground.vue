@@ -5,7 +5,7 @@
         <path v-for="svgPath in bg.mobile" :d="svgPath" :key="svgPath.id" />
       </g>
     </svg>
-    <svg v-if="mobileCheck === false" id="background-svg" xml:space="preserve" viewBox="0 0 720 480" preserveAspectRatio="xMidYMid">
+    <svg v-else id="background-svg" xml:space="preserve" viewBox="0 0 720 480" preserveAspectRatio="xMidYMid">
       <g style="display: none" v-for="bg in bgList" :id="bg.name" :key="bg.id">
         <path v-for="svgPath in bg.path" :d="svgPath" :key="svgPath.id" />
       </g>

@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <project-timeline>
-      <li v-for="project in list" :key="project.id" :class="{active: (projectId + 1) === project.id}">
+    <project-timeline :projectId="projectId">
+      <li v-for="project in list" :key="project.id">
         <router-link :to="{ name: 'project', params: {url: project.path}}" @click.native="updateProject(project.id)">
           <slot v-if="projectId <= 9">0</slot>{{project.id}}
         </router-link>
@@ -118,7 +118,7 @@
       height: 500px;
       position: relative;
       grid-template-columns: 40% 60%;
-      overflow: hidden; // background: #ffffff;
+      overflow: hidden;
     }
     .btn {
       width: 20px;
@@ -166,7 +166,7 @@
       section.container {
         grid-template-columns: 1fr;
         grid-template-rows: 50%;
-        background: none;
+        background: #ffffff;
       }
       .btn {
         &.back {

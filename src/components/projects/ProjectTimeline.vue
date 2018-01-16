@@ -1,9 +1,9 @@
 <template>
   <section>
     <ul>
-        <slot></slot>
+      <slot></slot>
     </ul>
-    <span :style="{top: (projectId + 1) * 30 + 'px'}"></span>
+    <span :style="{top: (projectId + 1) * 33 + 'px'}"></span>
   </section>
 </template>
 
@@ -20,32 +20,33 @@
     position: absolute;
     width: 30px;
     height: 100%;
-    left: -30px;
+    left: -20px;
     ul {
       height: 90%;
-      padding: 10px 0;
       li {
-        height: 20px;
-        line-height: 20px;
-        &.active {
-          color: $darkColor;
-        }
         a {
+          display: block;
+          height: 25px;
+          line-height: 25px;
           color: #ffffff;
           text-decoration: none;
+          transition: .4s ease;
+          &.router-link-active {
+            color: $darkColor;
+            font-size: 1.6rem;
+          }
         }
       }
     }
-  }
-
-  span {
-    position: absolute;
-    left: -2px;
-    height: 2px;
-    width: 30px;
-    background: $darkColor;
-    display: block;
-    transition: .4s ease;
+    span {
+      position: absolute;
+      left: -2px;
+      height: 2px;
+      width: 30px;
+      background: $darkColor;
+      display: block;
+      transition: .4s ease;
+    }
   }
 
 </style>

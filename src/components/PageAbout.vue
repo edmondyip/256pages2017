@@ -64,6 +64,7 @@
       display: flex;
       width: 100%;
       height: 100%;
+      margin: 50px 0;
       &.about-me {
         header {
           background: url(~assets/img/about/about-me.jpg) no-repeat;

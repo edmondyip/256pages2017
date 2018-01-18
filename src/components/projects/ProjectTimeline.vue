@@ -1,9 +1,9 @@
 <template>
   <section>
+    <span :style="{top: (projectId) * 33 + 8 + 'px'}"></span>
     <ul>
       <slot></slot>
     </ul>
-    <span :style="{top: (projectId + 1) * 34 + 'px'}"></span>
   </section>
 </template>
 
@@ -17,22 +17,22 @@
 
 <style lang="scss" scoped>
   section {
-    position: absolute;
-    width: 30px;
-    height: 100%;
-    left: -20px;
+    position: relative;
     ul {
-      height: 90%;
+      position: absolute;
+      width: 30px;
+      left: -25px;
+      height: 100%;
       li {
         a {
           display: block;
           height: 25px;
           line-height: 25px;
-          color: #ffffff;
+          color: rgba($color:#ffffff, $alpha: .5);
           text-decoration: none;
           transition: .4s ease;
           &.router-link-active {
-            color: $darkColor;
+            color: #ffffff;
             font-size: 1.6rem;
           }
         }
@@ -40,8 +40,8 @@
     }
     span {
       position: absolute;
-      left: -2px;
-      height: 2px;
+      left: -30px;
+      height: 25px;
       width: 30px;
       background: $darkColor;
       display: block;

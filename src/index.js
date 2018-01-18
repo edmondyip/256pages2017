@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
 import VueProgressBar from 'vue-progressbar'
+import Is from "is_js"
 
 import '@/assets/css/normalize.css'
 import '@/assets/css/_main.css'
@@ -21,6 +23,7 @@ const options = {
   location: 'top',
   inverse: false
 }
+
 Vue.use(VueProgressBar, options)
 
 // Global data
@@ -48,18 +51,19 @@ Vue.mixin({
     getWindowSize: function (event) {
       this.windowWidth = document.documentElement.clientWidth
       this.windowHeight = document.documentElement.clientHeight
-      // this.mobileCheck = Is.touchDevice()
-      if (this.windowWidth < this.windowHeight) {
-        this.mobileCheck = true
-      }
+      this.mobileCheck = Is.touchDevice()
+      // if (this.windowWidth < this.windowHeight) {
+      //   this.mobileCheck = true
+      // }
     }
   },
   created: function () {
     // window.addEventListener('mousemove', this.updatePosition)
     this.routeName = this.$route.name
-    if (this.windowWidth < this.windowHeight) {
-      this.mobileCheck = true
-    }
+    this.mobileCheck = Is.touchDevice()
+    // if (this.windowWidth < this.windowHeight) {
+    //   this.mobileCheck = true
+    // }
   },
   beforeDestroy: function () {
     // window.removeEventListener('mousemove', this.updatePosition)

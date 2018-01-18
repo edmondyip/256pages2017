@@ -96,6 +96,7 @@
     }
     &.scrolled {
       background: rgba($color: #ffffff, $alpha: .7);
+      padding: 0;
     }
     &.home {
       padding: 60px 0;

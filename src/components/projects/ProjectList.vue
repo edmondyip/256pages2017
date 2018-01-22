@@ -115,19 +115,19 @@
     section.container {
       display: grid;
       width: 100%;
-      height: 500px;
-      position: relative;
+      height: 550px;
       grid-template-columns: 40% 60%;
       overflow: hidden;
     }
     .btn {
+      cursor: pointer;
       width: 20px;
       height: 20px;
+      position: relative;
       display: block;
       padding: 15px;
       background: rgba($color: #ffffff, $alpha: .9);
       transition: .3s;
-      cursor: pointer;
       svg {
         fill: $darkColor;
         height: 100%;

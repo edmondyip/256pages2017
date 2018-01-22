@@ -165,6 +165,10 @@
       "description": "Canon Promoter App",
       "path": "canon",
       "gallery": [{
+        "title": "cover",
+        "imageType": "desktop",
+        "fileName": "cover2.jpg"
+      }, {        
         "title": "Login",
         "imageType": "mobile",
         "fileName": "login.jpg"

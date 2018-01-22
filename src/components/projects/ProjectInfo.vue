@@ -1,7 +1,7 @@
 <template>
   <section>
-    <h2><slot v-if="projectId <= 9">0</slot>{{projectId + 1}}</h2>
-    <span class="block" :style="{background: list[projectId].themeColor}"></span>
+    <span><slot v-if="projectId <= 9">0</slot>{{projectId + 1}}</span>
+    <div class="block" :style="{background: list[projectId].themeColor}"></div>
     <h1>{{list[projectId].name}}</h1>
     <p>{{list[projectId].description}}</p>
     <project-type>
@@ -30,9 +30,11 @@
   section {
     position: relative;
     padding: 50px;
+    height: 400px;
     background: #ffffff;
     text-indent: 0px;
     transition: .4s;
+    overflow: hidden;
     .block {
       position: absolute;
       top: 400px;
@@ -41,11 +43,14 @@
       width: 100px;
       transition: .8s;
     }
-    h2 {
+    span {
+      font-family: $titleFont;
       font-size: 15rem;
+      line-height: 15rem;
+      height: 150px;
       color: #efefef;
       position: absolute;
-      bottom: 0;
+      bottom: -20px;
       left: 0;
     }
     h1,

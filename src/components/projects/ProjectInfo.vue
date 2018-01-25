@@ -23,7 +23,6 @@
       ProjectType
     }
   }
-
 </script>
 
 <style lang="scss" scoped>

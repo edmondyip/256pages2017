@@ -1,5 +1,10 @@
 {
- "name": "App",
+ "name": "256pages",
+ "short_name": "256",
+ "start_url": "index.html",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "description": "Edmond Yip's personal website.",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

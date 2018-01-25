@@ -16,11 +16,11 @@
       "gallery": [{
         "title": "Concept Image",
         "imageType": "desktop",
-        "fileName": "eventor-banner.png"
+        "fileName": "banner1.jpg"
       }, {
         "title": "Concept Image",
         "imageType": "desktop",
-        "fileName": "eventor-banner2.png"
+        "fileName": "banner2.jpg"
       }],
       "themeColor": "#FFC056"
     },
@@ -165,25 +165,13 @@
       "description": "Canon Promoter App",
       "path": "canon",
       "gallery": [{
-        "title": "cover",
+        "title": "Login and Dashboard",
         "imageType": "desktop",
-        "fileName": "cover2.jpg"
+        "fileName": "cover.jpg"
       }, {        
-        "title": "Login",
-        "imageType": "mobile",
-        "fileName": "login.jpg"
-      }, {
-        "title": "Dashboard",
-        "imageType": "mobile",
-        "fileName": "dashboard.jpg"
-      }, {
-        "title": "Main Function",
+        "title": "Main Screen",
         "imageType": "mobile",
         "fileName": "main.jpg"
-      }, {
-        "title": "Pending Screen",
-        "imageType": "mobile",
-        "fileName": "pending.jpg"
       }, {
         "title": "UX Design",
         "imageType": "desktop",

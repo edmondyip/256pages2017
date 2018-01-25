@@ -33,10 +33,9 @@
     opacity: 1;
     transition: .8s;
     width: 590px;
-    height: 400px;
+    height: 450px;
     margin-top: 50px;
     margin-left: -50px;
-    overflow: hidden;
     .load {
       transform: translateX(100%);
     }

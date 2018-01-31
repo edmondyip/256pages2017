@@ -3,7 +3,7 @@
     <project-timeline :projectId="projectId">
       <li v-for="project in list" :key="project.id">
         <router-link :to="{ name: 'project', params: {url: project.path}}" @click.native="updateProject(project.id)">
-          <slot v-if="projectId <= 9">0</slot>{{project.id}}
+          <slot v-if="project.id <= 9">0</slot>{{project.id}}
         </router-link>
       </li>
     </project-timeline>

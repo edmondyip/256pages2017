@@ -21,6 +21,10 @@
         "title": "Concept Image",
         "imageType": "desktop",
         "fileName": "banner2.jpg"
+      }, {
+        "title": "UX",
+        "imageType": "desktop",
+        "fileName": "ux.jpg"
       }],
       "themeColor": "#FFC056"
     },
@@ -40,7 +44,7 @@
       "gallery": [{
         "title": "Landing Page",
         "imageType": "desktop",
-        "fileName": "cloudnifier_top.png"
+        "fileName": "cover.jpg"
       }],
       "themeColor": "#4D7EC2"
     },
@@ -117,7 +121,7 @@
       "gallery": [{
         "title": "Survey",
         "imageType": "desktop",
-        "fileName": "survey.jpg"
+        "fileName": "cover.jpg"
       }],
       "themeColor": "#A4DCE0"
     },
@@ -168,7 +172,7 @@
         "title": "Login and Dashboard",
         "imageType": "desktop",
         "fileName": "cover.jpg"
-      }, {        
+      }, {
         "title": "Main Screen",
         "imageType": "mobile",
         "fileName": "main.jpg"
@@ -198,23 +202,15 @@
       "gallery": [{
         "title": "Homepage",
         "imageType": "desktop",
-        "fileName": "index.png"
+        "fileName": "cover.jpg"
       }, {
         "title": "Products List",
         "imageType": "desktop",
-        "fileName": "list.png"
+        "fileName": "list.jpg"
       }, {
         "title": "Product Page",
         "imageType": "desktop",
-        "fileName": "product.png"
-      }, {
-        "title": "Our Lens",
-        "imageType": "desktop",
-        "fileName": "lens.png"
-      }, {
-        "title": "Affiliate Program",
-        "imageType": "desktop",
-        "fileName": "affiliate.png"
+        "fileName": "content.jpg"
       }],
       "themeColor": "#4a4a4a"
     },
@@ -259,6 +255,49 @@
         "fileName": "blog.png"
       }],
       "themeColor": "#0064AE"
+    },
+    {
+      "id": 10,
+      "name": "SVG-Morpheus",
+      "date": "2017",
+      "typeList": [
+        "Open Source",
+        "Side Project"
+      ],
+      "techList": [
+        "Javascript",
+        "GitHub"
+      ],
+      "description": "Add support for SVG a Javascript",
+      "path": "svg-morpheus",
+      "gallery": [{
+        "title": "Cover",
+        "imageType": "desktop",
+        "fileName": "cover.jpg"
+      }],
+      "themeColor": "#41b883"
+    },
+    {
+      "id": 11,
+      "name": "Chinese Fonts",
+      "date": "2017",
+      "typeList": [
+        "Open Source",
+        "Side Project"
+      ],
+      "techList": [
+        "Web Fonts",
+        "Javascript",
+        "GitHub"
+      ],
+      "description": "Convert text to web fonts",
+      "path": "chinese-fonts",
+      "gallery": [{
+        "title": "Cover",
+        "imageType": "desktop",
+        "fileName": "cover.jpg"
+      }],
+      "themeColor": "#666666"
     }
   ]
 }

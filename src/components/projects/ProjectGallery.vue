@@ -23,11 +23,6 @@
     components: {
       Carousel,
       Slide
-    },
-    watch: {
-      projectId () {
-        this.$forceUpdate(Carousel)
-      }
     }
   }
 

@@ -1,0 +1,62 @@
+
+256Pages.com
+This is Edmond Yip personal website, also my portfolio.
+
+
+___________________________________________________________
+| Team
+
+Web Designer : Edmond Yip
+UI Designer : Edmond Yip
+Front-end Developer : Edmond Yip
+Facebook : https://www.facebook.com/edmond.king
+Linkedin : https://www.linkedin.com/in/yip-edmond-35478536/
+From : Hong Kong
+
+
+___________________________________________________________
+| Thanks
+
+Pinky Fung
+Harry Lo
+
+
+___________________________________________________________
+| Technology
+
+Node.js
+https://nodejs.org/
+
+Vue.js
+https://vuejs.org/
+
+Normalize.css
+https://necolas.github.io/normalize.css/
+
+Sass
+http://sass-lang.com/
+
+Webpack
+https://webpack.js.org/
+
+Isotope
+https://isotope.metafizzy.co/
+
+
+
+___________________________________________________________
+| Fonts
+
+kaiso
+https://moji-waku.com/
+
+
+
+
+
+___________________________________________________________
+| Site
+
+Last update : 2017/11/10
+Language : English, Transition Chinese
+IDE : Viusal Studio Code, Sketch, FileZilla

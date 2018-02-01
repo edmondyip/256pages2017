@@ -1,0 +1,6 @@
+Sitemap: https://256pages.com/sitemap.xml
+User-agent:*
+
+Disallow: /static.bak/
+Disallow: /index.html.bak
+Disallow: /comments

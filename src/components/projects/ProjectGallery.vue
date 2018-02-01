@@ -23,8 +23,14 @@
     components: {
       Carousel,
       Slide
+    },
+    watch: {
+      projectId () {
+        this.$forceUpdate(Carousel)
+      }
     }
   }
+
 </script>
 
 <style lang="scss" scoped>
@@ -62,4 +68,5 @@
       }
     }
   }
+
 </style>

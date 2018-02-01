@@ -28,7 +28,7 @@
           display: block;
           height: 25px;
           line-height: 25px;
-          color: rgba($color:#ffffff, $alpha: .5);
+          color: #ffffff; 
           text-decoration: none;
           transition: .4s ease;
           &.router-link-active {

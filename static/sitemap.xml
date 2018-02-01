@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            
+<url><loc>http://256pages.com/</loc><changefreq>daily</changefreq><priority>1.00</priority></url>
+<url><loc>https://256pages.com/</loc><changefreq>daily</changefreq><priority>1.00</priority></url>
+<url><loc>http://www.256pages.com/</loc><changefreq>daily</changefreq><priority>1.00</priority></url>
+<url><loc>https://www.256pages.com/</loc><changefreq>daily</changefreq><priority>1.00</priority></url>
+
+<url><loc>https://www.256pages.com/about</loc><changefreq>daily</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.256pages.com/projects</loc><changefreq>daily</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.256pages.com/projects/eventor</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/projects/cloudnifier</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/projects/merchant-plus</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/projects/student-smart</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/projects/disenyland</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/projects/hatchya</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/projects/canon</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/projects/glassesgallery</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/projects/swisscoat</loc><changefreq>daily</changefreq><priority>0.60</priority></url>
+<url><loc>https://www.256pages.com/contact</loc><changefreq>daily</changefreq><priority>0.80</priority></url>
+</urlset>

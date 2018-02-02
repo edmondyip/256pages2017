@@ -1,26 +1,24 @@
-'use strict'
-var path = require('path')
-var utils = require('./utils')
-var config = require('../config')
-var vueLoaderConfig = require('./vue-loader.conf')
+const path = require('path')
+const webpack = require('webpack')
+const vueConfig = require('./vue-loader.config')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
-function resolve(dir) {
-  return path.join(__dirname, '..', dir)
-}
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  entry: {
-    app: './src/index.js'
-  },
+  devtool: isProd
+    ? false
+    : '#cheap-module-source-map',
   output: {
-    path: config.build.assetsRoot,
-    filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production' ?
-      config.build.assetsPublicPath : config.dev.assetsPublicPath
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '/dist/',
+    filename: '[name].[chunkhash].js'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
+      'public': path.resolve(__dirname, '../public'),
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'styles': path.resolve(__dirname, '../src/assets/css/'),
@@ -29,6 +27,7 @@ module.exports = {
     }
   },
   module: {
+    noParse: /es6-promise\.js$/, // avoid webpack shimming process
     rules: [
       ...(config.dev.useEslint ? [{
         test: /\.(js|vue)$/,
@@ -91,5 +90,22 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  performance: {
+    maxEntrypointSize: 300000,
+    hints: isProd ? 'warning' : false
+  },
+  plugins: isProd
+    ? [
+        new webpack.optimize.UglifyJsPlugin({
+          compress: { warnings: false }
+        }),
+        new webpack.optimize.ModuleConcatenationPlugin(),
+        new ExtractTextPlugin({
+          filename: 'common.[chunkhash].css'
+        })
+      ]
+    : [
+        new FriendlyErrorsPlugin()
+      ]
 }

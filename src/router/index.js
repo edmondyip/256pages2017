@@ -14,6 +14,7 @@ Vue.use(Meta)
 
 export default new Router({
   mode: 'history',
+  fallback: false,
   routes: [{
     name: 'error',
     path: '*',

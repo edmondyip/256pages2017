@@ -1,3 +1,7 @@
+'use strict'
+// const utils = require('./utils')
+const config = require('../config')
+
 module.exports = {
   extractCSS: process.env.NODE_ENV === 'production',
   preserveWhitespace: false,
@@ -5,5 +9,11 @@ module.exports = {
     require('autoprefixer')({
       browsers: ['last 3 versions']
     })
-  ]
+  ],
+  transformToRequire: {
+    video: 'src',
+    source: 'src',
+    img: 'src',
+    image: 'xlink:href'
+  }
 }

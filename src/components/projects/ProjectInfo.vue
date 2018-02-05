@@ -26,6 +26,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/_global.scss';
   section {
     position: relative;
     padding: 50px;

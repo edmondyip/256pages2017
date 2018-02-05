@@ -34,6 +34,7 @@ import GuestBook from "@/components/contact/ContactGuestbook"
 </script>
 
 <style scoped lang="scss">
+@import '../assets/css/_global.scss';
   section {
     width: 850px;
     margin: 0 auto;

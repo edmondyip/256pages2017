@@ -20,6 +20,7 @@
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/css/_global.scss';
   footer {
     display: block;
     font-family: $titleFont;

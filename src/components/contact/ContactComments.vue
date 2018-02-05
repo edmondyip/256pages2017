@@ -57,6 +57,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/_global.scss';
   ul {
     width: 400px;
     margin: 0 auto;

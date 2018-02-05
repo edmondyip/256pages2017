@@ -9,6 +9,7 @@
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/css/_global.scss';
   ul.tag {
     position: relative;
     transition: .5s;

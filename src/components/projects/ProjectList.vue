@@ -106,6 +106,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/_global.scss';
   .wrapper {
     width: calc(100% - 40px);
     max-width: 900px;

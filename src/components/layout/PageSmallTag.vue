@@ -11,6 +11,7 @@
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/css/_global.scss';
   .logo-tag {
     a {
       font-family: kaiso, sans-serif;

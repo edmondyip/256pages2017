@@ -97,6 +97,7 @@
 </script>
 
 <style lang="scss">
+@import '../../assets/css/_global.scss';
   svg#background-svg {
     margin: 0 auto;
     display: block;

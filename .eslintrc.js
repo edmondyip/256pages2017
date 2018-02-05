@@ -8,6 +8,8 @@ module.exports = {
   },
   env: {
     browser: true,
+    node: true,
+    jasmine: true
   },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   extends: 'standard',

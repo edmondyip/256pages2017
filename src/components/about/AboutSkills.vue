@@ -65,6 +65,7 @@ import ScrollMon from 'scrollmonitor'
 </script>
 
 <style scoped lang="scss">
+// @import '../../assets/css/_global.scss';
   article {
     width: 100%;
     section {
@@ -88,7 +89,7 @@ import ScrollMon from 'scrollmonitor'
           }
           span {
             display: block;
-            background: $themeColor;
+            background: #85F1C1;
             position: absolute;
             height: 30px;
             font-size: 2rem;

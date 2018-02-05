@@ -9,6 +9,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/_global.scss';
   .poisition {
     position: fixed;
     display: block;

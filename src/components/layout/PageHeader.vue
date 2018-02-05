@@ -70,6 +70,7 @@
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/css/_global.scss';
   header {
     position: fixed;
     top: 0;

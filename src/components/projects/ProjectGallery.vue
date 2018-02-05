@@ -29,6 +29,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/_global.scss';
   section {
     min-width: 100%;
     opacity: 1;

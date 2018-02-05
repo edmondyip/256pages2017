@@ -40,6 +40,7 @@
 </script>
 
 <style scoped lang="scss">
+// @import '../../assets/css/_global.scss';
   article {
     width: 100%;
     margin: 20px 0;
@@ -50,7 +51,7 @@
       flex: 1 1 auto;
       padding: 10px 30px;
       margin: 0 10px 0 0;
-      background: $themeColor;
+      background: #85F1C1;
       // box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
       // border: 5px solid #cccccc;
       &:last-child {
@@ -59,14 +60,14 @@
     }
   }
 
-  @media (max-width: $breakpoint-mobile) {
-    article {
-      flex-flow: column;
-      width: 100%;
-      section {
-        width: calc(100% - 60px);
-        margin: 0 0 10px;
-      }
-    }
-  }
+  // @media (max-width: $breakpoint-mobile) {
+  //   article {
+  //     flex-flow: column;
+  //     width: 100%;
+  //     section {
+  //       width: calc(100% - 60px);
+  //       margin: 0 0 10px;
+  //     }
+  //   }
+  // }
 </style>

@@ -57,6 +57,7 @@
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/css/_global.scss';
   $videoWidth: 980px;
   $videoWidthOffside: 40px;
   $videoHeight: 550px;

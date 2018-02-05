@@ -55,6 +55,7 @@
 </script>
 
 <style scoped lang="scss">
+// @import '../assets/css/_global.scss';
   .about-cover {
     position: relative;
     max-width: 940px;
@@ -67,13 +68,13 @@
       margin: 50px 0;
       &.about-me {
         header {
-          background: url(~assets/img/about/about-me.jpg) no-repeat;
+          background: url(../assets/img/about/about-me.jpg) no-repeat;
           background-size: cover;
         }
       }
       &.about-256 {
         header {
-          background: url(~assets/img/about/about-256.jpg) no-repeat center;
+          background: url(../assets/img/about/about-256.jpg) no-repeat center;
           background-size: cover;
         }
       }
@@ -82,7 +83,7 @@
         display: block;
         padding: 10px 20px;
         margin: 25px 0;
-        background: $themeColor;
+        background: #85F1C1;
         margin-left: -30px;
         position: relative;
       }
@@ -113,23 +114,23 @@
     }
   }
 
-  @media (max-width: $breakpoint-mobile) {
-    .about-cover {
-      display: block;
-      width: 100%;
-      padding: 30px 0 10px;
-      section {
-        width: 100%;
-        display: block;
-        .info {
-          width: 100%;
-          margin: 20px 0;
-          width: calc(100% - 40px);
-        }
-        .image {
-          width: 100%;
-        }
-      }
-    }
-  }
+  // @media (max-width: $breakpoint-mobile) {
+  //   .about-cover {
+  //     display: block;
+  //     width: 100%;
+  //     padding: 30px 0 10px;
+  //     section {
+  //       width: 100%;
+  //       display: block;
+  //       .info {
+  //         width: 100%;
+  //         margin: 20px 0;
+  //         width: calc(100% - 40px);
+  //       }
+  //       .image {
+  //         width: 100%;
+  //       }
+  //     }
+  //   }
+  // }
 </style>

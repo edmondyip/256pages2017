@@ -66,6 +66,7 @@
 </script>
 
 <style scoped lang="scss">
+@import 'assets/css/_global.scss';
   #app {
     height: 100%;
     main {

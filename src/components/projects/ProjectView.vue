@@ -28,6 +28,7 @@ z      }
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/_global.scss';
     section {
       display: grid;
       width: 100%;

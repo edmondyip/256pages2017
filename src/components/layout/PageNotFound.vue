@@ -19,6 +19,7 @@
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/css/_global.scss';
   section {
     text-align: center;
     h1 {

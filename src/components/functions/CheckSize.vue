@@ -11,6 +11,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/_global.scss';
   .size {
     position: fixed;
     right: 10px;

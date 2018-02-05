@@ -43,6 +43,7 @@
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/css/_global.scss';
   nav {
     max-width: 940px;
     margin: 0 auto;

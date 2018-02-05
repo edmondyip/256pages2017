@@ -46,6 +46,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/css/_global.scss';
   fieldset {
     margin: 50px 0 0;
     border: 0;

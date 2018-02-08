@@ -12,7 +12,7 @@
         </g>
       </svg>
     </div>
-    <navbar :class="{open: navOpen}" />
+    <!-- <navbar :class="{open: navOpen}" /> -->
   </header>
 </template>
 

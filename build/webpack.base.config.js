@@ -13,8 +13,7 @@ function resolve(dir) {
 
 module.exports = {
   devtool: isProd ?
-    false :
-    '#cheap-module-source-map',
+    false : '#cheap-module-source-map',
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/',
@@ -100,21 +99,20 @@ module.exports = {
           name: 'fonts/[name].[ext]?[hash]'
         }
       },
-      {
-        test: /\.(scss)(\?.*)?$/,
-        loader: 'sass-resources-loader',
-        options: {
-          resources: path.resolve(__dirname, '../src/assets/css/_global.scss')
-        }
-      },
+      // {
+      //   test: /\.(scss)(\?.*)?$/,
+      //   loader: 'sass-resources-loader',
+      //   options: {
+      //     resources: path.resolve(__dirname, '../src/assets/css/_global.scss')
+      //   }
+      // },
       {
         test: /\.css$/,
         use: isProd ?
           ExtractTextPlugin.extract({
             use: 'css-loader?minimize',
             fallback: 'vue-style-loader'
-          }) :
-          ['css-loader']
+          }) : ['vue-style-loader', 'css-loader']
       }
     ]
   },
@@ -122,19 +120,17 @@ module.exports = {
     maxEntrypointSize: 300000,
     hints: isProd ? 'warning' : false
   },
-  plugins: isProd ?
-    [
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false
-        }
-      }),
-      new webpack.optimize.ModuleConcatenationPlugin(),
-      new ExtractTextPlugin({
-        filename: 'common.[chunkhash].css'
-      })
-    ] :
-    [
-      new FriendlyErrorsPlugin()
-    ]
+  plugins: isProd ? [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new ExtractTextPlugin({
+      filename: 'common.[chunkhash].css'
+    })
+  ] : [
+    new FriendlyErrorsPlugin()
+  ]
 }

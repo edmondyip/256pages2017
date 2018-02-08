@@ -73,7 +73,6 @@
     "scrollmonitor": "^1.2.4",
     "semver": "^5.5.0",
     "shelljs": "^0.8.1",
-    "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
     "vue-carousel": "^0.6.5",
     "vue-loader": "^13.7.1",
@@ -100,6 +99,8 @@
   ],
   "eslintConfig": {
     "globals": {
+      "document": true,
+      "foo": true,
       "window": true
     }
   }

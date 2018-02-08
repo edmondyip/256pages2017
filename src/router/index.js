@@ -23,25 +23,25 @@ export default new Router({
     name: 'home',
     path: '/',
     component: Home
-  }, {
-    name: 'about',
-    path: '/about',
-    component: About
-  }, {
-    name: 'projects',
-    path: '/projects',
-    redirect: '/projects/eventor'
-  }, {    
-    name: 'project',
-    path: '/projects/:url',
-    component: Project
-  }, {
-    name: 'contact',
-    path: '/contact',
-    component: Contact
-  }, {
-    name: 'comments',
-    path: '/comments',
-    component: Comments
+  // }, {
+  //   name: 'about',
+  //   path: '/about',
+  //   component: About
+  // }, {
+  //   name: 'projects',
+  //   path: '/projects',
+  //   redirect: '/projects/eventor'
+  // }, {    
+  //   name: 'project',
+  //   path: '/projects/:url',
+  //   component: Project
+  // }, {
+  //   name: 'contact',
+  //   path: '/contact',
+  //   component: Contact
+  // }, {
+  //   name: 'comments',
+  //   path: '/comments',
+  //   component: Comments
   }]
 })

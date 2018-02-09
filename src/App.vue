@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <background-animation />
+    <!-- <background-animation /> -->
     <main :class="{home: routeName === 'home'}">
       <transition name="fade" mode="out-in">
         <router-view />
       </transition>
     </main>
     <page-footer />
-    <vue-progress-bar />
+    <!-- <vue-progress-bar /> -->
     <page-header />
   </div>
 </template>
@@ -15,7 +15,7 @@
 <script>
   import PageHeader from '@/components/layout/PageHeader'
   import PageFooter from '@/components/layout/PageFooter'
-  import BackgroundAnimation from '@/components/layout/PageBackground'
+  // import BackgroundAnimation from '@/components/layout/PageBackground'
   export default {
     name: 'Layout',
     metaInfo: function () {
@@ -59,7 +59,7 @@
     components: {
       PageHeader,
       PageFooter,
-      BackgroundAnimation
+      // BackgroundAnimation
     }
   }
 

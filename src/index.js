@@ -4,27 +4,27 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import VueProgressBar from 'vue-progressbar'
-import Is from "is_js"
+// import VueProgressBar from 'vue-progressbar'
+// import Is from "is_js"
 
 import '@/assets/css/normalize.css'
 import '@/assets/css/_main.css'
 
-const options = {
-  color: '#85F1C1',
-  failedColor: '#874b4b',
-  thickness: '3px',
-  transition: {
-    speed: '0.2s',
-    opacity: '0.6s',
-    termination: 300
-  },
-  autoRevert: true,
-  location: 'top',
-  inverse: false
-}
+// const options = {
+//   color: '#85F1C1',
+//   failedColor: '#874b4b',
+//   thickness: '3px',
+//   transition: {
+//     speed: '0.2s',
+//     opacity: '0.6s',
+//     termination: 300
+//   },
+//   autoRevert: true,
+//   location: 'top',
+//   inverse: false
+// }
 
-Vue.use(VueProgressBar, options)
+// Vue.use(VueProgressBar, options)
 
 // Global data
 Vue.mixin({
@@ -51,7 +51,7 @@ Vue.mixin({
     getWindowSize: function (event) {
       this.windowWidth = document.documentElement.clientWidth
       this.windowHeight = document.documentElement.clientHeight
-      this.mobileCheck = Is.touchDevice()
+      // this.mobileCheck = Is.touchDevice()
       // if (this.windowWidth < this.windowHeight) {
       //   this.mobileCheck = true
       // }
@@ -60,7 +60,7 @@ Vue.mixin({
   created: function () {
     // window.addEventListener('mousemove', this.updatePosition)
     this.routeName = this.$route.name
-    this.mobileCheck = Is.touchDevice()
+    // this.mobileCheck = Is.touchDevice()
     // if (this.windowWidth < this.windowHeight) {
     //   this.mobileCheck = true
     // }

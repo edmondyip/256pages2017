@@ -4,10 +4,10 @@ import Meta from 'vue-meta'
 
 import NotFound from '@/components/layout/PageNotFound'
 import Home from '@/components/PageIndex'
-import About from '@/components/PageAbout'
-import Project from '@/components/projects/ProjectList'
-import Contact from '@/components/PageContact'
-import Comments from '@/components/contact/ContactComments'
+// import About from '@/components/PageAbout'
+// import Project from '@/components/projects/ProjectList'
+// import Contact from '@/components/PageContact'
+// import Comments from '@/components/contact/ContactComments'
 
 Vue.use(Router)
 Vue.use(Meta)

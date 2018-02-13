@@ -33,7 +33,9 @@
         this.tab.to(target)
       },
       scrollPoisition: function () {
-        this.scrolled = window.scrollY > 0;
+        if (process.browser) {
+          this.scrolled = window.scrollY > 0;
+        }
       }
     },
     mounted: function () {
@@ -42,10 +44,14 @@
       })
     },
     created: function () {
-      window.addEventListener('scroll', this.scrollPoisition)
+      if (process.browser) {
+        window.addEventListener('scroll', this.scrollPoisition)
+      }
     },
     beforeDestroy: function () {
-      window.removeEventListener('scroll', this.scrollPoisition)
+      if (process.browser) {
+        window.removeEventListener('scroll', this.scrollPoisition)
+      }
     },
     components: {
       Navbar
@@ -70,7 +76,7 @@
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/css/_global.scss';
+  @import '../../assets/css/_global.scss';
   header {
     position: fixed;
     top: 0;

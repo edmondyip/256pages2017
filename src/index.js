@@ -40,7 +40,9 @@ Vue.mixin({
   },
   mounted: function () {
     this.$nextTick(function () {
-      window.addEventListener('resize', this.getWindowSize)
+      if (process.browser) {
+        window.addEventListener('resize', this.getWindowSize)
+      }
     })
   },
   methods: {
@@ -66,8 +68,10 @@ Vue.mixin({
     // }
   },
   beforeDestroy: function () {
-    // window.removeEventListener('mousemove', this.updatePosition)
-    window.removeEventListener('resize', this.getWindowSize)
+    if (process.browser) {
+      // window.removeEventListener('mousemove', this.updatePosition)
+      window.removeEventListener('resize', this.getWindowSize)
+    }
   },
   watch: {
     '$route' (to, from) {
@@ -88,7 +92,7 @@ Vue.config.productionTip = false
 //   }
 // })
 
-export function createApp () {
+export function createApp() {
   // create the app instance.
   // here we inject the router, store and ssr context to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
@@ -101,5 +105,8 @@ export function createApp () {
   // expose the app, the router and the store.
   // note we are not mounting the app here, since bootstrapping will be
   // different depending on whether we are in a browser or on the server.
-  return { app, router }
+  return {
+    app,
+    router
+  }
 }

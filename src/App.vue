@@ -6,15 +6,15 @@
         <router-view />
       </transition>
     </main>
-    <page-footer />
+    <!-- <page-footer /> -->
     <!-- <vue-progress-bar /> -->
-    <page-header />
+    <!-- <page-header /> -->
   </div>
 </template>
 
 <script>
-  import PageHeader from '@/components/layout/PageHeader'
-  import PageFooter from '@/components/layout/PageFooter'
+  // import PageHeader from '@/components/layout/PageHeader'
+  // import PageFooter from '@/components/layout/PageFooter'
   // import BackgroundAnimation from '@/components/layout/PageBackground'
   export default {
     name: 'Layout',
@@ -55,12 +55,12 @@
       this.$router.afterEach((to, from) => {
         this.$Progress.finish()
       })
-    },
-    components: {
-      PageHeader,
-      PageFooter,
-      // BackgroundAnimation
     }
+    // components: {
+    //   PageHeader,
+    //   PageFooter,
+    //   BackgroundAnimation
+    // }
   }
 
 </script>

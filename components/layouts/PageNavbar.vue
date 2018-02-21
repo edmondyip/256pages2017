@@ -3,13 +3,13 @@
     <transition-group tag="ul" name="navAnimation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
       <!-- loop nav bar -->
       <li v-for="(item, index) in list" itemprop="name" :key="index">
-        <nuxt-link :class="item.name" :to="item.url" itemprop="url">{{item.name}}{{item.index}}</nuxt-link>
+        <!-- <nuxt-link :class="item.name" :to="item.url" itemprop="url">{{item.name}}{{item.index}}</nuxt-link> -->
         <span>{{item.caption}}</span>
       </li>
-      <li itemprop="name" :key="5">
+      <!-- <li itemprop="name" :key="5">
         <a href="https://blog.256pages.com" itemprop="url">blog</a>
         <span>my development blog</span>
-      </li>
+      </li> -->
     </transition-group>
   </nav>
 </template>

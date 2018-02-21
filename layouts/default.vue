@@ -7,7 +7,7 @@
       </transition>
     </main>
     <page-footer />
-    <page-header />
+    <!-- <page-header /> -->
   </div>
 </template>
 

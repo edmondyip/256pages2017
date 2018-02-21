@@ -43,6 +43,7 @@ module.exports = {
    */
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/axios',
     'nuxt-sass-resources-loader'
   ],
   sassResources: [

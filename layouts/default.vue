@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <!-- <background-animation /> -->
-    <main :class="{home: routeName === 'index'}">
+    <!-- <main :class="{home: routeName === 'index'}"> -->
+      <main>
       <transition name="fade" mode="out-in">
         <nuxt />
       </transition>
     </main>
     <page-footer />
-    <!-- <page-header /> -->
+    <page-header />
   </div>
 </template>
 

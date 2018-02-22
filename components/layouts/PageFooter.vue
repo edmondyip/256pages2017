@@ -1,7 +1,7 @@
 <template>
   <transition name="copyAnimation" appear appear-active-class="copy-animation">
     <footer>
-      <small-tag />
+      <!-- <small-tag /> -->
       <div id="copyright">
         256pages &copy 2017
       </div>

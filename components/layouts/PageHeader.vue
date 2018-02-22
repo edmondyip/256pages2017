@@ -1,5 +1,6 @@
 <template>
-  <header :class="{scrolled: scrolled === true, home: routeName === 'index'}">
+  <!-- <header :class="{scrolled: scrolled === true, home: routeName === 'index'}"> -->
+    <header>
     <div class="nav-btn" @click="navOpen = !navOpen">
       <svg id="mobile-btn" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 25 25" preserveAspectRatio="none">
         <g id="close">
@@ -54,6 +55,12 @@
         window.removeEventListener('scroll', this.scrollPoisition)
       }
     },
+    beforeRouteUpdate: function () {
+     if (to.params.url === undefined || 'eventor' && from.params.url === undefined) {
+          this.tween('open')
+          this.navOpen = false
+        }
+    },
     components: {
       Navbar
     },
@@ -64,13 +71,13 @@
         } else {
           this.tween('close')
         }
-      },
-      '$route' (to, from) {
-        if (to.params.url === undefined || 'eventor' && from.params.url === undefined) {
-          this.tween('open')
-          this.navOpen = false
-        }
       }
+      // '$route' (to, from) {
+      //   if (to.params.url === undefined || 'eventor' && from.params.url === undefined) {
+      //     this.tween('open')
+      //     this.navOpen = false
+      //   }
+      // }
     }
   }
 

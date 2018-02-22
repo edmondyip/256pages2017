@@ -2,9 +2,29 @@
   <nav>
     <transition-group tag="ul" name="navAnimation" appear appear-active-class="nav-anmation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
       <!-- loop nav bar -->
-      <li v-for="(item, index) in list" itemprop="name" :key="index">
-        <!-- <nuxt-link :class="item.name" :to="item.url" itemprop="url">{{item.name}}{{item.index}}</nuxt-link> -->
+      <!-- <li v-for="(item, index) in list" itemprop="name" :key="index">
+        <nuxt-link :class="item.name" :to="item.url" itemprop="url">{{item.name}}{{item.index}}</nuxt-link>
         <span>{{item.caption}}</span>
+      </li> -->
+
+      <li itemprop="name" :key="0">
+        <nuxt-link to="/" itemprop="url">home</nuxt-link>
+        <span>test</span>
+      </li>
+
+      <li itemprop="name" :key="1">
+        <nuxt-link to="/about" itemprop="url">about</nuxt-link>
+        <span>test</span>
+      </li>
+
+      <li itemprop="name" :key="2">
+        <nuxt-link to="/projects" itemprop="url">projects</nuxt-link>
+        <span>test</span>
+      </li>
+
+      <li itemprop="name" :key="3">
+        <nuxt-link to="/contact" itemprop="url">contact</nuxt-link>
+        <span>test</span>
       </li>
       <!-- <li itemprop="name" :key="5">
         <a href="https://blog.256pages.com" itemprop="url">blog</a>
@@ -124,7 +144,7 @@
       transition: .5s;
       position: absolute;
       z-index: 1;
-      background: rgba(255,255,255,.8);
+      background: rgba(255, 255, 255, .8);
       ul {
         display: block;
         transition: .5s;

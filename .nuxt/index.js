@@ -13,7 +13,7 @@ import { createStore } from './store.js'
 
 /* Plugins */
 import nuxt_plugin_axios_36216d0c from 'nuxt_plugin_axios_36216d0c' // Source: ./axios.js
-import nuxt_plugin_global_f21f4e84 from 'nuxt_plugin_global_f21f4e84' // Source: ../plugins/global.js (ssr: false)
+import nuxt_plugin_svgmorpheus_0d65a43d from 'nuxt_plugin_svgmorpheus_0d65a43d' // Source: ../plugins/svg-morpheus.js (ssr: false)
 
 
 // Component: <no-ssr>
@@ -155,7 +155,7 @@ async function createApp (ssrContext) {
   if (typeof nuxt_plugin_axios_36216d0c === 'function') await nuxt_plugin_axios_36216d0c(app.context, inject)
   
   if (process.browser) { 
-    if (typeof nuxt_plugin_global_f21f4e84 === 'function') await nuxt_plugin_global_f21f4e84(app.context, inject)
+    if (typeof nuxt_plugin_svgmorpheus_0d65a43d === 'function') await nuxt_plugin_svgmorpheus_0d65a43d(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

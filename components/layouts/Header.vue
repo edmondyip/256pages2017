@@ -1,6 +1,5 @@
 <template>
-  <!-- <header :class="{scrolled: scrolled === true, home: routeName === 'index'}"> -->
-    <header>
+  <header :class="{scrolled: scrolled === true}">
     <div class="nav-btn" @click="navOpen = !navOpen">
       <svg id="mobile-btn" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 25 25" preserveAspectRatio="none">
         <g id="close">
@@ -18,8 +17,8 @@
 </template>
 
 <script>
-  // import SVGMorpheus from "~/assets/js/svg-morpheus"
-  import Navbar from "~/components/layouts/PageNavbar"
+  // import SVGMorpheus from "~/plugins/svg-morpheus.js"
+  import Navbar from "~/components/layouts/Navbar"
   export default {
     name: 'Header',
     data: function () {
@@ -47,7 +46,7 @@
     created: function () {
       if (process.browser) {
         window.addEventListener('scroll', this.scrollPoisition)
-        console.log(this.$route.name)
+        // console.log(this.$route.name)
       }
     },
     beforeDestroy: function () {
@@ -56,10 +55,10 @@
       }
     },
     beforeRouteUpdate: function () {
-     if (to.params.url === undefined || 'eventor' && from.params.url === undefined) {
-          this.tween('open')
-          this.navOpen = false
-        }
+      if (to.params.url === undefined || 'eventor' && from.params.url === undefined) {
+        this.tween('open')
+        this.navOpen = false
+      }
     },
     components: {
       Navbar

@@ -1,6 +1,6 @@
 <template>
   <div class="logo-tag" >
-    <nuxt-link to="/" :class="{hide: routeName === 'index'}">弐</nuxt-link>
+    <nuxt-link to="/" :class="{hide: $route.name === 'index'}">弐</nuxt-link>
   </div>
 </template>
 

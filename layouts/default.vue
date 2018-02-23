@@ -1,27 +1,29 @@
 <template>
   <div id="app">
-    <!-- <background-animation /> -->
-    <!-- <main :class="{home: routeName === 'index'}"> -->
-      <main>
+    <background-animation />
+    <main :class="$route.name">
       <transition name="fade" mode="out-in">
         <nuxt />
       </transition>
     </main>
-    <page-footer />
+    <page-footer/>
     <page-header />
   </div>
 </template>
 
 <script>
-  import PageHeader from '~/components/layouts/PageHeader'
-  import PageFooter from '~/components/layouts/PageFooter'
-  // import BackgroundAnimation from '~/components/layout/PageBackground'
+  import PageHeader from '~/components/layouts/Header'
+  import PageFooter from '~/components/layouts/Footer'
+  import BackgroundAnimation from '~/components/layouts/Background'
+
+  import Is from 'is_js'
+
   export default {
     name: 'Layout',
     components: {
       PageHeader,
-      PageFooter
-      // BackgroundAnimation
+      PageFooter,
+      BackgroundAnimation
     }
   }
 

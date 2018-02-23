@@ -1,10 +1,14 @@
-const { resolve } = require('path')
+const {
+  resolve
+} = require('path')
 
 module.exports = {
   /*
    ** Build configuration
    */
-  build: {},
+  build: {
+    vendor: ['is_js']
+  },
   /*
    ** Headers
    ** Common headers are already provided by @nuxtjs/pwa preset
@@ -48,7 +52,7 @@ module.exports = {
     resolve(__dirname, './assets/css/_global.scss')
   ],
   plugins: [{
-    src: '~/plugins/global.js',
+    src: '~/plugins/svg-morpheus.js',
     ssr: false
   }]
 }

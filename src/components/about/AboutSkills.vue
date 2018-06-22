@@ -21,15 +21,15 @@ import ScrollMon from 'scrollmonitor'
         loadBar: false,
         skills: [{
             name: 'User Experience Design',
-            percent: 68
+            percent: 75
           },
           {
             name: 'Graphic Design',
-            percent: 80
+            percent: 85
           },
           {
             name: 'Search Engine Optimization',
-            percent: 86
+            percent: 90
           },
           {
             name: 'Solution Consultancy',
@@ -41,11 +41,11 @@ import ScrollMon from 'scrollmonitor'
           },
           {
             name: 'API Development',
-            percent: 65
+            percent: 75
           },
           {
             name: 'Project Management',
-            percent: 75
+            percent: 70
           }
         ]
       }
